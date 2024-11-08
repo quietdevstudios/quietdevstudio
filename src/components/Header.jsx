@@ -1,20 +1,44 @@
 import React from "react";
 import brandLogo from "/assets/images/apple-touch-icon.png";
+import { NAV_LINKS } from "../../data";
 
 const Header = () => {
   return (
-    <header className="bg-orange-950 h-20 ">
-      <section className="h-full w-[95%] text-center mx-auto flex items-center justify-between text-3xl text-orange-500">
-        {/* <img src={brandLogo} className='w-24 cursor-pointer' /> */}
-
-        <div className="flex items-center justify-center tracking-tighter">
-          <img src={brandLogo} className="w-24 cursor-pointer " />
-          <h2 className="h-10 leading-normal text-xl cursor-pointer">
+    <header className="bg-orange-100 h-20 text-orange-950">
+      <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
+        <div className="flex items-center tracking-tighter">
+          <img src={brandLogo} className="w-24 cursor-pointer" />
+          <h2 className="h-12 leading-normal text-2xl text-orange-950 hidden lg:flex">
             Quietdev Studios
           </h2>
         </div>
 
-        <button className="flex flex-col">
+        <nav>
+          <ul className="hidden md:flex md:items-center md:gap-10">
+            {NAV_LINKS.map((navLink) => {
+              const { hyperLink, linkText } = navLink;
+              const defaultStyle =
+                "font-semibold leading-6 text-orange-600 hover:text-orange-500 hover:border-b-2 hover:border-orange-400 pb-1";
+              const getStarted =
+                "font-semibold leading-6 text-orange-100 bg-orange-600 md:px-4 md:py-3 rounded-md hover:bg-orange-500";
+
+              return (
+                <li key={navLink.linkText}>
+                  <a
+                    href={hyperLink}
+                    className={`${
+                      linkText === "Get Started" ? getStarted : defaultStyle
+                    }`}
+                  >
+                    {linkText}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+
+        <button className="flex flex-col md:hidden">
           <div className="w-8 h-[2px] bg-orange-400 m-1"></div>
           <div className="w-8 h-[2px] bg-orange-400 m-1"></div>
           <div className="w-8 h-[2px] bg-orange-400 m-1"></div>
