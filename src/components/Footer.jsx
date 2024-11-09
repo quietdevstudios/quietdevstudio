@@ -167,7 +167,7 @@ const Footer = () => {
       {/* copyright message */}
       <section className="border-t border-orange-800/10 mt-16 pt-8 sm:mt-20 xl:max-w-7xl xl:mx-auto">
         <p className="text-xs leading-5">
-          &copy;F 2024 QuietdevStudios. All rights reserved.
+          &copy; 2024 QuietdevStudios. All rights reserved.
         </p>
       </section>
     </footer>

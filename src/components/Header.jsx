@@ -1,6 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 import brandLogo from "/assets/images/apple-touch-icon.png";
 import { NAV_LINKS } from "../../data";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMoon } from "@fortawesome/free-regular-svg-icons";
 
 const Header = () => {
   return (
@@ -14,7 +16,7 @@ const Header = () => {
         </div>
 
         <nav>
-          <ul className="hidden md:flex md:items-center md:gap-10">
+          <ul className="hidden md:flex md:items-center md:gap-6 lg:gap-10">
             {NAV_LINKS.map((navLink) => {
               const { hyperLink, linkText } = navLink;
               const defaultStyle =
@@ -23,16 +25,25 @@ const Header = () => {
                 "font-semibold leading-6 text-orange-100 bg-orange-600 md:px-4 md:py-3 rounded-md hover:bg-orange-500";
 
               return (
-                <li key={navLink.linkText}>
-                  <a
-                    href={hyperLink}
-                    className={`${
-                      linkText === "Get Started" ? getStarted : defaultStyle
-                    }`}
-                  >
-                    {linkText}
-                  </a>
-                </li>
+                <Fragment key={navLink.linkText}>
+                  <li>
+                    <a
+                      href={hyperLink}
+                      className={`${
+                        linkText === "Get Started" ? getStarted : defaultStyle
+                      }`}
+                    >
+                      {linkText}
+                    </a>
+                  </li>
+                  {linkText === "Sign in" && (
+                    <FontAwesomeIcon
+                      icon={faMoon}
+                      size="xl"
+                      className="text-orange-600 hover:text-orange-500 cursor-pointer"
+                    />
+                  )}
+                </Fragment>
               );
             })}
           </ul>
