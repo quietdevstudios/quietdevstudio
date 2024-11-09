@@ -1,49 +1,49 @@
 export const NAV_LINKS = [
   {
     linkText: "All Path",
-    hyperLink: "path",
+    hyperLink: "#",
   },
   {
     linkText: "About",
-    hyperLink: "about",
+    hyperLink: "#",
   },
   {
     linkText: "Community",
-    hyperLink: "community",
+    hyperLink: "#",
   },
   {
     linkText: "Support us",
-    hyperLink: "support",
+    hyperLink: "#",
   },
   {
     linkText: "Sign in",
-    hyperLink: "sign-in",
+    hyperLink: "#",
   },
   {
     linkText: "Get Started",
-    hyperLink: "sign-up",
+    hyperLink: "#",
   },
 ];
 
 export const COUNTDOWN = [
   {
-    topNumber: 0,
-    bottomNumber: 0,
+    topNumber: "00",
+    bottomNumber: "00",
     unitsOfTime: "DAYS",
   },
   {
-    topNumber: 0,
-    bottomNumber: 0,
+    topNumber: "00",
+    bottomNumber: "00",
     unitsOfTime: "HOURS",
   },
   {
-    topNumber: 0,
-    bottomNumber: 0,
+    topNumber: "00",
+    bottomNumber: "00",
     unitsOfTime: "MINUTES",
   },
   {
-    topNumber: 0,
-    bottomNumber: 0,
+    topNumber: "00",
+    bottomNumber: "00",
     unitsOfTime: "SECONDS",
   },
 ];
