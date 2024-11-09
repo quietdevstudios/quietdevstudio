@@ -24,3 +24,26 @@ export const NAV_LINKS = [
     hyperLink: "sign-up",
   },
 ];
+
+export const COUNTDOWN = [
+  {
+    topNumber: 0,
+    bottomNumber: 0,
+    unitsOfTime: "DAYS",
+  },
+  {
+    topNumber: 0,
+    bottomNumber: 0,
+    unitsOfTime: "HOURS",
+  },
+  {
+    topNumber: 0,
+    bottomNumber: 0,
+    unitsOfTime: "MINUTES",
+  },
+  {
+    topNumber: 0,
+    bottomNumber: 0,
+    unitsOfTime: "SECONDS",
+  },
+];
