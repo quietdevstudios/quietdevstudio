@@ -12,7 +12,7 @@ export const NAV_LINKS = [
     hyperLink: "#",
   },
   {
-    linkText: "Support us",
+    linkText: "Templates",
     hyperLink: "#",
   },
   {
