@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <main className="font-montserrat text-zinc-600">
         <section className="text-center bg-orange-100 leading-10 flex flex-col items-center justify-center gap-8 p-8">
-          <h1 className="text-[2rem] font-medium leading-10 tracking-tighter">
+          <h1 className="text-[2.5rem] font-medium leading-10 tracking-tighter">
             Your{" "}
             <span className="text-orange-600">
               Gateway to Modern Web Development
@@ -28,7 +28,7 @@ const Home = () => {
         </section>
 
         <section className="text-center p-6 my-12">
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 max-w-7xl mx-auto xl:grid">
             <div className="flex flex-col gap-6">
               <h1 className="text-4xl font-medium text-orange-500">
                 How it works
@@ -41,7 +41,7 @@ const Home = () => {
                 development.
               </p>
             </div>
-            <div className="flex flex-col gap-24">
+            <div className="flex flex-col gap-24 md:grid md:grid-cols-2 lg:grid-cols-3">
               <div className="flex flex-col gap-6">
                 <FontAwesomeIcon
                   icon={faGraduationCap}
@@ -88,14 +88,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        {/* <section className="bg-orange-100">
-          <h1>Learn everything you need to know</h1>
-          <div>
-            <img src="#" alt="#" />
-            <a href="#">Intermediate HTML and CSS</a>
-          </div>
-        </section> */}
       </main>
     </>
   );
