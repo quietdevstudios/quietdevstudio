@@ -11,18 +11,18 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-100 text-orange-500 text-left p-6 py-10">
+    <footer className="bg-orange-100 text-orange-500 text-left p-6 py-10 font-montserrat">
       <div className="max-w-7xl mx-auto xl:grid xl:grid-cols-3">
         <section className="grid gap-6">
           <div className="flex items-center tracking-tighter">
             <img src={brandLogo} className="w-12 cursor-pointer" />
-            <h2 className="h-12 leading-normal text-2xl text-orange-950">
+            <h2 className="h-12 leading-normal text-2xl text-zinc-600">
               Quietdev Studios
             </h2>
           </div>
-          <p className="text-orange-950">
-            High quality coding education maintained by an open source
-            community.
+          <p className="text-zinc-600">
+            High-quality coding education designed and delivered by experienced
+            professionals.
           </p>
           <section className="flex gap-10">
             <a href="#" target="_blank">
