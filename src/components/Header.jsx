@@ -1,10 +1,17 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import brandLogo from "/assets/images/apple-touch-icon.png";
 import { NAV_LINKS } from "../../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import MobileNav from "./Nav/MobileNav";
 
 const Header = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <header className="bg-orange-100 h-20 text-orange-950 font-montserrat">
       <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
@@ -15,8 +22,10 @@ const Header = () => {
           </h2>
         </div>
 
+        {isNavOpen && <MobileNav isNavOpen={isNavOpen} toggleNav={toggleNav} />}
+
         <nav>
-          <ul className="hidden md:flex md:items-center md:gap-5 lg:gap-6 xl:gap-10">
+          <ul className="hidden md:flex md:items-center md:justify-evenly md:gap-5 lg:gap-6 xl:gap-10">
             {NAV_LINKS.map((navLink) => {
               const { hyperLink, linkText } = navLink;
               const defaultStyle =
@@ -49,10 +58,13 @@ const Header = () => {
           </ul>
         </nav>
 
-        <button className="flex flex-col md:hidden">
-          <div className="w-8 h-[2px] bg-orange-400 m-1"></div>
-          <div className="w-8 h-[2px] bg-orange-400 m-1"></div>
-          <div className="w-8 h-[2px] bg-orange-400 m-1"></div>
+        <button
+          onClick={toggleNav}
+          className="flex flex-col md:hidden hover:bg-orange-200 hover:p-1 hover:rounded-md"
+        >
+          <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
+          <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
+          <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
         </button>
       </section>
     </header>
