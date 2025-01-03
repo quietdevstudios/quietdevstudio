@@ -5,23 +5,30 @@ import Footer from "./components/Footer";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
+import Errorpage from "./pages/Errorpage";
+import RootLayout from "./pages/RootLayout";
 
 const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
-    },
-    {
-      path: "courses",
-      element: <Courses />,
+      element: <RootLayout />,
+      errorElement: <Errorpage />,
+      children: [
+        {
+          index: true,
+          element: <Home />,
+        },
+        {
+          path: "curriculum",
+          element: <Courses />,
+        },
+      ],
     },
   ]);
   return (
     <>
-      <Header />
       <RouterProvider router={router} />
-      <Footer />
     </>
   );
 };
