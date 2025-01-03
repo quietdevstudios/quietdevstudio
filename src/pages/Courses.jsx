@@ -6,7 +6,7 @@ import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 const Courses = () => {
   return (
     <section>
-      <article>
+      <article className="relative">
         <header className="p-6">
           <h1 className="text-[2rem] font-medium tracking-tighter text-orange-600">
             Quietdev Studios Curriculum
@@ -27,19 +27,16 @@ const Courses = () => {
         <figure>
           <img src={vector} alt="vector image" />
         </figure>
+        <section className="flex items-center justify-evenly bg-orange-400 w-[80%] md:max-w-[60%] mx-auto p-6 absolute -bottom-5 left-0 right-0 rounded-md text-white font-medium text-2xl tracking-tighter">
+          <div>
+            {/* <FontAwesomeIcon icon={faGraduationCap} /> */}
+            <p>Beginner's level</p>
+          </div>
+          <div>
+            <p>Self-paced</p>
+          </div>
+        </section>
       </article>
-      <section className="flex items-center justify-evenly">
-        <div>
-          {/* <FontAwesomeIcon icon={faGraduationCap} /> */}
-          <p>Beginner's level</p>
-        </div>
-        <div>
-          <p>Self-paced</p>
-        </div>
-        <div>
-          <p>Paid</p>
-        </div>
-      </section>
     </section>
   );
 };
