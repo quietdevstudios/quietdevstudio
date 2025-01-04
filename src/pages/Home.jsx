@@ -23,9 +23,12 @@ const Home = () => {
             Learn to code with structured lessons, hands-on projects, and step
             by step guidance.
           </p>
-          <button className="border border-orange-500 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-50 capitalize">
+          <a
+            href="curriculum"
+            className="border border-orange-500 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-50 capitalize"
+          >
             start your journey
-          </button>
+          </a>
           {/* <video height="100px" loop autoPlay muted>
             <source src={qlVideo} type="video/mp4" />
           </video> */}

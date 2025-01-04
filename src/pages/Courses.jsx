@@ -1,7 +1,7 @@
 import React from "react";
 import vector from "/vector.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const Courses = () => {
   return (
@@ -67,11 +67,30 @@ const Courses = () => {
 
       <section>
         <h1 className="text-[2rem] font-medium tracking-tighter text-orange-600 mt-12 px-6">
-          Modules
+          All Roadmaps
         </h1>
-        <p>coming soon...</p>
+        <section className="px-16 flex flex-col gap-10 py-6">
+          {/* web development */}
+          <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
+            <p className="tracking-wider text-lg font-regular">
+              Web Development
+            </p>
+            <span>
+              <FontAwesomeIcon icon={faChevronDown} />
+            </span>
+          </div>
+
+          {/* Graphic Design */}
+          <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
+            <p className="tracking-wider text-lg font-regular">
+              Graphic Design
+            </p>
+            <span>
+              <FontAwesomeIcon icon={faChevronDown} />
+            </span>
+          </div>
+        </section>
       </section>
-      
     </section>
   );
 };
