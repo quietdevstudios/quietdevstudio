@@ -1,7 +1,13 @@
 import React from "react";
 import vector from "/vector.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faClock,
+  faGraduationCap,
+} from "@fortawesome/free-solid-svg-icons";
+import FE from "/FE.svg";
+import uiux from "/uiux.svg";
 
 const Courses = () => {
   return (
@@ -71,23 +77,92 @@ const Courses = () => {
         </h1>
         <section className="px-6 flex flex-col gap-10 py-6 w-full">
           {/* web development */}
-          <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
+          {/* <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
             <p className="tracking-wider text-lg font-regular">
               Web Development
             </p>
             <span>
               <FontAwesomeIcon icon={faChevronDown} />
             </span>
-          </div>
+          </div> */}
 
           {/* Graphic Design */}
-          <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
+          {/* <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
             <p className="tracking-wider text-lg font-regular">
               Graphic Design
             </p>
             <span>
               <FontAwesomeIcon icon={faChevronDown} />
             </span>
+          </div> */}
+
+          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96 mb-4">
+            <div className="w-full h-32">
+              <img src={FE} className="h-full w-full object-cover" />
+            </div>
+            {/* Webs Development */}
+            <div className="p-6 h-screen">
+              <p className="tracking-wider text-xl font-medium pb-4">
+                Web Development
+              </p>
+              <p className="flex items-center gap-4">
+                <FontAwesomeIcon icon={faClock} />
+                <span>1 year course</span>
+              </p>
+              <p className="flex items-center gap-4 mt-2 ">
+                <FontAwesomeIcon icon={faGraduationCap} />
+                <span>HTML & CSS, Vanilla JS, React JS, NodeJS...</span>
+              </p>
+            </div>
+            {/* details */}
+            <div className="bg-orange-50 p-6 font-medium text-lg flex items-center justify-between">
+              <p>
+                <span className="text-md font-medium flex flex-col items-start justify-start">
+                  <span className="text-xs tracking-wider font-regular text-zinc-600">
+                    Next Cohort Starts
+                  </span>{" "}
+                  13th of Jan., 2025
+                </span>
+              </p>
+              <p className="bg-orange-200 w-fit p-2 px-4 rounded-md hover:bg-orange-300 hover:text-zinc-600 tracking-tighter">
+                Enroll Now
+              </p>
+            </div>
+          </div>
+
+          {/* Graphic Design */}
+          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96">
+            <div className="w-full h-32">
+              <img src={uiux} className="h-full w-full object-cover" />
+            </div>
+            {/* Front End Development */}
+            <div className="p-6 h-screen">
+              <p className="tracking-wider text-xl font-medium pb-4">
+                Graphic Design
+              </p>
+              <p className="flex items-center gap-4">
+                <FontAwesomeIcon icon={faClock} />
+                <span>1 year course</span>
+              </p>
+              <p className="flex items-center gap-4 mt-2 ">
+                <FontAwesomeIcon icon={faGraduationCap} />
+                <span>Figma, Adobe Photoshop, Canva...</span>
+              </p>
+            </div>
+            {/* details */}
+            <div className="bg-orange-50 p-6 font-medium text-lg flex items-center justify-between">
+              <p>
+                <span className="text-md font-medium flex flex-col items-start justify-start">
+                  <span className="text-xs tracking-wider font-regular text-zinc-600">
+                    Next Cohort Starts
+                  </span>{" "}
+                  13th of Jan., 2025
+                </span>
+              </p>
+              <p className="bg-orange-200 w-fit p-2 px-4 rounded-md hover:bg-orange-300 hover:text-zinc-600 tracking-tighter">
+                Enroll Now
+              </p>
+            </div>
           </div>
         </section>
       </section>

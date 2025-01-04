@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-orange-100 h-20 text-orange-950 font-montserrat">
+    <header className="bg-orange-200 h-20 text-orange-950 font-montserrat py-16 sticky top-0 z-50 ">
       <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center tracking-tighter">
           <img src={brandLogo} className="w-24 cursor-pointer" />
@@ -60,7 +60,7 @@ const Header = () => {
 
         <button
           onClick={toggleNav}
-          className="flex flex-col md:hidden hover:bg-orange-200 hover:p-1 hover:rounded-md"
+          className="flex flex-col mb-1 p-2 md:hidden hover:bg-orange-200 hover:p-1 hover:rounded-md"
         >
           <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
           <div className="w-6 h-[2px] bg-orange-400 m-1"></div>

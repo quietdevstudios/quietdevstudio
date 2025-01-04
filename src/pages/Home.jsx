@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <>
       <main className="font-montserrat text-zinc-600">
-        <section className="relative text-center bg-orange-100 leading-10 flex flex-col items-center justify-center gap-8 p-8 h-[28rem]">
-          <h1 className="text-[2.2rem] font-medium leading-10 tracking-tighter">
+        <section className="relative text-center bg-orange-50 leading-10 flex flex-col items-center justify-center gap-20 h-[28rem] py-[20rem]">
+          <h1 className="text-[3.2rem] font-bold leading-tight tracking-wide">
             Your{" "}
             <span className="text-orange-600">
               Gateway to Modern Web Development
