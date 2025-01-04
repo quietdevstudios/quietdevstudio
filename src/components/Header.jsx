@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-orange-200 h-20 text-orange-950 font-montserrat py-16 sticky top-0 z-50 ">
+    <header className="bg-orange-200 h-20 text-orange-950 font-montserrat sticky top-0 z-50 ">
       <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
         <a href="/" className="flex items-center tracking-tighter">
           <img src={brandLogo} className="w-24 cursor-pointer" />
