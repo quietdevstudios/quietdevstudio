@@ -69,7 +69,7 @@ const Courses = () => {
         <h1 className="text-[2rem] font-medium tracking-tighter text-orange-600 mt-12 px-6">
           All Roadmaps
         </h1>
-        <section className="px-16 flex flex-col gap-10 py-6">
+        <section className="px-6 flex flex-col gap-10 py-6 w-full">
           {/* web development */}
           <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
             <p className="tracking-wider text-lg font-regular">
