@@ -15,7 +15,7 @@ export const NAV_LINKS = [
   },
   {
     linkText: "My Learning",
-    hyperLink: "learning",
+    hyperLink: "my-courses",
     faImage: faBookOpen
   },
   {

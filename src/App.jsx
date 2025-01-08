@@ -25,7 +25,7 @@ const App = () => {
           element: <Courses />,
         },
         {
-          path: "learning",
+          path: "my-courses",
           element: <MyLearning />,
         },
       ],
