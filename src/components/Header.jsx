@@ -15,9 +15,9 @@ const Header = () => {
   return (
     <header className="bg-orange-200 h-20 text-orange-950 font-montserrat sticky top-0 z-50 ">
       <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center tracking-tighter">
+        <a href="/" className="flex items-center justify-center">
           <img src={brandLogo} className="w-24 cursor-pointer" />
-          <h2 className="h-12 leading-normal text-2xl text-zinc-600 hidden lg:flex">
+          <h2 className="font-semibold leading-normal text-xl text-zinc-600 hidden lg:flex lg:text-[1.25rem] relative right-5">
             Quietdev Studios
           </h2>
         </a>
@@ -29,9 +29,9 @@ const Header = () => {
             {NAV_LINKS.map((navLink) => {
               const { hyperLink, linkText } = navLink;
               const defaultStyle =
-                "font-semibold leading-6 text-zinc-600 hover:text-orange-500 hover:border-b-2 hover:border-orange-400 pb-1";
+                "font-medium leading-6 text-zinc-600 hover:text-orange-500 hover:border-b-2 hover:border-orange-400 pb-1 text-[0.9rem] lg:text-[0.95rem]";
               const getStarted =
-                "font-semibold leading-6 text-zinc-200 bg-orange-600 md:px-4 md:py-3 rounded-md hover:bg-orange-500";
+                "font-medium leading-6 text-zinc-200 bg-orange-600 md:px-4 md:py-3 rounded-md hover:bg-orange-500 text-[0.9rem] lg:text-[0.95rem]";
 
               return (
                 <Fragment key={navLink.linkText}>

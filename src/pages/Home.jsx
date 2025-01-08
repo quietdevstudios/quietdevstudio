@@ -11,10 +11,10 @@ const Home = () => {
   return (
     <>
       <main className="font-montserrat text-zinc-600">
-        <section className="relative text-center bg-orange-50 leading-10 flex flex-col items-center justify-center gap-20 h-[28rem] py-[20rem]">
-          <h1 className="text-[3.2rem] font-bold leading-tight tracking-wide">
+        <section className="relative text-center bg-zinc-700 leading-10 flex flex-col items-center justify-center gap-10 p-6 py-8 text-white">
+          <h1 className="text-[2.25rem] font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Your{" "}
-            <span className="text-orange-600">
+            <span className="text-orange-200">
               Gateway to Modern Web Development
             </span>{" "}
             Starts Here
@@ -25,7 +25,7 @@ const Home = () => {
           </p>
           <a
             href="curriculum"
-            className="border border-orange-500 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-50 capitalize"
+            className="border border-orange-50 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-50 capitalize"
           >
             start your journey
           </a>
