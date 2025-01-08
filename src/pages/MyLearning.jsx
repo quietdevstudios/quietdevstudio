@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const MyLearning = () => {
   return (
@@ -30,9 +31,12 @@ const MyLearning = () => {
         <p className="py-6 text-lg font-medium tracking-wide">
           Your purchased courses will be displayed here.
         </p>
-        <button className="border-b-2 border-orange-600 w-fit text-orange-600 text-lg font-bold tracking-wide">
+        <Link
+          to="/"
+          className="border-b-2 border-orange-600 w-fit text-orange-600 text-lg font-bold tracking-wide"
+        >
           Browse courses.
-        </button>
+        </Link>
       </main>
     </section>
   );

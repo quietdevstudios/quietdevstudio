@@ -102,7 +102,7 @@ const Courses = () => {
                   <span className="text-xs tracking-wider font-regular text-zinc-600">
                     Next Cohort Starts
                   </span>
-                  13th of Jan., 2025
+                   3rd of Mar., 2025
                 </span>
               </p>
               <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
@@ -174,7 +174,7 @@ const Courses = () => {
                   <span className="text-xs tracking-wider font-regular text-zinc-600">
                     Next Cohort Starts
                   </span>
-                  13th of Jan., 2025
+                  3rd of Mar., 2025
                 </span>
               </p>
               <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
