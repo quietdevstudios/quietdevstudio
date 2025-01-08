@@ -3,11 +3,11 @@ import { faBookOpen, faCircleQuestion, faCommentNodes } from "@fortawesome/free-
 
 
 export const NAV_LINKS = [
-  {
-    linkText: "Home",
-    hyperLink: "/",
-    faImage: faBookOpen
-  },
+  // {
+  //   linkText: "Home",
+  //   hyperLink: "/",
+  //   faImage: faBookOpen
+  // },
   {
     linkText: "Curriculum",
     hyperLink: "curriculum",
@@ -28,11 +28,11 @@ export const NAV_LINKS = [
     hyperLink: "#",
     faImage: faCommentNodes
   },
-  {
-    linkText: "Templates",
-    hyperLink: "#",
-    faImage: faBookOpen
-  },
+  // {
+  //   linkText: "Templates",
+  //   hyperLink: "#",
+  //   faImage: faBookOpen
+  // },
   {
     linkText: "Sign in",
     hyperLink: "#",
