@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Errorpage from "./pages/Errorpage";
 import RootLayout from "./pages/RootLayout";
+import MyLearning from "./pages/MyLearning";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const App = () => {
         {
           path: "curriculum",
           element: <Courses />,
+        },
+        {
+          path: "learning",
+          element: <MyLearning />,
         },
       ],
     },

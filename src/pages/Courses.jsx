@@ -76,31 +76,11 @@ const Courses = () => {
           All Roadmaps
         </h1>
         <section className="px-6 flex flex-col gap-10 py-6 w-full">
-          {/* web development */}
-          {/* <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
-            <p className="tracking-wider text-lg font-regular">
-              Web Development
-            </p>
-            <span>
-              <FontAwesomeIcon icon={faChevronDown} />
-            </span>
-          </div> */}
-
-          {/* Graphic Design */}
-          {/* <div className="border border-orange-200 p-6 rounded-xl flex items-center justify-between cursor-pointer">
-            <p className="tracking-wider text-lg font-regular">
-              Graphic Design
-            </p>
-            <span>
-              <FontAwesomeIcon icon={faChevronDown} />
-            </span>
-          </div> */}
-
           <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96 mb-4">
             <div className="w-full h-32">
               <img src={FE} className="h-full w-full object-cover" />
             </div>
-            {/* Webs Development */}
+            {/* web development */}
             <div className="p-6 h-screen">
               <p className="tracking-wider text-xl font-medium pb-4">
                 Web Development
@@ -109,57 +89,95 @@ const Courses = () => {
                 <FontAwesomeIcon icon={faClock} />
                 <span>1 year course</span>
               </p>
-              <p className="flex items-center gap-4 mt-2 ">
+              <p className="flex items-center gap-4 mt-2">
                 <FontAwesomeIcon icon={faGraduationCap} />
-                <span>HTML & CSS, Vanilla JS, React JS, NodeJS...</span>
+                <span>HTML & CSS, Vanilla JS, Nodejs, Reactjs...</span>
               </p>
             </div>
+
             {/* details */}
             <div className="bg-orange-50 p-6 font-medium text-lg flex items-center justify-between">
               <p>
-                <span className="text-md font-medium flex flex-col items-start justify-start">
+                <span className="text-md font-medium flex flex-col items-start justify-between">
                   <span className="text-xs tracking-wider font-regular text-zinc-600">
                     Next Cohort Starts
-                  </span>{" "}
+                  </span>
                   13th of Jan., 2025
                 </span>
               </p>
-              <p className="bg-orange-200 w-fit p-2 px-4 rounded-md hover:bg-orange-300 hover:text-zinc-600 tracking-tighter">
+              <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
                 Enroll Now
               </p>
             </div>
           </div>
 
           {/* Graphic Design */}
-          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96">
+          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96 mb-4">
             <div className="w-full h-32">
               <img src={uiux} className="h-full w-full object-cover" />
             </div>
-            {/* Front End Development */}
+            {/* web development */}
             <div className="p-6 h-screen">
               <p className="tracking-wider text-xl font-medium pb-4">
-                Graphic Design
+                Graphic Designs
               </p>
               <p className="flex items-center gap-4">
                 <FontAwesomeIcon icon={faClock} />
                 <span>1 year course</span>
               </p>
-              <p className="flex items-center gap-4 mt-2 ">
+              <p className="flex items-center gap-4 mt-2">
                 <FontAwesomeIcon icon={faGraduationCap} />
                 <span>Figma, Adobe Photoshop, Canva...</span>
               </p>
             </div>
+
             {/* details */}
             <div className="bg-orange-50 p-6 font-medium text-lg flex items-center justify-between">
               <p>
-                <span className="text-md font-medium flex flex-col items-start justify-start">
+                <span className="text-md font-medium flex flex-col items-start justify-between">
                   <span className="text-xs tracking-wider font-regular text-zinc-600">
                     Next Cohort Starts
-                  </span>{" "}
+                  </span>
                   13th of Jan., 2025
                 </span>
               </p>
-              <p className="bg-orange-200 w-fit p-2 px-4 rounded-md hover:bg-orange-300 hover:text-zinc-600 tracking-tighter">
+              <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
+                Enroll Now
+              </p>
+            </div>
+          </div>
+
+          {/* Virtual Assistance */}
+          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96 mb-4">
+            <div className="w-full h-32">
+              <img src={uiux} className="h-full w-full object-cover" />
+            </div>
+            {/* web development */}
+            <div className="p-6 h-screen">
+              <p className="tracking-wider text-xl font-medium pb-4">
+                Virtual Assistance
+              </p>
+              <p className="flex items-center gap-4">
+                <FontAwesomeIcon icon={faClock} />
+                <span>1 year course</span>
+              </p>
+              <p className="flex items-center gap-4 mt-2">
+                <FontAwesomeIcon icon={faGraduationCap} />
+                <span>Communication, sales,...</span>
+              </p>
+            </div>
+
+            {/* details */}
+            <div className="bg-orange-50 p-6 font-medium text-lg flex items-center justify-between">
+              <p>
+                <span className="text-md font-medium flex flex-col items-start justify-between">
+                  <span className="text-xs tracking-wider font-regular text-zinc-600">
+                    Next Cohort Starts
+                  </span>
+                  13th of Jan., 2025
+                </span>
+              </p>
+              <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
                 Enroll Now
               </p>
             </div>
