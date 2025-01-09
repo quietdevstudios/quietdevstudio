@@ -12,22 +12,22 @@ import uiux from "/uiux.svg";
 const Courses = () => {
   return (
     <section>
-      <article className="relative bg-orange-100">
+      <article className="relative bg-zinc-700">
         <header className="p-6">
-          <h1 className="text-[2rem] font-medium tracking-tighter text-orange-600">
+          <h1 className="text-[2.25rem] font-bold tracking-wide leading-tight text-orange-200 md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Quietdev Studios Curriculum
           </h1>
-          <h4 className="text-[1.5rem] font-medium tracking-tight leading-7 mt-2">
+          <h4 className="text-[1.5rem] font-medium tracking-wide leading-6 mt-2 text-white">
             The essential skillset for new front-end developers
           </h4>
-          <p className="mt-4 font-regular text-lg">
+          <p className="mt-4 font-medium text-md text-white">
             The Quietdev Studio Curriculum provides a structured guide to the
             essential skills and practices for being a successful front-end
             developer, along with recommended learning resources.
           </p>
 
-          <p className="mt-10 font-regular text-lg tracking-tighter">
-            Last Updated: January 2025
+          <p className="mt-10 font-regular text-md tracking-wide leading-tight text-white">
+            Last Updated: January 2025.
           </p>
         </header>
         <figure>
@@ -46,10 +46,10 @@ const Courses = () => {
 
       {/* about the curriculum */}
       <section>
-        <h1 className="text-[2rem] font-medium tracking-tighter text-orange-600 mt-28 px-6">
+        <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-28 px-6 md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
           About the curriculum
         </h1>
-        <div className="flex flex-col gap-4 text-lg font-regular tracking-tight px-16 my-10">
+        <div className="flex flex-col gap-4 text-md font-regular tracking-tight px-16 my-10">
           <div>
             <p>
               Defines the essential skills and knowledge every front-end
@@ -72,11 +72,11 @@ const Courses = () => {
       </section>
 
       <section>
-        <h1 className="text-[2rem] font-medium tracking-tighter text-orange-600 mt-12 px-6">
+        <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 px-6 md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
           All Roadmaps
         </h1>
         <section className="px-6 flex flex-col gap-10 py-6 w-full">
-          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96 mb-4">
+          <div className="shadow-zinc-300 shadow-lg flex flex-col cursor-pointer justify-between h-96 mb-4">
             <div className="w-full h-32">
               <img src={FE} className="h-full w-full object-cover" />
             </div>
@@ -102,7 +102,7 @@ const Courses = () => {
                   <span className="text-xs tracking-wider font-regular text-zinc-600">
                     Next Cohort Starts
                   </span>
-                   3rd of Mar., 2025
+                  3rd of Mar., 2025
                 </span>
               </p>
               <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
@@ -112,7 +112,7 @@ const Courses = () => {
           </div>
 
           {/* Graphic Design */}
-          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96 mb-4">
+          <div className="shadow-lg shadow-zinc-300 flex flex-col cursor-pointer justify-between h-96 mb-4">
             <div className="w-full h-32">
               <img src={uiux} className="h-full w-full object-cover" />
             </div>
@@ -148,7 +148,7 @@ const Courses = () => {
           </div>
 
           {/* Virtual Assistance */}
-          <div className="shadow-xl flex flex-col cursor-pointer justify-between h-96 mb-4">
+          <div className="shadow-lg shadow-zinc-300 flex flex-col cursor-pointer justify-between h-96 mb-4">
             <div className="w-full h-32">
               <img src={uiux} className="h-full w-full object-cover" />
             </div>

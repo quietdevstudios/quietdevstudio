@@ -25,7 +25,7 @@ const Home = () => {
           </p>
           <a
             href="curriculum"
-            className="border border-orange-50 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-50 capitalize"
+            className="border border-orange-50 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize transition duration-300"
           >
             start your journey
           </a>

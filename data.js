@@ -15,12 +15,12 @@ export const NAV_LINKS = [
   },
   {
     linkText: "My Learning",
-    hyperLink: "my-courses",
+    hyperLink: "courses",
     faImage: faBookOpen
   },
   {
     linkText: "About",
-    hyperLink: "#",
+    hyperLink: "about",
     faImage: faCircleQuestion
   },
   {

@@ -17,6 +17,13 @@ export default {
       black: "900",
     },
     extend: {
+      colors: {
+        ef6351: '#ef6351',
+        f38375: '#f38375',
+        f7a399: '#f7a399',
+        fbc3bc: '#fbc3bc',
+        ffe3e0: '#ffe3e0',
+      },
     },
   },
   plugins: [],

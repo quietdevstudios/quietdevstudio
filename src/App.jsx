@@ -8,6 +8,7 @@ import Courses from "./pages/Courses";
 import Errorpage from "./pages/Errorpage";
 import RootLayout from "./pages/RootLayout";
 import MyLearning from "./pages/MyLearning";
+import About from "./pages/About";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -25,8 +26,12 @@ const App = () => {
           element: <Courses />,
         },
         {
-          path: "my-courses",
+          path: "courses",
           element: <MyLearning />,
+        },
+        {
+          path: "about",
+          element: <About />,
         },
       ],
     },
