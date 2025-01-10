@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import FE from "/FE.svg";
 import uiux from "/uiux.svg";
+import { Link } from "react-router";
 
 const Courses = () => {
   return (
@@ -105,9 +106,12 @@ const Courses = () => {
                   3rd of Mar., 2025
                 </span>
               </p>
-              <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
+              <a
+                href="form"
+                className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600"
+              >
                 Enroll Now
-              </p>
+              </a>
             </div>
           </div>
 

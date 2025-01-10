@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className="font-montserrat">
       {/* Hero Section */}
-      <div className="bg-zinc-700 text-white py-8">
+      <div className="bg-zinc-800 text-white py-8">
         <div className="md:px-12 lg:px-20 text-center flex flex-col items-center gap-2">
           <h1 className="text-[2.2rem] p-3 font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Empowering Tomorrow's{" "}

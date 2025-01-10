@@ -11,6 +11,7 @@ import MyLearning from "./pages/MyLearning";
 import About from "./pages/About";
 import GetStarted from "./pages/GetStarted";
 import SignIn from "./pages/Signin";
+import Form from "./pages/Form";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const App = () => {
         {
           path: "signin",
           element: <SignIn />,
+        },
+        {
+          path: "form",
+          element: <Form />,
         },
       ],
     },

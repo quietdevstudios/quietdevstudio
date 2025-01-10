@@ -11,16 +11,14 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-100 text-orange-500 text-left p-6 py-10 font-montserrat">
-      <div className="max-w-7xl mx-auto xl:grid xl:grid-cols-3">
+    <footer className="bg-zinc-800 text-white text-left p-6 py-10 font-montserrat">
+      <div className="max-w-7xl mx-auto xl:grid xl:grid-cols-3 text-white">
         <section className="grid gap-6">
           <div className="flex items-center tracking-tighter">
             <img src={brandLogo} className="w-12 cursor-pointer" />
-            <h2 className="h-12 leading-normal text-2xl text-zinc-600">
-              Quietdev Studios
-            </h2>
+            <h2 className="h-12 leading-normal text-2xl">Quietdev Studios</h2>
           </div>
-          <p className="text-zinc-600">
+          <p>
             High-quality coding education designed and delivered by experienced
             professionals.
           </p>
@@ -45,70 +43,45 @@ const Footer = () => {
           {/* div 1 */}
           <div className="md:grid md:grid-cols-2">
             <div>
-              <h3 className="font-semibold leading-6 text-orange-950">
-                About us
-              </h3>
+              <h3 className="font-semibold leading-6">About us</h3>
               <ul className="mt-4 space-y-3">
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     About
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Team
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Blog
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Success Stories
                   </a>
                 </li>
               </ul>
             </div>
             <div className="mt-10 md:mt-0">
-              <h3 className="font-semibold leading-6 text-orange-950">
-                Support
-              </h3>
+              <h3 className="font-semibold leading-6">Support</h3>
               <ul className="mt-4 space-y-3">
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     FAQ
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Contribute
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Contact us
                   </a>
                 </li>
@@ -118,44 +91,30 @@ const Footer = () => {
           {/* div 2 */}
           <div className="md:grid md:grid-cols-2">
             <div>
-              <h3 className="font-semibold leading-6 text-orange-950">
-                Guides
-              </h3>
+              <h3 className="font-semibold leading-6">Guides</h3>
               <ul className="mt-4 space-y-3">
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Community guides
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Installation guides
                   </a>
                 </li>
               </ul>
             </div>
             <div className="mt-10 md:mt-0">
-              <h3 className="font-semibold leading-6 text-orange-950">Legal</h3>
+              <h3 className="font-semibold leading-6">Legal</h3>
               <ul className="mt-4 space-y-3">
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Terms
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#"
-                    className="text-sm leading-6 text-orange-600 hover:text-orange-900"
-                  >
+                  <a href="#" className="text-sm leading-6">
                     Privacy
                   </a>
                 </li>

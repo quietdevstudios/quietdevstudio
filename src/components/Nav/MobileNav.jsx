@@ -1,9 +1,11 @@
 import React, { Fragment } from "react";
-import brandLogo from "/assets/images/apple-touch-icon.png";
-import { NAV_LINKS } from "../../../data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router";
+
+import brandLogo from "/assets/images/apple-touch-icon.png";
+import { NAV_LINKS } from "../../../data";
 
 const MobileNav = ({ isNavOpen, toggleNav }) => {
   return (
@@ -16,7 +18,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
       )}
       {isNavOpen && (
         <>
-          <section className="bg-zinc-600 fixed top-0 left-0 bottom-0 right-1/3 z-50 backdrop-blur-2xl md:hidden">
+          <section className="bg-zinc-800 fixed top-0 left-0 bottom-0 right-1/3 z-50 backdrop-blur-2xl md:hidden">
             <div className="flex items-center tracking-tighter">
               <img src={brandLogo} className="w-24 cursor-pointer" />
               <h2 className="h-12 leading-normal text-2xl text-orange-100">
@@ -31,6 +33,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                   const defaultStyle =
                     "font-semibold leading-10 text-white text-lg";
                   const getStarted = "font-semibold text-white text-lg";
+                  const activeLink = `text-[#f97316]  ${defaultStyle}`;
 
                   return (
                     <Fragment key={navLink.linkText}>
@@ -41,20 +44,22 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                             : "mb-6"
                         }`}
                       >
-                        <a
-                          href={hyperLink}
+                        <NavLink
+                          to={hyperLink}
                           target={`${linkText === "Community" && "blank"}`}
-                          className={`${
-                            linkText === "Get Started"
+                          className={({ isActive }) =>
+                            isActive
+                              ? activeLink
+                              : linkText === "Get Started"
                               ? getStarted
                               : defaultStyle
-                          }`}
+                          }
                         >
                           <span className="flex items-center gap-4">
-                            {/* <FontAwesomeIcon icon={faImage} size="2x" /> */}
+                            {/* <FontAwesomeIcon icon={faImage} size="sm" /> */}
                             {linkText}
                           </span>
-                        </a>
+                        </NavLink>
                       </li>
 
                       {linkText === "Get Started" && (
