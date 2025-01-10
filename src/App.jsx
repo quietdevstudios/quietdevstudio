@@ -9,6 +9,8 @@ import Errorpage from "./pages/Errorpage";
 import RootLayout from "./pages/RootLayout";
 import MyLearning from "./pages/MyLearning";
 import About from "./pages/About";
+import GetStarted from "./pages/GetStarted";
+import SignIn from "./pages/Signin";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -32,6 +34,15 @@ const App = () => {
         {
           path: "about",
           element: <About />,
+        },
+        {
+          path: "signup",
+          element: <GetStarted />,
+        },
+
+        {
+          path: "signin",
+          element: <SignIn />,
         },
       ],
     },

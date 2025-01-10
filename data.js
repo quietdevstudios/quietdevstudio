@@ -35,12 +35,12 @@ export const NAV_LINKS = [
   // },
   {
     linkText: "Sign in",
-    hyperLink: "#",
+    hyperLink: "signin",
     faImage: faBookOpen
   },
   {
     linkText: "Get Started",
-    hyperLink: "#",
+    hyperLink: "signup",
     faImage: faBookOpen
   },
 ];

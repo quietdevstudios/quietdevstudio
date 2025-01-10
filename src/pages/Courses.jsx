@@ -12,7 +12,7 @@ import uiux from "/uiux.svg";
 const Courses = () => {
   return (
     <section>
-      <article className="relative bg-zinc-700">
+      <article className="relative bg-zinc-800">
         <header className="p-6">
           <h1 className="text-[2.25rem] font-bold tracking-wide leading-tight text-orange-200 md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Quietdev Studios Curriculum

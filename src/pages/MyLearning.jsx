@@ -13,7 +13,7 @@ const MyLearning = () => {
   const [showContent, setShowContent] = useState(false);
   return (
     <section className="font-montserrat">
-      <header className="bg-zinc-700 flex flex-col items-center justify-center">
+      <header className="bg-zinc-800 flex flex-col items-center justify-center">
         <h1 className="text-white text-4xl text-center font-semibold p-[3rem]">
           My learning
         </h1>
