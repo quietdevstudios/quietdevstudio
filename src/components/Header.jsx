@@ -38,6 +38,7 @@ const Header = () => {
                   <li>
                     <a
                       href={hyperLink}
+                      target={`${linkText === "Community" && "blank"}`}
                       className={`${
                         linkText === "Get Started" ? getStarted : defaultStyle
                       }`}

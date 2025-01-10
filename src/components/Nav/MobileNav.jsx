@@ -31,7 +31,6 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                   const defaultStyle =
                     "font-semibold leading-10 text-white text-lg";
                   const getStarted = "font-semibold text-white text-lg";
-                  const borderStyle = "border";
 
                   return (
                     <Fragment key={navLink.linkText}>
@@ -44,6 +43,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                       >
                         <a
                           href={hyperLink}
+                          target={`${linkText === "Community" && "blank"}`}
                           className={`${
                             linkText === "Get Started"
                               ? getStarted

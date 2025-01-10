@@ -25,7 +25,7 @@ export const NAV_LINKS = [
   },
   {
     linkText: "Community",
-    hyperLink: "#",
+    hyperLink: "https://chat.whatsapp.com/C9lCAAYQtEyEWOX880NnTv",
     faImage: faCommentNodes
   },
   // {
