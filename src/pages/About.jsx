@@ -46,11 +46,14 @@ const About = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Our Mission
             </h2>
-            <p className="text-gray-600">
-              At Quietdev Studios, our mission is to make learning accessible,
-              engaging, and practical. We strive to create a supportive
-              community where students can learn at their own pace and build
-              real-world projects to showcase their skills.
+            <p className="text-gray-600 tracking-tighter leading-relaxed">
+              At Quietdev Studios, our mission is to make learning simple,
+              engaging, and stress-free. We aim to provide an environment where
+              learners can grasp complex concepts in less time through clear,
+              structured lessons and practical projects. Our focus is on
+              reducing the barriers to understanding, ensuring that every
+              learner feels supported and empowered to succeed in their tech
+              journey.
             </p>
           </div>
 
@@ -59,11 +62,12 @@ const About = () => {
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Our Vision
             </h2>
-            <p className="text-gray-600">
-              To be the go-to platform for aspiring developers worldwide,
-              fostering creativity, innovation, and a love for technology. We
-              envision a future where anyone can become a tech leader with the
-              right guidance and resources.
+            <p className="text-gray-600 tracking-tighter leading-relaxed">
+              Our vision is to become the leading platform worldwide, recognized
+              for our innovative and accessible approach to learning. We strive
+              to create a future where no learner feels overwhelmed or left
+              behind, fostering a global community of confident and skilled
+              learners who are ready to shape the tech industry.
             </p>
           </div>
 
