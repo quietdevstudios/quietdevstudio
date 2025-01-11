@@ -14,26 +14,32 @@ const Courses = () => {
   return (
     <section>
       <article className="relative bg-zinc-800">
-        <header className="p-6">
-          <h1 className="text-[2.25rem] font-bold tracking-wide leading-tight text-orange-200 md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
-            Quietdev Studios Curriculum
-          </h1>
-          <h4 className="text-[1.5rem] font-medium tracking-wide leading-6 mt-2 text-white">
-            The essential skillset for new front-end developers
-          </h4>
-          <p className="mt-4 font-medium text-md text-white">
-            The Quietdev Studio Curriculum provides a structured guide to the
-            essential skills and practices for being a successful front-end
-            developer, along with recommended learning resources.
-          </p>
+        <section className="sm:grid sm:grid-cols-2 sm:grid-rows-1 w-[95%] max-w-7xl xl:mx-auto">
+          <header className="p-6 sm:grid sm:place-self-center">
+            <h1 className="w-full text-[2rem] font-bold tracking-wide leading-tight text-orange-200 md:text-[2.5rem] lg:text-[3.25rem]">
+              Quietdev Studios Curriculum
+            </h1>
+            <h4 className="text-[1.5rem] font-medium tracking-wide leading-6 mt-2 text-white md:text-[2rem] md:leading-8">
+              The essential skillset for new front-end developers
+            </h4>
+            <p className="mt-4 font-medium text-md text-white">
+              The Quietdev Studio Curriculum provides a structured guide to the
+              essential skills and practices for being a successful front-end
+              developer, along with recommended learning resources.
+            </p>
 
-          <p className="mt-10 font-regular text-md tracking-wide leading-tight text-white">
-            Last Updated: January 2025.
-          </p>
-        </header>
-        <figure>
-          <img src={vector} alt="vector image" />
-        </figure>
+            <p className="mt-10 font-regular text-md tracking-wide leading-tight text-white">
+              Last Updated: January 2025.
+            </p>
+          </header>
+          <figure className="sm:flex sm:items-end">
+            <img
+              src={vector}
+              alt="vector image"
+              className="w-[30rem] mx-auto md:max-w-[28rem]"
+            />
+          </figure>
+        </section>
         <section className="flex items-center justify-evenly bg-orange-400 w-[80%] md:max-w-[60%] mx-auto p-6 absolute -bottom-14 left-0 right-0 rounded-md text-white font-medium text-2xl tracking-tighter">
           <div>
             {/* <FontAwesomeIcon icon={faGraduationCap} /> */}
@@ -46,8 +52,8 @@ const Courses = () => {
       </article>
 
       {/* about the curriculum */}
-      <section>
-        <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-28 px-6 md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
+      <section className="w-[95%] max-w-7xl xl:mx-auto">
+        <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-28 w-[95%] mx-auto md:text-[2.5rem] lg:text-[3.25rem]">
           About the curriculum
         </h1>
         <div className="flex flex-col gap-4 text-md font-regular tracking-tight px-16 my-10">
@@ -72,11 +78,11 @@ const Courses = () => {
         </div>
       </section>
 
-      <section>
-        <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 px-6 md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
+      <section className="w-[95%] max-w-7xl xl:mx-auto">
+        <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 px-6 md:text-[2.5rem] lg:text-[3.25rem]">
           All Roadmaps
         </h1>
-        <section className="px-6 flex flex-col gap-10 py-6 w-full">
+        <section className="px-6 flex flex-col gap-10 py-6 w-full sm:grid sm:grid-cols-2 lg:grid-cols-3">
           <div className="shadow-zinc-300 shadow-lg flex flex-col cursor-pointer justify-between h-96 mb-4">
             <div className="w-full h-32">
               <img src={FE} className="h-full w-full object-cover" />

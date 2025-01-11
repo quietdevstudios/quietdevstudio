@@ -16,7 +16,11 @@ export const GetStarted = () => {
         </h2>
         <p className="mb-4 text-sm">
           Or{" "}
-          <a href="signin" className="hover:underline" style={{ color: "#b76d68" }}>
+          <a
+            href="signin"
+            className="hover:underline"
+            style={{ color: "#b76d68" }}
+          >
             sign in to your existing account
           </a>
         </p>
@@ -99,12 +103,7 @@ export const GetStarted = () => {
           </p>
           <button
             type="submit"
-            className="w-full py-2 px-4 rounded-lg font-semibold"
-            style={{
-              backgroundColor: "#b76d68",
-              color: "#ffffff",
-              hover: { backgroundColor: "#403f4c" },
-            }}
+            className="w-full py-2 px-4 rounded-lg font-semibold text-white bg-[#b76d68] hover:bg-[#8a524e]"
           >
             Sign up
           </button>

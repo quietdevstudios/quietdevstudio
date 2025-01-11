@@ -16,7 +16,11 @@ export const SignIn = () => {
         </h2>
         <p className="mb-4 text-sm">
           Or{" "}
-          <a href="signup" className="hover:underline" style={{ color: "#b76d68" }}>
+          <a
+            href="signup"
+            className="hover:underline"
+            style={{ color: "#b76d68" }}
+          >
             sign up for a new account
           </a>
         </p>

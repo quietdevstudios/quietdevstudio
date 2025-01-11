@@ -36,7 +36,6 @@ const App = () => {
           path: "signup",
           element: <GetStarted />,
         },
-
         {
           path: "signin",
           element: <SignIn />,
@@ -46,7 +45,7 @@ const App = () => {
           element: <Form />,
         },
         {
-          path: "courses",
+          path: "my-learning",
           element: <MyLearning />,
         },
       ],
