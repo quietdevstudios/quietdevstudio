@@ -29,10 +29,6 @@ const App = () => {
           element: <Courses />,
         },
         {
-          path: "courses",
-          element: <MyLearning />,
-        },
-        {
           path: "about",
           element: <About />,
         },
@@ -48,6 +44,10 @@ const App = () => {
         {
           path: "form",
           element: <Form />,
+        },
+        {
+          path: "courses",
+          element: <MyLearning />,
         },
       ],
     },
