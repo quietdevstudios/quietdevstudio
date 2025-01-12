@@ -116,7 +116,7 @@ const Courses = () => {
                 href="form"
                 className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600"
               >
-                Enroll Now
+                Add to cart
               </a>
             </div>
           </div>
@@ -152,7 +152,7 @@ const Courses = () => {
                 </span>
               </p>
               <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
-                Enroll Now
+                Add to cart
               </p>
             </div>
           </div>
@@ -188,7 +188,7 @@ const Courses = () => {
                 </span>
               </p>
               <p className="bg-orange-200 p-2 px-4 rounded-md w-fit hover:bg-orange-300 hover:text-zinc-600">
-                Enroll Now
+                Add to cart
               </p>
             </div>
           </div>
