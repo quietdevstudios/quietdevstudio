@@ -6,6 +6,7 @@ import { NavLink } from "react-router";
 import brandLogo from "/assets/images/apple-touch-icon.png";
 import { NAV_LINKS } from "../../data";
 import MobileNav from "./Nav/MobileNav";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -66,14 +67,27 @@ const Header = () => {
           </ul>
         </nav>
 
-        <button
-          onClick={toggleNav}
-          className="flex flex-col mb-1 p-2 md:hidden"
-        >
-          <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
-          <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
-          <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
-        </button>
+        <div className="flex items-center justify-center gap-10">
+          <div className="relative">
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              color="#ffcc80"
+              size="xl"
+              className="cursor-pointer"
+            />
+            <span className="text-[#fff] absolute -top-5 left-6 text-lg font-medium">
+              0
+            </span>
+          </div>
+          <button
+            onClick={toggleNav}
+            className="flex flex-col mb-1 p-2 md:hidden"
+          >
+            <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
+            <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
+            <div className="w-6 h-[2px] bg-orange-400 m-1"></div>
+          </button>
+        </div>
       </section>
     </header>
   );
