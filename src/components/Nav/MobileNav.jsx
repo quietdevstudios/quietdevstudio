@@ -6,6 +6,7 @@ import { NavLink } from "react-router";
 
 import { NAV_LINKS } from "../../../data";
 import Profilesection from "../Profilesection";
+import UserSection from "../UserSection";
 
 const MobileNav = ({ isNavOpen, toggleNav }) => {
   return (
@@ -13,7 +14,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
       {isNavOpen && (
         <div
           className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40 backdrop-blur-sm md:hidden"
-          onClick={toggleNav} // Close nav when clicking on the backdrop
+          onClick={toggleNav}
         ></div>
       )}
       {isNavOpen && (
@@ -23,9 +24,8 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
             <nav className="p-6">
               <ul>
                 {NAV_LINKS.map((navLink) => {
-                  const { hyperLink, linkText, faImage } = navLink;
+                  const { hyperLink, linkText } = navLink;
                   const defaultStyle = "font-semibold leading-10 text-lg";
-                  // const getStarted = "font-semibold text-white text-lg";
                   const activeLink = `text-[#f97316] ${defaultStyle}`;
 
                   return (
@@ -34,7 +34,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                         <NavLink
                           to={hyperLink}
                           target={`${linkText === "Community" && "blank"}`}
-                          className={({ isActive, linkText }) =>
+                          className={({ isActive }) =>
                             isActive ? activeLink : defaultStyle + " text-white"
                           }
                         >
@@ -62,7 +62,12 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                 })}
               </ul>
               <Fragment>
-                <header className="text-white text-xl">Alerts</header>
+                {/* <header className="font-semibold leading-10 text-2xl text-white my-10">
+                  <ul>
+                    <li>Alerts</li>
+                  </ul>
+                </header> */}
+                <UserSection />
               </Fragment>
             </nav>
           </section>
