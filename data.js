@@ -36,7 +36,7 @@ export const NAV_LINKS = [
   //   faImage: faBookOpen
   // },
   {
-    linkText: "Sign in",
+    linkText: "Sign In",
     hyperLink: "signin",
     faImage: faBookOpen,
   },

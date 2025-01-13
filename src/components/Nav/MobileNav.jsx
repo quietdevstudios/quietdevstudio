@@ -24,53 +24,40 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
               <ul>
                 {NAV_LINKS.map((navLink) => {
                   const { hyperLink, linkText, faImage } = navLink;
-                  const defaultStyle =
-                    "font-semibold leading-10 text-white text-lg";
-                  const getStarted = "font-semibold text-white text-lg";
-                  const activeLink = `text-[#f97316]  ${defaultStyle}`;
+                  const defaultStyle = "font-semibold leading-10 text-lg";
+                  // const getStarted = "font-semibold text-white text-lg";
+                  const activeLink = `text-[#f97316] ${defaultStyle}`;
 
                   return (
-                    <>
-                      <Fragment key={navLink.linkText}>
-                        <li
-                          className={`${
-                            linkText === "Sign In"
-                              ? "border border-red-300"
-                              : "mb-6"
-                          }`}
+                    <Fragment key={navLink.linkText}>
+                      <li className="mb-6">
+                        <NavLink
+                          to={hyperLink}
+                          target={`${linkText === "Community" && "blank"}`}
+                          className={({ isActive, linkText }) =>
+                            isActive ? activeLink : defaultStyle + " text-white"
+                          }
                         >
-                          <NavLink
-                            to={hyperLink}
-                            target={`${linkText === "Community" && "blank"}`}
-                            className={({ isActive }) =>
-                              isActive
-                                ? activeLink
-                                : linkText === "Get Started"
-                                ? getStarted
-                                : defaultStyle
-                            }
-                          >
-                            <span className="flex items-center gap-4">
-                              {/* <FontAwesomeIcon icon={faImage} size="sm" /> */}
-                              {linkText}
-                            </span>
-                          </NavLink>
-                        </li>
+                          <span className="flex items-center gap-4">
+                            {/* <FontAwesomeIcon icon={faImage} size="sm" /> */}
+                            {linkText}
+                          </span>
+                        </NavLink>
+                      </li>
 
-                        {linkText === "Get Started" && (
-                          <>
-                            <span className="text-white font-semibold mr-2 text-lg">
-                              toggle Mode
-                            </span>
-                            <FontAwesomeIcon
-                              icon={faMoon}
-                              size="xl"
-                              className="text-white cursor-pointer"
-                            />
-                          </>
-                        )}
-                      </Fragment>
-                    </>
+                      {linkText === "Get Started" && (
+                        <>
+                          <span className="text-white font-semibold mr-2 text-lg">
+                            toggle Mode
+                          </span>
+                          <FontAwesomeIcon
+                            icon={faMoon}
+                            size="xl"
+                            className="text-white cursor-pointer"
+                          />
+                        </>
+                      )}
+                    </Fragment>
                   );
                 })}
               </ul>
