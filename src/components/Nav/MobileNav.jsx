@@ -19,7 +19,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
       )}
       {isNavOpen && (
         <>
-          <section className="bg-zinc-800 fixed top-0 left-0 bottom-0 right-1/3 z-50 backdrop-blur-2xl md:hidden">
+          <section className="bg-zinc-800 fixed top-0 left-0 bottom-0 right-1/3 z-50 backdrop-blur-2xl overflow-y-auto md:hidden">
             <Profilesection />
             <nav className="p-6">
               <ul>
@@ -50,7 +50,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                           <span className="text-white font-semibold mr-2 text-lg">
                             toggle Mode
                           </span>
-                          <FontAwesomeIcon 
+                          <FontAwesomeIcon
                             icon={faMoon}
                             size="xl"
                             className="text-white cursor-pointer"
