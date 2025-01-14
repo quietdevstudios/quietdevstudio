@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router";
 
 import PurchasedCourses from "../components/PurchasedCourses";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 const MyLearning = () => {
   return (
@@ -10,20 +15,36 @@ const MyLearning = () => {
         <h1 className="text-white text-4xl text-center font-semibold p-[3rem]">
           My learning
         </h1>
-        <nav className="flex items-end justify-start w-full px-8">
-          <ul className="flex gap-6">
+        <nav className="flex items-end justify-between w-full px-8">
+          <button className="border border-zinc-600 rounded-full w-12 h-12 mr-2">
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              size="2x"
+              color="#fff"
+              className=""
+            />
+          </button>
+          <ul className="flex gap-6 overflow-x-scroll scrollbar-hide space-x-4 h-full">
             <li className="text-white font-bold text-[1rem] tracking-wide border-b-8 border-orange-600 w-fit">
               <a href="#">All courses</a>
             </li>
 
-            <li className="text-white font-bold text-[1rem] tracking-wide">
+            <li className="text-white text-[1rem] font-bold tracking-wide">
               <a href="#">Wishlist</a>
             </li>
 
-            <li className="text-white font-bold text-[1rem] tracking-wide">
+            <li className="text-white font-bold tracking-wide">
               <a href="#">Learning tools</a>
             </li>
           </ul>
+          <button className="border border-zinc-600 rounded-full w-12 h-12 mr-2">
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              size="2x"
+              color="#fff"
+              className=""
+            />
+          </button>
         </nav>
       </header>
 
