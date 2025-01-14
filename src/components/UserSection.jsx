@@ -1,6 +1,7 @@
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
+import { NavLink } from "react-router";
 
 const UserSection = () => {
   const [alertsOpen, setAlertsOpen] = useState(false);
@@ -32,9 +33,9 @@ const UserSection = () => {
         {alertsOpen && (
           <ul className="list-disc pl-5 text-gray-600">
             <li>
-              <a href="/notification" className={linkStyle}>
+              <NavLink to="/notification" className={linkStyle}>
                 Notification
-              </a>
+              </NavLink>
             </li>
           </ul>
         )}
@@ -64,14 +65,14 @@ const UserSection = () => {
         {accountsOpen && (
           <ul className="list-disc pl-5 text-gray-600">
             <li>
-              <a href="/account-settings" className={linkStyle}>
+              <NavLink to="/account-settings" className={linkStyle}>
                 Account Settings
-              </a>
+              </NavLink>
             </li>
             <li>
-              <a href="/purchase-history" className={linkStyle}>
+              <NavLink to="/purchase-history" className={linkStyle}>
                 Purchase History
-              </a>
+              </NavLink>
             </li>
           </ul>
         )}

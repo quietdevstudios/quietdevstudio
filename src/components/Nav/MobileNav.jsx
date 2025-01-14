@@ -30,7 +30,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
 
                   return (
                     <Fragment key={navLink.linkText}>
-                      <li className="mb-6 border">
+                      <li className="mb-6">
                         <NavLink
                           to={hyperLink}
                           target={`${linkText === "Community" ? "_blank" : ""}`}
@@ -40,7 +40,6 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                           onClick={toggleNav}
                         >
                           <span className="flex items-center gap-4">
-                            {/* <FontAwesomeIcon icon={faImage} size="sm" /> */}
                             {linkText}
                           </span>
                         </NavLink>
@@ -62,9 +61,9 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                   );
                 })}
               </ul>
-              <Fragment>
+              <>
                 <UserSection />
-              </Fragment>
+              </>
             </nav>
           </section>
 

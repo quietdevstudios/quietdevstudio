@@ -18,12 +18,12 @@ const Header = () => {
   return (
     <header className="bg-zinc-800 h-20 text-orange-950 font-montserrat sticky top-0 z-50 border-b border-zinc-700 ">
       <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
-        <a href="/" className="flex items-center justify-center">
+        <NavLink to="/" className="flex items-center justify-center">
           <img src={brandLogo} className="w-24 cursor-pointer" />
           <h2 className="font-semibold leading-normal text-xl text-white hidden lg:flex lg:text-[1.25rem] relative right-5">
             Quietdev Studios
           </h2>
-        </a>
+        </NavLink>
 
         {isNavOpen && <MobileNav isNavOpen={isNavOpen} toggleNav={toggleNav} />}
 
