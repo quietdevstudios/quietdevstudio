@@ -31,7 +31,7 @@ const Header = () => {
             {NAV_LINKS.map((navLink) => {
               const { hyperLink, linkText } = navLink;
               const defaultStyle =
-                "font-medium leading-6 text-white hover:text-orange-500 hover:border-b-2 hover:border-orange-400 pb-1 text-[0.9rem] lg:text-[0.95rem]";
+                "font-medium leading-6 hover:text-orange-500 hover:border-b-2 hover:border-orange-400 pb-1 text-[0.9rem] lg:text-[0.95rem]";
               const getStarted =
                 "font-medium leading-6 text-white bg-orange-600 md:px-4 md:py-3 rounded-md hover:bg-orange-500 text-[0.9rem] lg:text-[0.95rem]";
               const activeLink = `text-[#f97316] border-b-2 border-orange-400  ${defaultStyle}`;
@@ -47,7 +47,7 @@ const Header = () => {
                           ? activeLink
                           : linkText === "Get Started"
                           ? getStarted
-                          : defaultStyle
+                          : defaultStyle + " text-white"
                       }
                     >
                       {linkText}
