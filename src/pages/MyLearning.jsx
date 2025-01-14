@@ -16,27 +16,11 @@ const MyLearning = () => {
           My learning
         </h1>
         <nav className="flex items-end justify-between w-full px-[1.5rem]">
-          {/* <button className="border border-zinc-600 rounded-full w-12 h-12 mr-2 md:hidden">
-            <FontAwesomeIcon
-              icon={faChevronLeft}
-              size="2x"
-              color="#fff"
-              className=""
-            />
-          </button> */}
           <ul className="flex gap-6 overflow-x-scroll scrollbar-hide space-x-4 px-[1.5rem] h-full w-[95%] max-w-7xl xl:mx-auto">
             <li className="text-white font-bold text-[1.25rem] tracking-wide border-b-8 border-orange-600 w-fit">
               <a href="#">All courses</a>
             </li>
           </ul>
-          {/* <button className="border border-zinc-600 rounded-full w-12 h-12 mr-2 sm:hidden">
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              size="2x"
-              color="#fff"
-              className=""
-            />
-          </button> */}
         </nav>
       </header>
 
