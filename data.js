@@ -1,6 +1,8 @@
-import { faBookOpen, faCircleQuestion, faCommentNodes } from "@fortawesome/free-solid-svg-icons";
-
-
+import {
+  faBookOpen,
+  faCircleQuestion,
+  faCommentNodes,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const NAV_LINKS = [
   // {
@@ -11,22 +13,22 @@ export const NAV_LINKS = [
   {
     linkText: "Curriculum",
     hyperLink: "curriculum",
-    faImage: faBookOpen
+    faImage: faBookOpen,
   },
   {
     linkText: "My Learning",
     hyperLink: "my-learning",
-    faImage: faBookOpen
+    faImage: faBookOpen,
   },
   {
     linkText: "About",
     hyperLink: "about",
-    faImage: faCircleQuestion
+    faImage: faCircleQuestion,
   },
   {
     linkText: "Community",
     hyperLink: "https://chat.whatsapp.com/C9lCAAYQtEyEWOX880NnTv",
-    faImage: faCommentNodes
+    faImage: faCommentNodes,
   },
   // {
   //   linkText: "Templates",
@@ -34,14 +36,14 @@ export const NAV_LINKS = [
   //   faImage: faBookOpen
   // },
   {
-    linkText: "Sign in",
+    linkText: "Sign In",
     hyperLink: "signin",
-    faImage: faBookOpen
+    faImage: faBookOpen,
   },
   {
     linkText: "Get Started",
     hyperLink: "signup",
-    faImage: faBookOpen
+    faImage: faBookOpen,
   },
 ];
 
