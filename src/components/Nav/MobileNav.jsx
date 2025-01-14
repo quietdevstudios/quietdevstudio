@@ -50,7 +50,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                           <span className="text-white font-semibold mr-2 text-lg">
                             toggle Mode
                           </span>
-                          <FontAwesomeIcon
+                          <FontAwesomeIcon 
                             icon={faMoon}
                             size="xl"
                             className="text-white cursor-pointer"
