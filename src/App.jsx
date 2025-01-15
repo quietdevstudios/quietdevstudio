@@ -13,6 +13,7 @@ import SignIn from "./pages/Signin";
 import Form from "./pages/Form";
 import Coursedetail from "./pages/Coursedetail";
 import Curriculum from "./pages/Curriculum";
+import CourseLayout from "./pages/CourseLayout";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -51,7 +52,13 @@ const App = () => {
         },
         {
           path: "my-learning/:courseId",
-          element: <Coursedetail />,
+          element: <CourseLayout />,
+          children: [
+            {
+              index: true,
+              element: <Coursedetail />,
+            },
+          ],
         },
       ],
     },

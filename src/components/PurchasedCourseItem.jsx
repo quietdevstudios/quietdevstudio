@@ -3,7 +3,7 @@ import React from "react";
 
 const PurchasedCourseItem = ({ course }) => {
   //   const params = useParams();
-  return <div>{course}</div>;
+  return <div className="h-screen text-center">{course}</div>;
 };
 
 export default PurchasedCourseItem;
