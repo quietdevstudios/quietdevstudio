@@ -7,6 +7,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { PURCHASEDCOURSES } from "../../data";
 
 const MyLearning = () => {
   return (
@@ -25,8 +26,8 @@ const MyLearning = () => {
       </header>
 
       {/* depending on whether there are available courses, i will display dynamic contents. either the main tag with it's content(if i get an empty arr []) or purchased courses I get from server, else if there are no purchased courses by that user, I display the main tag with it's content in it. */}
-      <main className={`flex flex-col items-center justify-center h-screen`}>
-        <>
+      <main className={`flex flex-col items-center justify-center h-scren`}>
+        {/* <>
           <h2 className="text-2xl font-bold text-center tracking-wide">
             Explore Over 50,000 Courses and Start Learning Today!
           </h2>
@@ -34,14 +35,53 @@ const MyLearning = () => {
             Your purchased courses will be displayed here.
           </p>
           <Link
-            to="/curriculum"
+            to="/course-detail"
             className="border-b-2 border-orange-600 w-fit text-orange-600 text-lg font-bold tracking-wide"
           >
             Browse courses.
           </Link>
-        </>
+        </> */}
 
-        {/* <PurchasedCourses /> */}
+        {PURCHASEDCOURSES.map((courses) => {
+          return <PurchasedCourses key={courses.id} {...courses} />;
+        })}
+
+        <section className="p-2">
+          <div className="flex items-center justify-center gap-4 py-2">
+            <FontAwesomeIcon
+              icon={faChevronLeft}
+              className="border border-orange-300 p-3 rounded-full w-4 h-4 cursor-pointer"
+            />
+            <ul className="flex gap-6 p-2 text-zinc-600">
+              <li>
+                <a
+                  href="#"
+                  className="border-b-[.2rem] border-orange-600 px-2 py-1"
+                >
+                  1
+                </a>
+              </li>
+              <li>
+                <a href="#">2</a>
+              </li>
+              <li>
+                <a href="#">3</a>
+              </li>
+              <li>
+                <a href="#">4</a>
+              </li>
+            </ul>
+            <FontAwesomeIcon
+              icon={faChevronRight}
+              className="border border-orange-300 p-3 rounded-full w-4 h-4 cursor-pointer"
+            />
+          </div>
+          <div>
+            <p className="text-center tracking-wider text-sm text-zinc-600">
+              1-3 of 10 courses
+            </p>
+          </div>
+        </section>
       </main>
     </section>
   );

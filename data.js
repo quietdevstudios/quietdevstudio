@@ -4,6 +4,11 @@ import {
   faCommentNodes,
 } from "@fortawesome/free-solid-svg-icons";
 
+// purchased courses image...
+import thumbnailImg from "/download.jpg";
+import cssImg from "/css.jpg";
+import jsImg from "/js.jpeg";
+
 export const NAV_LINKS = [
   // {
   //   linkText: "Home",
@@ -47,25 +52,23 @@ export const NAV_LINKS = [
   },
 ];
 
-export const COUNTDOWN = [
+export const PURCHASEDCOURSES = [
   {
-    topNumber: "00",
-    bottomNumber: "00",
-    unitsOfTime: "DAYS",
+    id: 'course1',
+    title: 'HTML for Beginners',
+    tutor: 'quietdev',
+    image: thumbnailImg
   },
   {
-    topNumber: "00",
-    bottomNumber: "00",
-    unitsOfTime: "HOURS",
+    id: 'course2',
+    title: 'CSS for Beginners',
+    tutor: 'quietdev',
+    image: cssImg
   },
   {
-    topNumber: "00",
-    bottomNumber: "00",
-    unitsOfTime: "MINUTES",
-  },
-  {
-    topNumber: "00",
-    bottomNumber: "00",
-    unitsOfTime: "SECONDS",
-  },
-];
+    id: 'course3',
+    title: 'JavaScript for Beginners',
+    tutor: 'quietdev',
+    image: jsImg
+  }
+]

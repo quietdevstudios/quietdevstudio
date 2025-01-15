@@ -10,7 +10,7 @@ import FE from "/FE.svg";
 import uiux from "/uiux.svg";
 import { Link } from "react-router";
 
-const Courses = () => {
+const Curriculum = () => {
   return (
     <section>
       <article className="relative bg-zinc-800">
@@ -198,4 +198,4 @@ const Courses = () => {
   );
 };
 
-export default Courses;
+export default Curriculum;
