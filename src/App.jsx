@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 // import Maintenance from "./components/Maintenance";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Errorpage from "./pages/Errorpage";
 import RootLayout from "./pages/RootLayout";
@@ -48,19 +48,10 @@ const App = () => {
         {
           path: "my-learning",
           element: <MyLearning />,
-          // loader: coursesLoader,
         },
         {
-          path: ":courseId",
-          id: "course-detail",
-          // element
-          // loader: courseDetailLoader
-          children: [
-            {
-              index: true,
-              element: <Coursedetail />,
-            },
-          ],
+          path: "my-learning/:courseId",
+          element: <Coursedetail />,
         },
       ],
     },

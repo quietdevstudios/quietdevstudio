@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 import PurchasedCourses from "../components/PurchasedCourses";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

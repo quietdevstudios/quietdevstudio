@@ -1,15 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
 import PurchasedCourseItem from "../components/PurchasedCourseItem";
-import { useParams, useRouteLoaderData } from "react-router";
 
 const Coursedetail = () => {
-    const course = useRouteLoaderData("course-detail");
-//   const params = useParams("course-detail");
-  return (
-    <div>
-      <PurchasedCourseItem course={course} />
-    </div>
-  );
+  const params = useParams();
+  return <PurchasedCourseItem course={params.courseId} />;
 };
 
 export default Coursedetail;
