@@ -54,21 +54,104 @@ export const NAV_LINKS = [
 
 export const PURCHASEDCOURSES = [
   {
-    id: 'course1',
-    title: 'HTML for Beginners',
-    tutor: 'quietdev',
-    image: thumbnailImg
+    id: "course1",
+    title: "HTML for Beginners",
+    tutor: "quietdev",
+    image: thumbnailImg,
   },
   {
-    id: 'course2',
-    title: 'CSS for Beginners',
-    tutor: 'quietdev',
-    image: cssImg
+    id: "course2",
+    title: "CSS for Beginners",
+    tutor: "quietdev",
+    image: cssImg,
   },
   {
-    id: 'course3',
-    title: 'JavaScript for Beginners',
-    tutor: 'quietdev',
-    image: jsImg
-  }
-]
+    id: "course3",
+    title: "JavaScript for Beginners",
+    tutor: "quietdev",
+    image: jsImg,
+  },
+];
+
+export const COURSECONTENT = [
+  {
+    id: "1",
+    courseTitle: "Introduction and Overview",
+    sectionNumber: 1,
+    completedSteps: 0,
+    totalSteps: 10,
+    estimatedTime: `${25}min`,
+  },
+  {
+    id: "2",
+    courseTitle: "HTML Basics",
+    sectionNumber: 2,
+    completedSteps: 0,
+    totalSteps: 20,
+    estimatedTime: `${35}min`,
+  },
+  {
+    id: "3",
+    courseTitle: "Text Formatting and Semantics",
+    sectionNumber: 3,
+    completedSteps: 0,
+    totalSteps: 30,
+    estimatedTime: `${20}min`,
+  },
+  {
+    id: "4",
+    courseTitle: "Links and Navigation",
+    sectionNumber: 4,
+    completedSteps: 0,
+    totalSteps: 12,
+    estimatedTime: `${15}min`,
+  },
+  {
+    id: "5",
+    courseTitle: "Images and Media",
+    sectionNumber: 5,
+    completedSteps: 0,
+    totalSteps: 15,
+    estimatedTime: `${15}min`,
+  },
+  {
+    id: "6",
+    courseTitle: "Tables",
+    sectionNumber: 6,
+    completedSteps: 0,
+    totalSteps: 8,
+    estimatedTime: `${45}min`,
+  },
+  {
+    id: "7",
+    courseTitle: "Forms",
+    sectionNumber: 7,
+    completedSteps: 0,
+    totalSteps: 6,
+    estimatedTime: `${35}min`,
+  },
+  {
+    id: "8",
+    courseTitle: "HTML5 Features",
+    sectionNumber: 8,
+    completedSteps: 0,
+    totalSteps: 5,
+    estimatedTime: `${12}min`,
+  },
+  {
+    id: "9",
+    courseTitle: "Structuring a Web Page",
+    sectionNumber: 9,
+    completedSteps: 0,
+    totalSteps: 25,
+    estimatedTime: `${50}min`,
+  },
+  {
+    id: "10",
+    courseTitle: "Accessibility and Best Practices",
+    sectionNumber: 10,
+    completedSteps: 0,
+    totalSteps: 20,
+    estimatedTime: `${15}min`,
+  },
+];
