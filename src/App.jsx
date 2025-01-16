@@ -1,7 +1,4 @@
 import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-// import Maintenance from "./components/Maintenance";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import Errorpage from "./pages/Errorpage";
