@@ -17,6 +17,8 @@ const PurchasedCourseItem = () => {
     );
   };
 
+  let topicCounter = 1;
+
   return (
     <main className="text-center font-montserrat">
       <video
@@ -47,6 +49,7 @@ const PurchasedCourseItem = () => {
               estimatedTime,
               sectionNumber,
               totalSteps,
+              topics,
             } = coursecontentitem;
             const isVisible = showContent === id;
             return (
@@ -71,20 +74,30 @@ const PurchasedCourseItem = () => {
                   </span>
                 </button>
                 {isVisible && (
-                  <li className="flex items-start gap-3 py-3">
-                    <div>
-                      <input type="checkbox" />
-                    </div>
-                    <div className="w-full flex flex-col gap-1">
-                      <h2 className="text-left">
-                        {sectionNumber}. {courseTitle}
-                      </h2>
-                      <span className="text-xs font-regular flex gap-2 items-center">
-                        <FontAwesomeIcon icon={faTv} />
-                        {estimatedTime}
-                      </span>
-                    </div>
-                  </li>
+                  <ul>
+                    {topics.map((topic) => {
+                      const { topicTitle, topicTime } = topic;
+                      return (
+                        <li
+                          key={topicCounter}
+                          className="flex items-start gap-3 py-3"
+                        >
+                          <div>
+                            <input type="checkbox" />
+                          </div>
+                          <div className="w-full flex flex-col gap-1">
+                            <h2 className="text-left">
+                              {topicCounter++}. {topicTitle}
+                            </h2>
+                            <span className="text-xs font-regular flex gap-2 items-center">
+                              <FontAwesomeIcon icon={faTv} />
+                              {topicTime}
+                            </span>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
                 )}
               </Fragment>
             );

@@ -81,6 +81,16 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 10,
     estimatedTime: `${25}min`,
+    topics: [
+      { topicTitle: "What is HTML?", topicTime: "10m" },
+      { topicTitle: "History and evolution of HTML", topicTime: "20m" },
+      { topicTitle: "Role of HTML in web development", topicTime: "15m" },
+      { topicTitle: "Basic structure of an HTML document", topicTime: "25m" },
+      {
+        topicTitle: "Tools for writing HTML (Code editors like VS Code)",
+        topicTime: "20m",
+      },
+    ],
   },
   {
     id: "2",
@@ -89,6 +99,12 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 20,
     estimatedTime: `${35}min`,
+    topics: [
+      { topicTitle: "HTML elements and tags", topicTime: "10m" },
+      { topicTitle: "Attributes and their usage", topicTime: "20m" },
+      { topicTitle: "Comments in HTML", topicTime: "15m" },
+      { topicTitle: "Nesting and hierarchy of elements", topicTime: "25m" },
+    ],
   },
   {
     id: "3",
@@ -97,6 +113,19 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 30,
     estimatedTime: `${20}min`,
+    topics: [
+      { topicTitle: "Headings (<h1> to <h6>)", topicTime: "10m" },
+      { topicTitle: "Paragraphs (<p>)", topicTime: "20m" },
+      {
+        topicTitle: "Bold, Italics, and Underline (<b>, <i>, <u>)",
+        topicTime: "15m",
+      },
+      {
+        topicTitle:
+          "Semantic tags (<article>, <section>, <header>, <footer>, etc.)",
+        topicTime: "25m",
+      },
+    ],
   },
   {
     id: "4",
@@ -105,6 +134,12 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 12,
     estimatedTime: `${15}min`,
+    topics: [
+      { topicTitle: "Creating hyperlinks (<a>)", topicTime: "10m" },
+      { topicTitle: "Absolute vs Relative URLs", topicTime: "20m" },
+      { topicTitle: "Opening links in new tabs", topicTime: "15m" },
+      { topicTitle: "Anchor links and navigation", topicTime: "25m" },
+    ],
   },
   {
     id: "5",
