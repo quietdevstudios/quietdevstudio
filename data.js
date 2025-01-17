@@ -148,6 +148,12 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 15,
     estimatedTime: `${15}min`,
+    topics: [
+      { topicTitle: "Creating hyperlinks (<a>)", topicTime: "10m" },
+      { topicTitle: "Absolute vs Relative URLs", topicTime: "20m" },
+      { topicTitle: "Opening links in new tabs", topicTime: "15m" },
+      { topicTitle: "Anchor links and navigation", topicTime: "25m" },
+    ],
   },
   {
     id: "6",
@@ -156,6 +162,12 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 8,
     estimatedTime: `${45}min`,
+    topics: [
+      { topicTitle: "Creating hyperlinks (<a>)", topicTime: "10m" },
+      { topicTitle: "Absolute vs Relative URLs", topicTime: "20m" },
+      { topicTitle: "Opening links in new tabs", topicTime: "15m" },
+      { topicTitle: "Anchor links and navigation", topicTime: "25m" },
+    ],
   },
   {
     id: "7",
@@ -164,6 +176,12 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 6,
     estimatedTime: `${35}min`,
+    topics: [
+      { topicTitle: "Creating hyperlinks (<a>)", topicTime: "10m" },
+      { topicTitle: "Absolute vs Relative URLs", topicTime: "20m" },
+      { topicTitle: "Opening links in new tabs", topicTime: "15m" },
+      { topicTitle: "Anchor links and navigation", topicTime: "25m" },
+    ],
   },
   {
     id: "8",
@@ -172,6 +190,12 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 5,
     estimatedTime: `${12}min`,
+    topics: [
+      { topicTitle: "Creating hyperlinks (<a>)", topicTime: "10m" },
+      { topicTitle: "Absolute vs Relative URLs", topicTime: "20m" },
+      { topicTitle: "Opening links in new tabs", topicTime: "15m" },
+      { topicTitle: "Anchor links and navigation", topicTime: "25m" },
+    ],
   },
   {
     id: "9",
@@ -180,6 +204,12 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 25,
     estimatedTime: `${50}min`,
+    topics: [
+      { topicTitle: "Creating hyperlinks (<a>)", topicTime: "10m" },
+      { topicTitle: "Absolute vs Relative URLs", topicTime: "20m" },
+      { topicTitle: "Opening links in new tabs", topicTime: "15m" },
+      { topicTitle: "Anchor links and navigation", topicTime: "25m" },
+    ],
   },
   {
     id: "10",
@@ -188,5 +218,11 @@ export const COURSECONTENT = [
     completedSteps: 0,
     totalSteps: 20,
     estimatedTime: `${15}min`,
+    topics: [
+      { topicTitle: "Creating hyperlinks (<a>)", topicTime: "10m" },
+      { topicTitle: "Absolute vs Relative URLs", topicTime: "20m" },
+      { topicTitle: "Opening links in new tabs", topicTime: "15m" },
+      { topicTitle: "Anchor links and navigation", topicTime: "25m" },
+    ],
   },
 ];
