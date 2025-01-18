@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import video from "/wontFail.mp4";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,9 +8,13 @@ import {
   faTv,
 } from "@fortawesome/free-solid-svg-icons";
 import { COURSECONTENT } from "../../data";
+import { HeaderContext } from "./store/HeaderContext";
 
 const PurchasedCourseItem = () => {
   const [showContent, setShowContent] = useState(false);
+  const { headerHeight, isXtraLargeScreen } = useContext(HeaderContext);
+  console.log(headerHeight);
+  console.log(isXtraLargeScreen);
 
   const handleShowContent = (contentId) => {
     setShowContent((prevContent) =>
@@ -40,10 +44,22 @@ const PurchasedCourseItem = () => {
           </ul>
         </nav>
       </section>
-      <section className="m-8 xl:m-0 xl:top-0">
-        <div className="xl:sticky xl:overflow-hidden xl:top-0">
-          <h2 className="text-xl font-bold text-left p-4">Course Content</h2>
-          <ul>
+      <section
+        className="m-8 xl:m-0"
+        style={
+          isXtraLargeScreen
+            ? {
+                top: `${headerHeight}px`,
+                height: `calc(100vh - ${headerHeight}px)`,
+              }
+            : {}
+        }
+      >
+        <div className="sticky top-[10rem]">
+          <h2 className="text-xl font-bold text-left p-4 border-2 border-red-300">
+            Course Content
+          </h2>
+          <ul className="xl:overflow-y-scroll">
             {COURSECONTENT.map((coursecontentitem) => {
               const {
                 id,

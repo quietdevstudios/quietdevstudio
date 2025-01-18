@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { NavLink } from "react-router";
@@ -7,16 +7,21 @@ import brandLogo from "/assets/images/apple-touch-icon.png";
 import { NAV_LINKS } from "../../data";
 import MobileNav from "./Nav/MobileNav";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { HeaderContext } from "./store/HeaderContext";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const { headerRef } = useContext(HeaderContext);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
 
   return (
-    <header className="bg-zinc-800 h-20 text-orange-950 font-montserrat sticky top-0 z-50 border-b border-zinc-700 ">
+    <header
+      ref={headerRef}
+      className="bg-zinc-800 h-20 text-orange-950 font-montserrat sticky top-0 z-50 border-b border-zinc-700 "
+    >
       <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
         <NavLink to="/" className="flex items-center justify-center">
           <img src={brandLogo} className="w-24 cursor-pointer" />
@@ -42,7 +47,9 @@ const Header = () => {
                   <li>
                     <NavLink
                       to={hyperLink}
-                      target={`${linkText === "Community" && "blank"}`}
+                      target={`${
+                        linkText === "Community" ? "_blank" : "_self"
+                      }`}
                       className={({ isActive }) =>
                         isActive
                           ? activeLink
