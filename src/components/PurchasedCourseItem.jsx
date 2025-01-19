@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import video from "/wontFail.mp4";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,16 +8,19 @@ import {
   faTv,
 } from "@fortawesome/free-solid-svg-icons";
 import { COURSECONTENT } from "../../data";
+import { HeaderContext } from "./store/HeaderContext";
 
 const PurchasedCourseItem = () => {
   const [showContent, setShowContent] = useState(false);
+  const { headerHeight, isXtraLargeScreen } = useContext(HeaderContext);
+  console.log(headerHeight);
+  console.log(isXtraLargeScreen);
+
   const handleShowContent = (contentId) => {
     setShowContent((prevContent) =>
       prevContent === contentId ? null : contentId
     );
   };
-
-  let topicCounter = 1;
 
   return (
     <main className="text-center font-montserrat lg:grid lg:grid-cols-3">
