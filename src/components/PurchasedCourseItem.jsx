@@ -20,26 +20,28 @@ const PurchasedCourseItem = () => {
   let topicCounter = 1;
 
   return (
-    <main className="text-center font-montserrat">
-      <video
-        controls
-        width="100%"
-        height="auto"
-        poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg"
-      >
-        <source src={video} type="video/mp4" />
-      </video>
-      <nav>
-        <ul className="flex items-center justify-center gap-6 p-4 bg-zinc-100 border-b-2 border-zinc-200 font-bold text-lg">
-          <li>
-            <NavLink>Course content</NavLink>
-          </li>
-          <li>
-            <NavLink>Overview</NavLink>
-          </li>
-        </ul>
-      </nav>
-      <section className="m-8">
+    <main className="text-center font-montserrat lg:grid lg:grid-cols-3">
+      <section className="sticky top-20 z-50 bg-zinc-300 lg:col-span-2 lg:z-0">
+        <video
+          controls
+          width="100%"
+          height="auto"
+          poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg"
+        >
+          <source src={video} type="video/mp4" />
+        </video>
+        <nav className="">
+          <ul className="flex items-center justify-center gap-6 p-4 bg-zinc-100 border-b-2 border-zinc-200 font-bold text-lg">
+            <li>
+              <NavLink>Course content</NavLink>
+            </li>
+            <li>
+              <NavLink>Overview</NavLink>
+            </li>
+          </ul>
+        </nav>
+      </section>
+      <section className="m-4 lg:m-0 lg:sticky lg:top-20">
         <ul>
           {COURSECONTENT.map((coursecontentitem) => {
             const {
@@ -80,7 +82,7 @@ const PurchasedCourseItem = () => {
                       return (
                         <li
                           key={topicCounter}
-                          className="flex items-start gap-3 py-3"
+                          className="flex items-start gap-4 py-4 px-4"
                         >
                           <div>
                             <input type="checkbox" />
