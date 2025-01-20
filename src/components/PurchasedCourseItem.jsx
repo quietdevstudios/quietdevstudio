@@ -84,7 +84,7 @@ const PurchasedCourseItem = () => {
                       const { topicTitle, topicTime } = topic;
                       return (
                         <li
-                          key={topicCounter}
+                          // key={topicCounter}
                           className="flex items-start gap-4 py-4 px-4"
                         >
                           <div>
@@ -92,7 +92,7 @@ const PurchasedCourseItem = () => {
                           </div>
                           <div className="w-full flex flex-col gap-1">
                             <h2 className="text-left">
-                              {topicCounter++}. {topicTitle}
+                              {}. {topicTitle}
                             </h2>
                             <span className="text-xs font-regular flex gap-2 items-center">
                               <FontAwesomeIcon icon={faTv} />
