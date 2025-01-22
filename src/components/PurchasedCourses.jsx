@@ -17,7 +17,7 @@ const PurchasedCourses = ({ id, title, tutor, image }) => {
           <div className="leading-6 flex flex-col mt-4 gap-1">
             <span className="border-2 border-zinc-600"></span>
             <span className="text-sm uppercase tracking-wider">
-              start course
+              start course / 50% complete
             </span>
           </div>
         </Link>

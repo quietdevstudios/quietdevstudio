@@ -1,20 +1,12 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { useState } from "react";
 import video from "/wontFail.mp4";
-import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronDown,
-  faChevronRight,
-  faTv,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faTv } from "@fortawesome/free-solid-svg-icons";
 import { COURSECONTENT } from "../../data";
-import { HeaderContext } from "./store/HeaderContext";
 
 const PurchasedCourseItem = () => {
   const [showContent, setShowContent] = useState(false);
-  const { headerHeight, isXtraLargeScreen } = useContext(HeaderContext);
-  console.log(headerHeight);
-  console.log(isXtraLargeScreen);
+  const [checkedTopics, setCheckedTopics] = useState({});
 
   const handleShowContent = (contentId) => {
     setShowContent((prevContent) =>
@@ -22,30 +14,41 @@ const PurchasedCourseItem = () => {
     );
   };
 
+  const toggleCheckbox = (topicId) => {
+    setCheckedTopics((prev) => ({
+      ...prev,
+      [topicId]: !prev[topicId],
+    }));
+  };
+
   return (
-    <main className="text-center font-montserrat lg:grid lg:grid-cols-3">
-      <section className="sticky top-20 z-50 bg-zinc-300 lg:col-span-2 lg:z-0">
-        <video
-          controls
-          width="100%"
-          height="auto"
-          poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg"
-        >
-          <source src={video} type="video/mp4" />
-        </video>
-        <nav className="">
+    <main className="text-center font-montserrat lg:flex lg:items-center lg:justify-center lg:absolute lg:top-[7.5rem] lg:bottom-0 lg:right-0 lg:left-0">
+      <section className="bg-zinc-300 w-full lg:max-w-full lg:h-auto lg:mx-auto lg:flex lg:flex-col lg:items-center lg:justify-center lg:sticky lg:top-20">
+        <div className="w-full">
+          <video
+            className="lg:flex lg:items-center lg:justify-center lg:flex-col lg:w-full lg:max-w-[70vw] lg:h-auto lg:max-h-[100vh] lg:mx-auto"
+            controls
+            width="100%"
+            height="auto"
+            poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        </div>
+        <nav className="lg:hidden">
           <ul className="flex items-center justify-center gap-6 p-4 bg-zinc-100 border-b-2 border-zinc-200 font-bold text-lg">
             <li>
-              <NavLink>Course content</NavLink>
-            </li>
-            <li>
-              <NavLink>Overview</NavLink>
+              <button>Course content</button>
             </li>
           </ul>
         </nav>
       </section>
-      <section className="m-4 lg:m-0 lg:sticky lg:top-20">
+
+      <section className="m-4 lg:m-0 lg:h-[900px] lg:overflow-auto">
         <ul>
+          <h1 className="px-6 py-4 font-medium capitalize text-center tracking-wide text-lg hidden lg:flex lg:flex-col">
+            Course content
+          </h1>
           {COURSECONTENT.map((coursecontentitem) => {
             const {
               id,
@@ -58,10 +61,10 @@ const PurchasedCourseItem = () => {
             } = coursecontentitem;
             const isVisible = showContent === id;
             return (
-              <Fragment key={id}>
+              <section key={id} className="lg:overflow-auto">
                 <button
                   onClick={() => handleShowContent(id)}
-                  className={`bg-zinc-100 py-6 px-4 text-left font-semibold text-[1rem] tracking-wide w-full border-t-2 border-zinc-400`}
+                  className="bg-zinc-100 p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t-2 border-orange-400"
                 >
                   <span className="flex items-center justify-between">
                     <h2>
@@ -70,8 +73,9 @@ const PurchasedCourseItem = () => {
                     <FontAwesomeIcon
                       icon={faChevronDown}
                       size="sm"
-                      className={`transform transition-transform
-                        ${isVisible && "rotate-180"}`}
+                      className={`transform transition-transform ${
+                        isVisible ? "rotate-180" : ""
+                      }`}
                     />
                   </span>
                   <span className="text-xs font-medium">
@@ -80,31 +84,33 @@ const PurchasedCourseItem = () => {
                 </button>
                 {isVisible && (
                   <ul>
-                    {topics.map((topic) => {
+                    {topics.map((topic, index) => {
                       const { topicTitle, topicTime } = topic;
                       return (
-                        <li
-                          // key={topicCounter}
-                          className="flex items-start gap-4 py-4 px-4"
+                        <button
+                          key={`${id}-${index}`}
+                          className="w-full flex items-start gap-4 py-4 px-4 my-4"
                         >
                           <div>
-                            <input type="checkbox" />
+                            <input
+                              type="checkbox"
+                              checked={!!checkedTopics[`${id}-${index}`]}
+                              onChange={() => toggleCheckbox(`${id}-${index}`)}
+                            />
                           </div>
                           <div className="w-full flex flex-col gap-1">
-                            <h2 className="text-left">
-                              {}. {topicTitle}
-                            </h2>
+                            <h2 className="text-left">{topicTitle}</h2>
                             <span className="text-xs font-regular flex gap-2 items-center">
                               <FontAwesomeIcon icon={faTv} />
                               {topicTime}
                             </span>
                           </div>
-                        </li>
+                        </button>
                       );
                     })}
                   </ul>
                 )}
-              </Fragment>
+              </section>
             );
           })}
         </ul>

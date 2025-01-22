@@ -16,8 +16,8 @@ export const NAV_LINKS = [
   //   faImage: faBookOpen
   // },
   {
-    linkText: "Curriculum",
-    hyperLink: "curriculum",
+    linkText: "Courses",
+    hyperLink: "courses",
     faImage: faBookOpen,
   },
   {

@@ -9,7 +9,7 @@ import GetStarted from "./pages/GetStarted";
 import SignIn from "./pages/Signin";
 import Form from "./pages/Form";
 import Coursedetail from "./pages/Coursedetail";
-import Curriculum from "./pages/Curriculum";
+import Courses from "./pages/Courses";
 import CourseLayout from "./pages/CourseLayout";
 
 const App = () => {
@@ -24,8 +24,8 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "curriculum",
-          element: <Curriculum />,
+          path: "courses",
+          element: <Courses />,
         },
         {
           path: "about",
@@ -47,15 +47,16 @@ const App = () => {
           path: "my-learning",
           element: <MyLearning />,
         },
+      ],
+    },
+
+    {
+      path: "my-learning/:courseId",
+      element: <CourseLayout />,
+      children: [
         {
-          path: "my-learning/:courseId",
-          element: <CourseLayout />,
-          children: [
-            {
-              index: true,
-              element: <Coursedetail />,
-            },
-          ],
+          index: true,
+          element: <Coursedetail />,
         },
       ],
     },

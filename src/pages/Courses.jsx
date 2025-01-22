@@ -10,14 +10,14 @@ import FE from "/FE.svg";
 import uiux from "/uiux.svg";
 import { Link } from "react-router";
 
-const Curriculum = () => {
+const Courses = () => {
   return (
     <section>
       <article className="relative bg-zinc-800">
         <section className="sm:grid sm:grid-cols-2 sm:grid-rows-1 w-[95%] max-w-7xl xl:mx-auto">
           <header className="p-6 sm:grid sm:place-self-center">
             <h1 className="w-full text-[2rem] font-bold tracking-wide leading-tight text-orange-200 md:text-[2.5rem] lg:text-[3.25rem]">
-              Quietdev Studios Curriculum
+              Quietdev Studios Courses
             </h1>
             <h4 className="text-[1.5rem] font-medium tracking-wide leading-6 mt-2 text-white md:text-[2rem] md:leading-8">
               The essential skillset for new front-end developers
@@ -54,7 +54,7 @@ const Curriculum = () => {
       {/* about the curriculum */}
       <section className="w-[95%] max-w-7xl xl:mx-auto">
         <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-28 w-[95%] mx-auto md:text-[2.5rem] lg:text-[3.25rem]">
-          About the curriculum
+          About the courses
         </h1>
         <div className="flex flex-col gap-4 text-md font-regular tracking-tight px-16 my-10">
           <div>
@@ -80,7 +80,7 @@ const Curriculum = () => {
 
       <section className="w-[95%] max-w-7xl xl:mx-auto">
         <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 px-6 md:text-[2.5rem] lg:text-[3.25rem]">
-          All Roadmaps
+          All Courses
         </h1>
         <section className="px-6 flex flex-col gap-10 py-6 w-full sm:grid sm:grid-cols-2 lg:grid-cols-3">
           <div className="shadow-zinc-300 shadow-lg flex flex-col cursor-pointer justify-between h-96 mb-4">
@@ -198,4 +198,4 @@ const Curriculum = () => {
   );
 };
 
-export default Curriculum;
+export default Courses;
