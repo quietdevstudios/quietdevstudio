@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const PurchasedCourses = ({ id, title, tutor, image }) => {
   return (
     <>
-      <section className="flex flex-col gap-10 p-8 w-full">
+      <section className="p-8 w-full">
         <Link
           to={id}
           key={id}
-          className="leading-6s w-full p-2 cursor-pointer"
+          className="w-full cursor-pointer"
           state={{ id, title, tutor, image }}
         >
           <img src={image} alt="course thumbnail" className="w-full mx-auto" />

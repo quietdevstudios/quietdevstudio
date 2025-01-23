@@ -7,6 +7,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import { PURCHASEDCOURSES } from "../../data";
+import { Link } from "react-router-dom";
 
 const MyLearning = () => {
   return (
@@ -25,7 +26,7 @@ const MyLearning = () => {
       </header>
 
       {/* depending on whether there are available courses, i will display dynamic contents. either the main tag with it's content(if i get an empty arr []) or purchased courses I get from server, else if there are no purchased courses by that user, I display the main tag with it's content in it. */}
-      <main className={`flex flex-col items-center justify-center h-scren`}>
+      <main className={`flex flex-col items-center justify-center`}>
         {/* <>
           <h2 className="text-2xl font-bold text-center tracking-wide">
             Explore Over 50,000 Courses and Start Learning Today!
@@ -41,9 +42,11 @@ const MyLearning = () => {
           </Link>
         </> */}
 
-        {PURCHASEDCOURSES.map((courses) => {
-          return <PurchasedCourses key={courses.id} {...courses} />;
-        })}
+        <section className="sm:grid sm:grid-cols-2 lg:grid-cols-3 max-w-7xl xl:mx-auto">
+          {PURCHASEDCOURSES.map((courses) => {
+            return <PurchasedCourses key={courses.id} {...courses} />;
+          })}
+        </section>
 
         <section className="p-2">
           <div className="flex items-center justify-center gap-4 py-2">
