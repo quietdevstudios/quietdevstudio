@@ -8,8 +8,8 @@ import About from "./pages/About";
 import GetStarted from "./pages/GetStarted";
 import SignIn from "./pages/Signin";
 import Form from "./pages/Form";
-import Coursedetail from "./pages/Coursedetail";
-import Courses from "./pages/Courses";
+import CoursePlayerPage from "./pages/CoursePlayerPage";
+import CoursesList from "./pages/CoursesList";
 import CourseLayout from "./pages/CourseLayout";
 
 const App = () => {
@@ -24,8 +24,8 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "courses",
-          element: <Courses />,
+          path: "courses-list",
+          element: <CoursesList />,
         },
         {
           path: "about",
@@ -56,7 +56,7 @@ const App = () => {
       children: [
         {
           index: true,
-          element: <Coursedetail />,
+          element: <CoursePlayerPage />,
         },
       ],
     },

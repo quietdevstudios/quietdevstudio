@@ -9,6 +9,10 @@ import thumbnailImg from "/download.jpg";
 import cssImg from "/css.jpg";
 import jsImg from "/js.jpeg";
 
+// course-list image...
+import FE from "/FE.svg";
+import uiux from "/uiux.svg";
+
 export const NAV_LINKS = [
   // {
   //   linkText: "Home",
@@ -17,7 +21,7 @@ export const NAV_LINKS = [
   // },
   {
     linkText: "Courses",
-    hyperLink: "courses",
+    hyperLink: "courses-list",
     faImage: faBookOpen,
   },
   {
@@ -224,5 +228,32 @@ export const COURSECONTENT = [
       { topicTitle: "Opening links in new tabs", topicTime: "15m" },
       { topicTitle: "Anchor links and navigation", topicTime: "25m" },
     ],
+  },
+];
+
+export const COURSElIST = [
+  {
+    id: 1,
+    courseTitle: "Wen Development",
+    courseThumbnailImg: FE,
+    courseDuration: "1 year course",
+    courseTopics: "HTML & CSS, Vanilla JS, Nodejs, Reactjs...",
+    nextCohortStartDate: "3rd of Mar., 2025",
+  },
+  {
+    id: 2,
+    courseTitle: "Graphics Design",
+    courseThumbnailImg: uiux,
+    courseDuration: "1 year course",
+    courseTopics: "Figma, Adobe Photoshop, Canva...",
+    nextCohortStartDate: "3rd of Mar., 2025",
+  },
+  {
+    id: 3,
+    courseTitle: "Virtual Assistance",
+    courseThumbnailImg: uiux,
+    courseDuration: "1 year course",
+    courseTopics: "Communication, sales,...",
+    nextCohortStartDate: "3rd of Mar., 2025",
   },
 ];

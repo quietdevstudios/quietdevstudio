@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faTv } from "@fortawesome/free-solid-svg-icons";
 import { COURSECONTENT } from "../../data";
 
-const PurchasedCourseItem = () => {
+const CourseContent = () => {
   const [showContent, setShowContent] = useState(false);
   const [checkedTopics, setCheckedTopics] = useState({});
 
@@ -30,7 +30,7 @@ const PurchasedCourseItem = () => {
             controls
             width="100%"
             height="auto"
-            poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg"
+            poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg" 
           >
             <source src={video} type="video/mp4" />
           </video>
@@ -124,6 +124,6 @@ const PurchasedCourseItem = () => {
   );
 };
 
-export default PurchasedCourseItem;
+export default CourseContent;
 
 // different states will be available - watched state - unwatched state - active state.
