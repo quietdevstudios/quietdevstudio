@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 // import Maintenance from "../components/Maintenance";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import qlVideo from "/ql.mp4";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -23,12 +23,12 @@ const Home = () => {
             Learn to code with structured lessons, hands-on projects, and step
             by step guidance.
           </p>
-          <a
-            href="curriculum"
+          <Link
+            to="/courses-list"
             className="border border-orange-50 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize transition duration-300"
           >
             start your journey
-          </a>
+          </Link>
           {/* <video height="100px" loop autoPlay muted>
             <source src={qlVideo} type="video/mp4" />
           </video> */}

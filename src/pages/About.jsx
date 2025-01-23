@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -15,13 +16,13 @@ const About = () => {
             by providing top-notch education in web development and technology.
             Join a platform where innovation meets learning.
           </p>
-          <a
-            href="/signup"
+          <Link
+            to="/signup"
             // className="inline-block bg-f7a399 text-ef6351 py-3 px-6 rounded-lg shadow hover:bg-fbc3bc transition duration-300"
             className="border border-orange-50 w-fit px-6 py-3 font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize transition duration-300"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -109,13 +110,13 @@ const About = () => {
             Quietdev Studios. Explore our courses and take the first step toward
             your tech career.
           </p>
-          <a
-            href="/curriculum"
+          <Link
+            to="/courses-list"
             // className="inline-block bg-ef6351 text-white py-3 px-6 rounded-lg shadow hover:bg-f38375 transition duration-300"
             className="border border-orange-200 w-fit px-6 py-3 font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-500 hover:text-white capitalize transition duration-300"
           >
             Explore Courses
-          </a>
+          </Link>
         </div>
       </div>
     </section>
