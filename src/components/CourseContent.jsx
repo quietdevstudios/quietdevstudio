@@ -22,7 +22,7 @@ const CourseContent = () => {
   };
 
   return (
-    <main className="main text-center bg-zinc-800 font-montserrat lg:flex lg:items-center lg:justify-center lg:absolute lg:top-[7.5rem] lg:bottom-0 lg:right-0 lg:left-0">
+    <main className="text-center bg-zinc-800 font-montserrat lg:flex lg:items-center lg:justify-center lg:absolute lg:top-0 lg:bottom-0 lg:right-0 lg:left-0">
       <section className="w-full lg:max-w-full lg:h-auto lg:mx-auto lg:flex lg:flex-col lg:items-center lg:justify-center lg:sticky lg:top-20">
         <div className="w-full">
           <video
@@ -30,7 +30,7 @@ const CourseContent = () => {
             controls
             width="100%"
             height="auto"
-            poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg" 
+            poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg"
           >
             <source src={video} type="video/mp4" />
           </video>
