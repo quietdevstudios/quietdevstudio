@@ -7,11 +7,11 @@ const CourseLayout = () => {
   return (
     <>
       <section className="font-montserrat bg-zinc-700 text-white">
-        <span className="flex items-center gap-4 py-[3rem] px-[2rem] w-[95%] xl:max-w-[1900px] xl:mx-auto">
+        <span className="flex items-center gap-4 py-[3rem] px-[2rem] w-[95%] xl:max-w-[1900px] xl:mx-auto lg:w-full w-fit">
           <Link to=".." relative="path">
             <FontAwesomeIcon icon={faArrowLeft} size="xl" />
           </Link>
-          <p className="font-semibold tracking-wide">Web Development</p>
+          <p className="font-semibold tracking-wide p-2">Web Development</p>
         </span>
       </section>
       <Outlet />

@@ -39,24 +39,21 @@ const PurchasedCourseItem = () => {
 
       <section className="p- lg:h-[900px] lg:overflow-auto border border-zinc-700 text-white">
         <ul>
-          {/* <h1 className="px-6 py-4 font-medium capitalize text-center tracking-wide text-lg hidden lg:flex lg:flex-col">
-            Course content
-          </h1> */}
-          <section className="hiddn lg:block lg:fixed lg:right-0 lg:z-50 lg:top-0">
-            <div className="flex items-center justify-center gap-6 px-6 py-2 bg-zinc-00 text-white font-bold text-lg">
-              <div className="w-full text-left leading-9">
-                <h1 className="font-bold text-xl">
-                  Web Development: The Introductory Guide
-                </h1>
-                <p className="text-xs tracking-widest font-regular mt-4">
-                  by Quietdev
-                </p>
-                <p className="mt-7 font-medium tracking-wider text-lg">
-                  Course Content
-                </p>
-              </div>
+          {/* course heading */}
+          <section className="lg:sticky lg:right-0 lg:top-0 lg:z-50 bg-zinc-800 shadow-md">
+            <div className="w-full text-left p-3">
+              <h1 className="font-bold text-xl w-full">
+                Web Development: The Introductory Guide
+              </h1>
+              <p className="text-xs tracking-widest font-regular mt-2">
+                by Quietdev
+              </p>
+              <p className="font-medium tracking-wider text-lg mt-4 text-center">
+                Course Content
+              </p>
             </div>
           </section>
+
           {COURSECONTENT.map((coursecontentitem) => {
             const {
               id,
