@@ -1,10 +1,11 @@
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export const SignIn = () => {
   return (
     <div
-      className="min-h-screen flex items-center justify-center font-montserrat"
+      className="min-h-screen flex items-center justify-center font-montserrat px-8"
       style={{ backgroundColor: "#2c2b3c", color: "#ffffff" }}
     >
       <div
@@ -16,13 +17,13 @@ export const SignIn = () => {
         </h2>
         <p className="mb-4 text-sm">
           Or{" "}
-          <a
-            href="signup"
+          <Link
+            to="/signup"
             className="hover:underline"
             style={{ color: "#b76d68" }}
           >
             sign up for a new account
-          </a>
+          </Link>
         </p>
         <form>
           <div className="mb-4">
