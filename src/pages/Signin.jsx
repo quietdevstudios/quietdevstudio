@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const SignIn = () => {
   return (
     <div
-      className="min-h-screen flex items-center justify-center font-montserrat px-8"
+      className="min-h-[80vh] flex items-center justify-center font-montserrat px-8"
       style={{ backgroundColor: "#2c2b3c", color: "#ffffff" }}
     >
       <div
