@@ -26,7 +26,7 @@ const PurchasedCourseItem = () => {
       <section className="w-full lg:max-w-full lg:h-auto lg:mx-auto lg:flex lg:flex-col lg:items-center lg:justify-center lg:sticky lg:top-20">
         <div className="w-full">
           <video
-            className="lg:flex lg:items-center lg:justify-center lg:flex-col lg:w-full lg:max-w-[70vw] lg:h-auto lg:max-h-[100vh] lg:mx-auto"
+            className="lg:flex lg:items-center lg:justify-center lg:flex-col lg:w-full lg:max-w-[75vw] lg:h-auto lg:max-h-[100vh] lg:mx-auto"
             controls
             width="100%"
             height="auto"
