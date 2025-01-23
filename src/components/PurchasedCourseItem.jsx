@@ -22,8 +22,8 @@ const PurchasedCourseItem = () => {
   };
 
   return (
-    <main className="text-center font-montserrat lg:flex lg:items-center lg:justify-center lg:absolute lg:top-[7.5rem] lg:bottom-0 lg:right-0 lg:left-0">
-      <section className="bg-zinc-300 w-full lg:max-w-full lg:h-auto lg:mx-auto lg:flex lg:flex-col lg:items-center lg:justify-center lg:sticky lg:top-20">
+    <main className="main text-center bg-zinc-800 font-montserrat lg:flex lg:items-center lg:justify-center lg:absolute lg:top-[7.5rem] lg:bottom-0 lg:right-0 lg:left-0">
+      <section className="w-full lg:max-w-full lg:h-auto lg:mx-auto lg:flex lg:flex-col lg:items-center lg:justify-center lg:sticky lg:top-20">
         <div className="w-full">
           <video
             className="lg:flex lg:items-center lg:justify-center lg:flex-col lg:w-full lg:max-w-[70vw] lg:h-auto lg:max-h-[100vh] lg:mx-auto"
@@ -36,7 +36,7 @@ const PurchasedCourseItem = () => {
           </video>
         </div>
         <nav className="lg:hidden">
-          <ul className="flex items-center justify-center gap-6 p-4 bg-zinc-100 border-b-2 border-zinc-200 font-bold text-lg">
+          <ul className="flex items-center justify-center gap-6 p-6 bg-zinc-800 text-white font-bold text-lg">
             <li>
               <button>Course content</button>
             </li>
@@ -44,7 +44,7 @@ const PurchasedCourseItem = () => {
         </nav>
       </section>
 
-      <section className="m-4 lg:m-0 lg:h-[900px] lg:overflow-auto">
+      <section className="p- lg:h-[900px] lg:overflow-auto border border-zinc-700 text-white">
         <ul>
           <h1 className="px-6 py-4 font-medium capitalize text-center tracking-wide text-lg hidden lg:flex lg:flex-col">
             Course content
@@ -61,10 +61,10 @@ const PurchasedCourseItem = () => {
             } = coursecontentitem;
             const isVisible = showContent === id;
             return (
-              <section key={id} className="lg:overflow-auto">
+              <section key={id}>
                 <button
                   onClick={() => handleShowContent(id)}
-                  className="bg-zinc-100 p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t-2 border-orange-400"
+                  className="bg-zinc-100 p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t bg-zinc-700"
                 >
                   <span className="flex items-center justify-between">
                     <h2>
@@ -89,7 +89,7 @@ const PurchasedCourseItem = () => {
                       return (
                         <button
                           key={`${id}-${index}`}
-                          className="w-full flex items-start gap-4 py-4 px-4 my-4"
+                          className="w-full flex items-start gap-4 py-4 px-4 my-4 text-sm"
                         >
                           <div>
                             <input
@@ -120,3 +120,5 @@ const PurchasedCourseItem = () => {
 };
 
 export default PurchasedCourseItem;
+
+// different states will be available - watched state - unwatched state - active state.
