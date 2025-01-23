@@ -11,6 +11,7 @@ import Form from "./pages/Form";
 import CoursePlayerPage from "./pages/CoursePlayerPage";
 import CoursesList from "./pages/CoursesList";
 import CourseLayout from "./pages/CourseLayout";
+import CourseDetail from "./pages/Coursedetail";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -26,6 +27,16 @@ const App = () => {
         {
           path: "courses-list",
           element: <CoursesList />,
+        },
+        {
+          path: "courses-list/:courseId",
+          id: "course-detail",
+          children: [
+            {
+              index: true,
+              element: <CourseDetail />,
+            },
+          ],
         },
         {
           path: "about",
