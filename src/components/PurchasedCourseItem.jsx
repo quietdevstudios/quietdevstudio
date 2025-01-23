@@ -35,20 +35,28 @@ const PurchasedCourseItem = () => {
             <source src={video} type="video/mp4" />
           </video>
         </div>
-        <nav className="lg:hidden">
-          <ul className="flex items-center justify-center gap-6 p-6 bg-zinc-800 text-white font-bold text-lg">
-            <li>
-              <button>Course content</button>
-            </li>
-          </ul>
-        </nav>
       </section>
 
       <section className="p- lg:h-[900px] lg:overflow-auto border border-zinc-700 text-white">
         <ul>
-          <h1 className="px-6 py-4 font-medium capitalize text-center tracking-wide text-lg hidden lg:flex lg:flex-col">
+          {/* <h1 className="px-6 py-4 font-medium capitalize text-center tracking-wide text-lg hidden lg:flex lg:flex-col">
             Course content
-          </h1>
+          </h1> */}
+          <section className="hiddn lg:block lg:fixed lg:right-0 lg:z-50 lg:top-0">
+            <div className="flex items-center justify-center gap-6 px-6 py-2 bg-zinc-00 text-white font-bold text-lg">
+              <div className="w-full text-left leading-9">
+                <h1 className="font-bold text-xl">
+                  Web Development: The Introductory Guide
+                </h1>
+                <p className="text-xs tracking-widest font-regular mt-4">
+                  by Quietdev
+                </p>
+                <p className="mt-7 font-medium tracking-wider text-lg">
+                  Course Content
+                </p>
+              </div>
+            </div>
+          </section>
           {COURSECONTENT.map((coursecontentitem) => {
             const {
               id,
