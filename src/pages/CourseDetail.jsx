@@ -28,7 +28,7 @@ const CourseDetail = () => {
                 className="w-20 h-auto rounded-full border-2 border-zinc-500"
               />
             </div>
-            <h3 className="text-zinc-400 font-semibold tracking-wide">
+            <h3 className="text-zinc-400 font-semibold tracking-wide mt-2">
               Created by{" "}
               <span className="text-[.65rem] block tracking-wider text-zinc-300 font-medium">
                 the.quietdev
