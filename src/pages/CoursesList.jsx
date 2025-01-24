@@ -73,7 +73,7 @@ const CoursesList = () => {
         </div>
       </section>
 
-      <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 mb-6 px-6 md:text-[2.5rem] lg:text-[3.25rem] max-w-7xl xl:mx-auto">
+      <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 mb-6 px-6 md:text-[2.5rem] lg:text-[3.25rem] xl:max-w-7xl xl:mx-auto">
         All Courses
       </h1>
 
