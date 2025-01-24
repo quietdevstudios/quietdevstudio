@@ -69,7 +69,7 @@ const CourseContent = () => {
               <section key={id}>
                 <button
                   onClick={() => handleShowContent(id)}
-                  className="bg-zinc-100 p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t bg-zinc-700"
+                  className="p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t bg-zinc-700"
                 >
                   <span className="flex items-center justify-between">
                     <h2>
