@@ -124,6 +124,14 @@ const CoursesList = () => {
                   <Link
                     to={`${id}`}
                     className="text-sm bg-zinc-800 text-zinc-100 tracking-wide p-3 rounded-md shadow-xl"
+                    state={{
+                      id,
+                      courseDuration,
+                      courseTitle,
+                      courseThumbnailImg,
+                      courseTopics,
+                      nextCohortStartDate,
+                    }}
                   >
                     View Course
                   </Link>

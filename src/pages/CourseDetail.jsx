@@ -1,14 +1,28 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+// import { useParams } from "react-router-dom";
 import profile from "/profile.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons/faCheck";
 import video from "/wontFail.mp4";
-import { faStopwatch } from "@fortawesome/free-solid-svg-icons/faStopwatch";
-import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faClock,
+  faFile,
+  faLock,
+  faMinus,
+  faPlay,
+  faPlus,
+  faShare,
+} from "@fortawesome/free-solid-svg-icons";
+import { useLocation } from "react-router-dom";
 
 const CourseDetail = () => {
-  const { courseId } = useParams();
+  // const { courseId } = useParams();
+  // const location = useLocation();
+  // console.log(location);
+
+  // useEffect(() => {}, [location.pathname]);
+
   return (
     <section className="font-montserrat">
       <section className="Hero bg-zinc-800 text-white p-8 leading-snug flex flex-col gap-4">
@@ -115,7 +129,90 @@ const CourseDetail = () => {
       </section>
 
       {/* Curriculum Section */}
-      <section>Curriculum</section>
+      <section className="mx-8 my-12">
+        <h3 className="font-semibold mb-4 tracking-wide">Curriculum</h3>
+        <ul>
+          <li className="mb-8">
+            <button className="border border-zinc-100 shadow-md w-full rounded-md p-7 text-left flex items-center gap-3">
+              <FontAwesomeIcon icon={faMinus} />
+              <h4 className="text-sm font-medium">Introduction</h4>
+            </button>
+            <ul className="mt-4">
+              {/* one */}
+              <li className="p-4 pb-6 border-b rounded-md mt-2">
+                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                  <FontAwesomeIcon icon={faFile} size="lg" />
+                  Introduction to course
+                </p>
+                <div className="flex items-center gap-6">
+                  <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
+                    3 question
+                  </p>
+                  <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
+                    30 min
+                  </p>
+                  <button className="ml-4">
+                    <FontAwesomeIcon icon={faPlay} size="lg" />
+                  </button>
+                </div>
+              </li>
+              {/* two */}
+              <li className="p-4 pb-6 border-b rounded-md bg-zinc-50 mt-2">
+                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                  <FontAwesomeIcon icon={faFile} size="lg" />
+                  Introduction
+                </p>
+                <div className="flex items-center gap-6">
+                  <FontAwesomeIcon icon={faLock} />
+                </div>
+              </li>
+              {/* two */}
+              <li className="p-4 pb-6 border-b rounded-md bg-zinc-50 mt-2">
+                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                  <FontAwesomeIcon icon={faClock} size="lg" />
+                  Required Tools
+                </p>
+                <div className="flex items-center gap-6">
+                  <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
+                    12 lectures
+                  </p>
+                  <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
+                    30 min
+                  </p>
+                  <button className="ml-4">
+                    <FontAwesomeIcon icon={faLock} size="lg" />
+                  </button>
+                </div>
+              </li>
+              {/* three */}
+              <li className="p-4 pb-6 border-b rounded-md mt-2">
+                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                  <FontAwesomeIcon icon={faClock} size="lg" />
+                  Course Structure
+                </p>
+                <div className="flex items-center gap-6">
+                  <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
+                    3 question
+                  </p>
+                  <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
+                    30 min
+                  </p>
+                  <button className="ml-4">
+                    <FontAwesomeIcon icon={faPlay} size="lg" />
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <button className="border border-zinc-100 shadow-md w-full rounded-md p-7 text-left flex items-center gap-3">
+              <FontAwesomeIcon icon={faPlus} />
+              <h4 className="text-sm font-medium">Web Development Basics</h4>
+            </button>
+          </li>
+        </ul>
+      </section>
 
       {/* Instructor Section */}
       <section className="mx-8">
@@ -218,8 +315,10 @@ const CourseDetail = () => {
           </li>
         </ul>
 
-        <div className="text-center my-4 mt-8">
-          <p className="text-sm tracking-wide font-medium">Share this course</p>
+        <div className="text-center">
+          <button className="text-sm tracking-wide font-medium text-center my-5">
+            Share this course
+          </button>
         </div>
       </section>
     </section>
