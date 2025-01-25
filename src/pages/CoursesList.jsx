@@ -133,7 +133,7 @@ const CoursesList = () => {
                       nextCohortStartDate,
                     }}
                   >
-                    Course Details
+                    Course Detail
                   </Link>
                 </div>
               </div>
