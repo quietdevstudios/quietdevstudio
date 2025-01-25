@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import profile from "/profile.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons/faCheck";
+import video from "/wontFail.mp4";
+import { faStopwatch } from "@fortawesome/free-solid-svg-icons/faStopwatch";
+import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
 const CourseDetail = () => {
   const { courseId } = useParams();
@@ -108,6 +111,74 @@ const CourseDetail = () => {
             connection.
           </li>
         </ul>
+      </section>
+
+      <section className="border rounded w-[85%] mx-auto p-[7px] my-10 shadow-md">
+        <div className="mx-auto text-center flex items-center justify-center">
+          <video
+            className="lg:flex lg:items-center lg:justify-center lg:flex-col lg:w-full lg:max-w-[75vw] lg:h-auto lg:max-h-[100vh] lg:mx-auto rounded"
+            controls
+            width="100%"
+            height="auto"
+            poster="https://i.ytimg.com/vi/i-_OMSGpt1k/maxresdefault.jpg"
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        </div>
+
+        <div className="rounded my-1 flex items-start justify-between p-6">
+          <span className="flex gap-1 flex-col">
+            <p className="font-semibold text-2xl tracking-wider flex items-center gap-2">
+              $89.99
+              <span className="line-through text-sm text-zinc-400 font-medium">
+                339.99
+              </span>
+            </p>
+            <p className="text-red-600 text-sm font-medium tracking-wide">
+              2 days left at this price!
+            </p>
+          </span>
+          <span className="rounded bg-zinc-700 px-4 py-2">
+            <p className="text-xs text-white">91% Off</p>
+          </span>
+        </div>
+
+        <div className="p-2 flex flex-col gap-3 rounded-md">
+          <button className="bg-blue-900 rounded p-4 text-white font-semibold hover:bg-blue-950">
+            BUY NOW
+          </button>
+          <button className="bg-orange-300 rounded p-4 text-white font-semibold hover:bg-orange-400">
+            ENROLL
+          </button>
+        </div>
+
+        <ul className="px-2 mt-8 flex flex-col gap-6">
+          <li className="flex items-center justify-between">
+            <span className="flex items-center gap-4">
+              <FontAwesomeIcon icon={faCalendar} color="orange" />
+              <p className="font-medium">Duration</p>
+            </span>
+            <p className="font-medium tracking-wide">43 weeks</p>
+          </li>
+          <li className="flex items-center justify-between">
+            <span className="flex items-center gap-4">
+              <FontAwesomeIcon icon={faCalendar} color="orange" />
+              <p className="font-medium">Lectures</p>
+            </span>
+            <p className="font-medium tracking-wide">43 weeks</p>
+          </li>
+          <li className="flex items-center justify-between">
+            <span className="flex items-center gap-4">
+              <FontAwesomeIcon icon={faCalendar} color="orange" />
+              <p className="font-medium">Enrolled</p>
+            </span>
+            <p className="font-medium tracking-wide">43 weeks</p>
+          </li>
+        </ul>
+
+        <div className="text-center my-4 mt-8">
+          <p className="text-sm tracking-wide font-medium">Share this course</p>
+        </div>
       </section>
     </section>
   );
