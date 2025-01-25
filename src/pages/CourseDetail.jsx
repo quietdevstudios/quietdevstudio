@@ -52,6 +52,7 @@ const CourseDetail = () => {
         })}
       </section>
 
+      {/* Overview Section */}
       <section className="mx-8 my-10">
         <h3 className="font-semibold mb-4 mt-12 tracking-wide">
           Course Description
@@ -113,6 +114,47 @@ const CourseDetail = () => {
         </ul>
       </section>
 
+      {/* Curriculum Section */}
+      <section>Curriculum</section>
+
+      {/* Instructor Section */}
+      <section className="mx-8">
+        <h3 className="font-semibold mb-4 mt-12 tracking-wide">
+          About the instructor
+        </h3>
+        <div>
+          <div className="flex items-center gap-8">
+            <div className="border-2 border-zinc-600 w-fit p-[.35rem] rounded-full">
+              <img
+                src={profile}
+                alt="profile image of tutor"
+                className="w-20 h-auto rounded-full border-2 border-zinc-500"
+              />
+            </div>
+            <h3 className="text-zinc-400 font-semibold tracking-wide mt-2 text-xs">
+              the.quietdev{" "}
+              <span className="text-[.8rem] block tracking-wider text-zinc-600 font-medium pt-1">
+                Web Developer
+              </span>
+            </h3>
+          </div>
+        </div>
+
+        <div className="text-sm flex flex-col gap-8 leading-6 tracking-loose py-8">
+          <p>
+            I am a web developer with having almost three years of experience in
+            web development.
+          </p>
+
+          <p>
+            My passion is helping people to learn new skills in a short-term
+            course and achieve their goals. It's my honor if I could help you
+            learn to program in a simple word. I currently am teaching HTML,
+            CSS, JavaScript etc.
+          </p>
+        </div>
+      </section>
+
       <section className="border rounded w-[85%] mx-auto p-[7px] my-10 shadow-md">
         <div className="mx-auto text-center flex items-center justify-center">
           <video
@@ -156,23 +198,23 @@ const CourseDetail = () => {
           <li className="flex items-center justify-between">
             <span className="flex items-center gap-4">
               <FontAwesomeIcon icon={faCalendar} color="orange" />
-              <p className="font-medium">Duration</p>
+              <p className="font-medium text-sm">Duration</p>
             </span>
-            <p className="font-medium tracking-wide">43 weeks</p>
+            <p className="font-medium tracking-wide text-sm">43 weeks</p>
           </li>
           <li className="flex items-center justify-between">
             <span className="flex items-center gap-4">
               <FontAwesomeIcon icon={faCalendar} color="orange" />
-              <p className="font-medium">Lectures</p>
+              <p className="font-medium text-sm">Lectures</p>
             </span>
-            <p className="font-medium tracking-wide">43 weeks</p>
+            <p className="font-medium tracking-wide text-sm">32</p>
           </li>
           <li className="flex items-center justify-between">
             <span className="flex items-center gap-4">
               <FontAwesomeIcon icon={faCalendar} color="orange" />
-              <p className="font-medium">Enrolled</p>
+              <p className="font-medium text-sm">Enrolled</p>
             </span>
-            <p className="font-medium tracking-wide">43 weeks</p>
+            <p className="font-medium tracking-wide text-sm">1982 students</p>
           </li>
         </ul>
 
