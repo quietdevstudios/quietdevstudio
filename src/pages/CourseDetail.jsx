@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 // import { useParams } from "react-router-dom";
 import profile from "/profile.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,9 +12,8 @@ import {
   faMinus,
   faPlay,
   faPlus,
-  faShare,
 } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 
 const CourseDetail = () => {
   // const { courseId } = useParams();

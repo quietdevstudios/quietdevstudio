@@ -123,7 +123,7 @@ const CoursesList = () => {
                   </p>
                   <Link
                     to={`${id}`}
-                    className="text-sm bg-zinc-800 text-zinc-100 tracking-wide p-3 rounded-md shadow-xl"
+                    className="text-sm bg-zinc-800 text-zinc-100 tracking-wider p-3 rounded-md shadow-xl"
                     state={{
                       id,
                       courseDuration,
@@ -133,7 +133,7 @@ const CoursesList = () => {
                       nextCohortStartDate,
                     }}
                   >
-                    View Course
+                    Course Details
                   </Link>
                 </div>
               </div>
