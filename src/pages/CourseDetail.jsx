@@ -283,7 +283,7 @@ const CourseDetail = () => {
 
         <div className="p-2 flex flex-col gap-3 rounded-md">
           <button className="bg-blue-900 rounded p-4 text-white font-semibold hover:bg-blue-950">
-            BUY NOW
+            ADD TO CART
           </button>
           <button className="bg-orange-300 rounded p-4 text-white font-semibold hover:bg-orange-400">
             ENROLL
@@ -296,7 +296,7 @@ const CourseDetail = () => {
               <FontAwesomeIcon icon={faCalendar} color="orange" />
               <p className="font-medium text-sm">Duration</p>
             </span>
-            <p className="font-medium tracking-wide text-sm">43 weeks</p>
+            <p className="font-medium tracking-wide text-sm">self paced</p>
           </li>
           <li className="flex items-center justify-between">
             <span className="flex items-center gap-4">
