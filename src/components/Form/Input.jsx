@@ -1,28 +1,21 @@
 import React from "react";
-import { useFormik } from "formik";
-// import * as Yup from "yup";
 
 const Input = ({ label, id, name, type, placeholder, ...props }) => {
-  const formik = useFormik({
-    initialValues: {
-      fullName: "udeme",
-    },
-  });
   return (
     <>
       <div className="mt-6 flex flex-col gap-1">
-        <label className="tracking-wider font-medium" htmlFor="fullName">
+        <label
+          className="tracking-wider font-medium text-sm mb-1"
+          htmlFor="fullName"
+        >
           {label}
         </label>
         <input
-          className="text-zinc-800 border-none outline-none bg-none p-3 w-full rounded font-medium tracking-wide shadow-2xl"
+          className="text-white bg-[#121420] border border-[#403f4c] bg-none px-4 py-3 w-full rounded-lg font-medium tracking-wide shadow-2xl focus:outline-none focus:ring-2"
           {...props}
           id={id}
           name={name}
           type={type}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          values={formik.values.fullName}
           placeholder={placeholder}
         />
       </div>

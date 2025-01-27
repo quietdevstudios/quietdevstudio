@@ -1,6 +1,9 @@
+import React from "react";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+
+import Input from "../components/Form/Input";
 
 export const SignIn = () => {
   return (
@@ -26,47 +29,36 @@ export const SignIn = () => {
           </Link>
         </p>
 
-
         <form>
-          <div className="mb-4">
-            <label className="block text-sm mb-1" htmlFor="email">
-              Email address
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
-              style={{
-                backgroundColor: "#121420",
-                color: "#ffffff",
-                borderColor: "#403f4c",
-              }}
-              placeholder="Enter your email"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm mb-1" htmlFor="password">
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
-              style={{
-                backgroundColor: "#121420",
-                color: "#ffffff",
-                borderColor: "#403f4c",
-              }}
-              placeholder="Enter your password"
-            />
-          </div>
-          <div className="mb-4 flex items-center">
+          <Input
+            label="Email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+          <Input
+            label="Password"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+          <Input
+            label="Confirm Password"
+            type="confirmPassword"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your password"
+          />
+          <div className="my-4 mx-1 flex items-center">
             <input
               type="checkbox"
               id="remember"
               className="mr-2"
               style={{ accentColor: "#b76d68" }}
             />
+
             <label htmlFor="remember" className="text-sm">
               Remember me
             </label>
@@ -100,8 +92,6 @@ export const SignIn = () => {
             </button>
           </div>
         </form>
-
-        
       </div>
     </div>
   );

@@ -1,98 +1,54 @@
+import React from "react";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
+import Input from "../components/Form/Input";
+
 export const GetStarted = () => {
   return (
-    <div
-      className="min-h-[80vh] flex flex-col items-center justify-center font-montserrat px-8"
-      style={{ backgroundColor: "#2c2b3c", color: "#ffffff" }}
-    >
-      <div
-        className="w-full max-w-md p-6 rounded-lg shadow-lg"
-        style={{ backgroundColor: "#1b2432" }}
-      >
-        <h2 className="text-2xl font-bold mb-4" style={{ color: "#b76d68" }}>
+    <div className="min-h-[80vh] flex flex-col items-center justify-center font-montserrat px-8 bg-[#2c2b3c] text-[#ffffff]">
+      <div className="w-full max-w-md p-6 rounded-lg shadow-lg bg-[#1b2432]">
+        <h2 className="text-2xl font-bold mb-4 text-[#b76d68]">
           Sign up for free
         </h2>
         <p className="mb-4 text-sm">
           Or{" "}
-          <Link
-            to="/signin"
-            className="hover:underline"
-            style={{ color: "#b76d68" }}
-          >
+          <Link to="/signin" className="hover:underline text-[#b76d68]">
             sign in to your existing account
           </Link>
         </p>
 
         <form>
-          <div className="mb-4">
-            <label className="block text-sm mb-1" htmlFor="username">
-              Username
-            </label>
-            <input
-              type="text"
-              id="username"
-              className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
-              style={{
-                backgroundColor: "#121420",
-                color: "#ffffff",
-                borderColor: "#403f4c",
-                focus: { borderColor: "#b76d68" },
-              }}
-              placeholder="Enter your username"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm mb-1" htmlFor="email">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
-              style={{
-                backgroundColor: "#121420",
-                color: "#ffffff",
-                borderColor: "#403f4c",
-              }}
-              placeholder="Enter your email"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm mb-1" htmlFor="password">
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
-              style={{
-                backgroundColor: "#121420",
-                color: "#ffffff",
-                borderColor: "#403f4c",
-              }}
-              placeholder="Enter your password"
-            />
-          </div>
-          <div className="mb-4">
-            <label className="block text-sm mb-1" htmlFor="password-confirm">
-              Password confirmation
-            </label>
-            <input
-              type="password"
-              id="password-confirm"
-              className="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
-              style={{
-                backgroundColor: "#121420",
-                color: "#ffffff",
-                borderColor: "#403f4c",
-              }}
-              placeholder="Confirm your password"
-            />
-          </div>
-          <p className="text-xs mb-4">
+          <Input
+            label="Username"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+          />
+          <Input
+            label="Email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+          <Input
+            label="Password"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+          <Input
+            label="Confirm Password"
+            type="confirmPassword"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your password"
+          />
+          <p className="text-xs my-4 mx-1">
             By signing up, you agree to our{" "}
             <a
               href="#"
@@ -125,7 +81,6 @@ export const GetStarted = () => {
             </button>
           </div>
         </form>
-        
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
+import React from "react";
+
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 import CheckoutForm from "../components/Form/CheckoutForm";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   return (
@@ -32,7 +34,7 @@ const Checkout = () => {
 
         <div className="w-fit flex flex-col gap-2 items-center justify-center p-2">
           {/* <FontAwesomeIcon
-            icon={faChevronRight}
+            icon={faChevronRight} 
             color="#fff"
             size="2xs"
             className="bg-zinc-800 p-1 rounded-full w-3 h-3"
@@ -42,9 +44,9 @@ const Checkout = () => {
         </div>
       </section>
 
-      <section className="bg-zinc-700 h-screen p-8 border">
+      <section className="bg-[#1b2432] h-screen p-8 border">
         <form>
-          <h1 className="flex items-center gap-3 text-lg font-semibold">
+          <h1 className="flex items-center gap-3 text-2xl font-bold mb-2 text-[#b76d68]">
             <p className="bg-zinc-800 w-7 h-7 rounded-full flex items-center justify-center pt-[2px]">
               1
             </p>
@@ -52,12 +54,9 @@ const Checkout = () => {
           </h1>
           <p className="text-xs mt-1">
             Already have an account?{" "}
-            <span
-              type="button"
-              className="text-orange-200 hover:text-orange-400 cursor-pointer"
-            >
+            <Link to="/signin" className="hover:underline text-[#b76d68]">
               Sign in
-            </span>
+            </Link>
           </p>
           <CheckoutForm />
         </form>

@@ -3,7 +3,7 @@ import Input from "./Input";
 
 const CheckoutForm = () => {
   return (
-    <form className="border">
+    <>
       <Input
         label="Full Name"
         id="fullName"
@@ -19,13 +19,6 @@ const CheckoutForm = () => {
         placeholder="Enter your email"
       />
       <Input
-        label="Confirm Email"
-        id="confirmEmail"
-        name="confirmEmail"
-        type="email"
-        placeholder="Confirm your email"
-      />
-      <Input
         label="Password"
         id="password"
         name="password"
@@ -39,9 +32,7 @@ const CheckoutForm = () => {
         type="confirmPassword"
         placeholder="Confirm your password"
       />
-
-      <Input type='checkbox' label='By checking' />
-    </form>
+    </>
   );
 };
 
