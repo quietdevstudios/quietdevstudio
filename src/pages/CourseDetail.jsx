@@ -1,5 +1,5 @@
 import React from "react";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import profile from "/profile.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons/faCheck";
@@ -13,15 +13,11 @@ import {
   faPlay,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 
 const CourseDetail = () => {
-  // const { courseId } = useParams();
-  // const location = useLocation();
-  // console.log(location);
-
-  // useEffect(() => {}, [location.pathname]);
-
+  const params = useParams();
   return (
     <section className="font-montserrat">
       <section className="Hero bg-zinc-800 text-white p-8 leading-snug flex flex-col gap-4">
@@ -281,13 +277,16 @@ const CourseDetail = () => {
           </span>
         </div>
 
-        <div className="p-2 flex flex-col gap-3 rounded-md">
-          <button className="bg-blue-900 rounded p-4 text-white font-semibold hover:bg-blue-950">
-            ADD TO CART
-          </button>
-          <button className="bg-orange-300 rounded p-4 text-white font-semibold hover:bg-orange-400">
-            ENROLL
-          </button>
+        <div className="p-2 flex flex-col gap-3 rounded-md text-white font-semibold">
+          <Link className="bg-blue-900 rounded p-4 text-center hover:bg-blue-950">
+            <button>Add to cart</button>
+          </Link>
+          <Link
+            to={`/checkout/${params.courseId}`}
+            className="bg-orange-300 rounded p-4 text-center hover:bg-orange-400"
+          >
+            <button>Enroll</button>
+          </Link>
         </div>
 
         <ul className="px-2 mt-8 flex flex-col gap-6">

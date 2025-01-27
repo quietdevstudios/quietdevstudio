@@ -257,3 +257,6 @@ export const COURSElIST = [
     nextCohortStartDate: "3rd of Mar., 2025",
   },
 ];
+
+
+// export const CHECKOUT = []

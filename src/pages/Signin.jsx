@@ -25,6 +25,8 @@ export const SignIn = () => {
             sign up for a new account
           </Link>
         </p>
+
+
         <form>
           <div className="mb-4">
             <label className="block text-sm mb-1" htmlFor="email">
@@ -98,6 +100,8 @@ export const SignIn = () => {
             </button>
           </div>
         </form>
+
+        
       </div>
     </div>
   );

@@ -11,7 +11,9 @@ import Form from "./pages/Form";
 import CoursePlayerPage from "./pages/CoursePlayerPage";
 import CoursesList from "./pages/CoursesList";
 import CourseLayout from "./pages/CourseLayout";
-import CourseDetail from "./pages/CourseDetail";
+// import CourseDetail from "./pages/CourseDetail";
+import CourseDetail from "./pages/Coursedetail";
+import Checkout from "./pages/Checkout";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -37,6 +39,10 @@ const App = () => {
               element: <CourseDetail />,
             },
           ],
+        },
+        {
+          path: "checkout/:courseId",
+          element: <Checkout />,
         },
         {
           path: "about",

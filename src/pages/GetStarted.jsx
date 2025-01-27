@@ -25,6 +25,7 @@ export const GetStarted = () => {
             sign in to your existing account
           </Link>
         </p>
+
         <form>
           <div className="mb-4">
             <label className="block text-sm mb-1" htmlFor="username">
@@ -124,6 +125,7 @@ export const GetStarted = () => {
             </button>
           </div>
         </form>
+        
       </div>
     </div>
   );
