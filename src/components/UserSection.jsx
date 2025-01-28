@@ -11,7 +11,7 @@ const UserSection = () => {
   return (
     <div className="mt-10">
       {/* Alerts Section */}
-      <div className="mb-6 bg-zinc-800 shadow-md rounded-lg p-4">
+      {/* <div className="mb-6 bg-zinc-800 shadow-md rounded-lg p-4">
         <button
           onClick={() => setAlertsOpen(!alertsOpen)}
           className="w-full text-left font-semibold text-gray-800 focus:outline-none"
@@ -39,10 +39,10 @@ const UserSection = () => {
             </li>
           </ul>
         )}
-      </div>
+      </div> */}
 
       {/* Accounts Section */}
-      <div className="bg-zinc-800 shadow-md rounded-lg p-4">
+      <div className="bg-zinc-700 shadow-lg rounded-lg p-4">
         <button
           onClick={() => setAccountsOpen(!accountsOpen)}
           className="w-full text-left font-semibold text-gray-800 focus:outline-none"
