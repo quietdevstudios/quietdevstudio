@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 import { Input } from "../components/Form/Input";
+import { Checkbox } from "../components/Form/Input";
 
 export const GetStarted = () => {
   return (
@@ -21,11 +22,11 @@ export const GetStarted = () => {
 
         <form>
           <Input
-            label="Username"
+            label="Full Name"
             type="text"
-            id="username"
-            name="username"
-            placeholder="Enter your username"
+            id="fullName"
+            name="fullName"
+            placeholder="Enter your fullName"
           />
           <Input
             label="Email"
@@ -48,17 +49,20 @@ export const GetStarted = () => {
             name="confirmPassword"
             placeholder="Confirm your password"
           />
-          <p className="text-xs my-4 mx-1">
-            By signing up, you agree to our{" "}
-            <a
-              href="#"
-              className="hover:underline"
-              style={{ color: "#b76d68" }}
-            >
-              terms of use
-            </a>
-            .
-          </p>
+          <div className="flex items-center cursor-pointer">
+            <Checkbox />
+            <p className="text-xs my-4 mt-5">
+              By signing up, you agree to our{" "}
+              <a
+                href="#"
+                className="hover:underline"
+                style={{ color: "#b76d68" }}
+              >
+                terms of use
+              </a>
+              .
+            </p>
+          </div>
           <button
             type="submit"
             className="w-full py-2 px-4 rounded-lg font-semibold text-white bg-[#b76d68] hover:bg-[#8a524e]"
