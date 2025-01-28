@@ -4,6 +4,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import CheckoutForm from "../components/Form/CheckoutForm";
 import { Link } from "react-router-dom";
+import { Input } from "../components/Form/Input";
 
 const Checkout = () => {
   return (
@@ -44,7 +45,7 @@ const Checkout = () => {
         </div>
       </section>
 
-      <section className="bg-[#1b2432] h-screen p-8 border">
+      <section className="bg-[#1b2432] p-8 border-4 border-[#8a524e]">
         <form>
           <h1 className="flex items-center gap-3 text-2xl font-bold mb-2 text-[#b76d68]">
             <p className="bg-zinc-800 w-7 h-7 rounded-full flex items-center justify-center pt-[2px]">
@@ -60,6 +61,93 @@ const Checkout = () => {
           </p>
           <CheckoutForm />
         </form>
+      </section>
+
+      <section className="bg-[#1b2432] p-8 border-4 border-[#8a524e]">
+        <>
+          <h1 className="flex items-center gap-3 text-2xl font-bold mb-2 text-[#b76d68]">
+            <p className="bg-zinc-800 w-7 h-7 rounded-full flex items-center justify-center pt-[2px]">
+              2
+            </p>
+            Payment
+          </h1>
+          <p className="text-xs mt-1">
+            Select a payment method{" "}
+            <Link to="/signin" className="hover:underline text-[#b76d68]">
+              Why do we need this for a free trial?
+            </Link>
+          </p>
+          <hr className="my-3 border border-zinc-600" />
+
+          <form>
+            <section className="bg-zinc-800 px-1 pb-4 flex items-center justify-between gap-2">
+              <div>
+                <Input
+                  label="Name on card*"
+                  type="text"
+                  id="cardName"
+                  name="cardName"
+                />
+                <Input
+                  label="Expiration*"
+                  type="text"
+                  id="cardName"
+                  name="cardName"
+                />
+                <Input
+                  label="Address*"
+                  type="text"
+                  id="cardName"
+                  name="cardName"
+                />
+                <Input
+                  label="Country*"
+                  type="text"
+                  id="cardName"
+                  name="cardName"
+                />
+                <Input
+                  label="State*"
+                  type="text"
+                  id="cardName"
+                  name="cardName"
+                />
+              </div>
+              <div>
+                <Input
+                  label="Card number*"
+                  type="number"
+                  id="cardNumber"
+                  name="cardNumber"
+                />
+                <Input
+                  label="CVV*"
+                  type="number"
+                  id="cardNumber"
+                  name="cardNumber"
+                />
+                <Input
+                  label="Address (cont)*"
+                  type="number"
+                  id="cardNumber"
+                  name="cardNumber"
+                />
+                <Input
+                  label="City*"
+                  type="number"
+                  id="cardNumber"
+                  name="cardNumber"
+                />
+                <Input
+                  label="Postal code*"
+                  type="number"
+                  id="cardNumber"
+                  name="cardNumber"
+                />
+              </div>
+            </section>
+          </form>
+        </>
       </section>
     </section>
   );

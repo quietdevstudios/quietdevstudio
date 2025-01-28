@@ -3,7 +3,7 @@ import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-import Input from "../components/Form/Input";
+import { Input } from "../components/Form/Input";
 
 export const GetStarted = () => {
   return (

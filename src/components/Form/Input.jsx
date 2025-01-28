@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Input = ({ label, id, name, type, placeholder, ...props }) => {
+export const Input = ({ label, id, name, type, placeholder, ...props }) => {
   return (
     <>
       <div className="mt-6 flex flex-col gap-1">
         <label
-          className="tracking-wider font-medium text-sm mb-1"
+          className="tracking-wider font-medium text-xs mb-1 mx-1"
           htmlFor="fullName"
         >
           {label}
@@ -23,7 +24,29 @@ const Input = ({ label, id, name, type, placeholder, ...props }) => {
   );
 };
 
-export default Input;
+export const Checkbox = ({ label, id, placeholder, ...props }) => {
+  return (
+    <div className="my-4 mx-1 flex items-start">
+      <input
+        type="checkbox"
+        id={id}
+        className="mr-2 mt-1"
+        style={{ accentColor: "#b76d68" }}
+      />
+
+      <label htmlFor="remember" className="text-sm cursor-pointer">
+        {label}
+      </label>
+      <Link
+        href="#"
+        className="ml-auto text-sm hover:underline"
+        style={{ color: "#b76d68" }}
+      >
+        {placeholder}
+      </Link>
+    </div>
+  );
+};
 
 // import React from 'react';
 // import { useFormik } from 'formik';

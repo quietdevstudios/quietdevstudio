@@ -3,7 +3,7 @@ import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-import Input from "../components/Form/Input";
+import { Checkbox, Input } from "../components/Form/Input";
 
 export const SignIn = () => {
   return (
@@ -51,25 +51,13 @@ export const SignIn = () => {
             name="confirmPassword"
             placeholder="Confirm your password"
           />
-          <div className="my-4 mx-1 flex items-center">
-            <input
-              type="checkbox"
-              id="remember"
-              className="mr-2"
-              style={{ accentColor: "#b76d68" }}
-            />
 
-            <label htmlFor="remember" className="text-sm">
-              Remember me
-            </label>
-            <a
-              href="#"
-              className="ml-auto text-sm hover:underline"
-              style={{ color: "#b76d68" }}
-            >
-              Forgot your password?
-            </a>
-          </div>
+          <Checkbox
+            label="Remember me"
+            placeholder="Forgot your password"
+            id="remember"
+          />
+
           <button
             type="submit"
             className="w-full py-2 px-4 rounded-lg font-semibold bg-[#b76d68] hover:bg-[#8a524e]"
