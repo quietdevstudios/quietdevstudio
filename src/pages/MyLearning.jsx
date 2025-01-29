@@ -26,7 +26,6 @@ const MyLearning = () => {
       </header>
 
       {/* depending on whether there are available courses, i will display dynamic contents. either the main tag with it's content(if i get an empty arr []) or purchased courses I get from server, else if there are no purchased courses by that user, I display the main tag with it's content in it. */}
-=
       <main className={`flex flex-col items-center justify-center`}>
         {PURCHASEDCOURSES.length > 0 ? (
           <>
@@ -96,18 +95,3 @@ const MyLearning = () => {
 export default MyLearning;
 
 // loader function here... I'll load purchased courses from server here - depending on whether there are available courses, i will display dynamic contents.
-
-{/* <>
-  <h2 className="text-2xl font-bold text-center tracking-wide">
-    Explore Over 50,000 Courses and Start Learning Today!
-  </h2>
-  <p className="py-6 text-lg text-center font-medium tracking-wide">
-    Your purchased courses will be displayed here.
-  </p>
-  <Link
-    to="/course-detail"
-    className="border-b-2 border-orange-600 w-fit text-orange-600 text-lg font-bold tracking-wide"
-  >
-    Browse courses.
-  </Link>
-</>; */}
