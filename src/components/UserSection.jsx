@@ -7,7 +7,7 @@ const UserSection = () => {
   const [alertsOpen, setAlertsOpen] = useState(false);
   const [accountsOpen, setAccountsOpen] = useState(false);
 
-  const linkStyle = `text-orange-50 tracking-wider leading-10 hover:underline hover:text-orange-200`;
+  const linkStyle = `text-white tracking-wider leading-10 hover:underline hover:text-orange-200`;
   return (
     <div className="mt-10">
       {/* Alerts Section */}
@@ -63,17 +63,17 @@ const UserSection = () => {
         </button>
 
         {accountsOpen && (
-          <ul className="list-disc pl-5 text-gray-600">
+          <ul className="list-disc pl-5 text-gray-600 mt-1">
             <li>
               <NavLink to="/account-settings" className={linkStyle}>
                 Account Settings
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/purchase-history" className={linkStyle}>
                 Purchase History
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         )}
       </div>
