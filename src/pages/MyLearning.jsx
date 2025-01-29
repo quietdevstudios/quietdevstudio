@@ -17,6 +17,8 @@ const MyLearning = () => {
           My learning
         </h1>
         <nav className="flex items-end justify-between w-full px-[1.5rem]">
+          {}
+
           <ul className="flex gap-6 overflow-x-scroll scrollbar-hide space-x-4 px-[1.5rem] h-full w-[95%] max-w-7xl xl:mx-auto">
             <li className="text-white font-bold text-[1.25rem] tracking-wide border-b-8 border-orange-600 w-fit">
               <a href="#">All courses</a>
@@ -25,9 +27,8 @@ const MyLearning = () => {
         </nav>
       </header>
 
-      {/* depending on whether there are available courses, i will display dynamic contents. either the main tag with it's content(if i get an empty arr []) or purchased courses I get from server, else if there are no purchased courses by that user, I display the main tag with it's content in it. */}
       <main className={`flex flex-col items-center justify-center`}>
-        {PURCHASEDCOURSES.length > 0 ? (
+        {PURCHASEDCOURSES.length < 0 ? (
           <>
             <section className="sm:grid sm:grid-cols-2 lg:grid-cols-3 max-w-7xl xl:mx-auto">
               {PURCHASEDCOURSES.map((courses) => {
@@ -94,4 +95,4 @@ const MyLearning = () => {
 
 export default MyLearning;
 
-// loader function here... I'll load purchased courses from server here - depending on whether there are available courses, i will display dynamic contents.
+// loader function here to load purchased courses from backend server - depending on whether there are available courses, i will display dynamic contents.
