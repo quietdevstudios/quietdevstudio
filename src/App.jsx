@@ -13,6 +13,7 @@ import CoursesList from "./pages/CoursesList";
 import CourseLayout from "./pages/CourseLayout";
 import CourseDetail from "./pages/CourseDetail";
 import Checkout from "./pages/Checkout";
+import Account_Settings from "./pages/Accounts/Account_Settings";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -62,6 +63,10 @@ const App = () => {
         {
           path: "my-learning",
           element: <MyLearning />,
+        },
+        {
+          path: "account-settings",
+          element: <Account_Settings />,
         },
       ],
     },

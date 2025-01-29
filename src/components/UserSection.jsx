@@ -1,10 +1,10 @@
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
-const UserSection = () => {
-  const [alertsOpen, setAlertsOpen] = useState(false);
+const UserSection = ({ closeNav }) => {
+  // const [alertsOpen, setAlertsOpen] = useState(false);
   const [accountsOpen, setAccountsOpen] = useState(false);
 
   const linkStyle = `text-white tracking-wider leading-10 hover:underline hover:text-orange-200`;
@@ -42,7 +42,7 @@ const UserSection = () => {
       </div> */}
 
       {/* Accounts Section */}
-      <div className="bg-zinc-700 shadow-lg rounded-lg p-4">
+      <div className="bg-zinc-700 shadow-lg rounded-lg py-6 px-4 w-fit">
         <button
           onClick={() => setAccountsOpen(!accountsOpen)}
           className="w-full text-left font-semibold text-gray-800 focus:outline-none"
@@ -65,7 +65,11 @@ const UserSection = () => {
         {accountsOpen && (
           <ul className="list-disc pl-5 text-gray-600 mt-1">
             <li>
-              <NavLink to="/account-settings" className={linkStyle}>
+              <NavLink
+                to="account-settings"
+                className={linkStyle}
+                onClick={closeNav}
+              >
                 Account Settings
               </NavLink>
             </li>

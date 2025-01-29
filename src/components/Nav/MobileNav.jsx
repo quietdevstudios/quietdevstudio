@@ -30,7 +30,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
 
                   return (
                     <Fragment key={navLink.linkText}>
-                      <li className="mb-6">
+                      <li className="mb-6 bg-zinc-700 shadow-lg rounded-lg p-4 w-fit">
                         <NavLink
                           to={hyperLink}
                           target={`${linkText === "Community" ? "_blank" : ""}`}
@@ -45,7 +45,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                         </NavLink>
                       </li>
 
-                      {linkText === "Get Started" && (
+                      {/* {linkText === "Get Started" && (
                         <>
                           <span className="text-white font-semibold mr-2 text-lg">
                             toggle Mode
@@ -56,13 +56,13 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                             className="text-white cursor-pointer"
                           />
                         </>
-                      )}
+                      )} */}
                     </Fragment>
                   );
                 })}
               </ul>
               <>
-                <UserSection />
+                <UserSection closeNav={toggleNav} />
               </>
             </nav>
           </section>

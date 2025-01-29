@@ -84,7 +84,7 @@ const MyLearning = () => {
               Your purchased courses will be displayed here.
             </p>
             <Link
-              to="/courses-detail"
+              to="/courses-list"
               className="border border-orange-200 text-lg w-fit px-6 py-3 mt-6 font-medium tracking-wide rounded-md text-orange-600 hover:bg-orange-500 hover:text-white capitalize transition duration-300"
             >
               Browse Courses
