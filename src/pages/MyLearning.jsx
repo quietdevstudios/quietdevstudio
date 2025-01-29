@@ -73,18 +73,21 @@ const MyLearning = () => {
             </section>
           </>
         ) : (
-          <section className=" text-center flex flex-col items-center justify-center min-h-[70vh]">
-            <h2 className="text-2xl font-bold text-center tracking-wide">
-              Explore Over 50,000 Courses and Start Learning Today!
+          <section className=" text-center flex flex-col items-center justify-center min-h-[70vh] px-3">
+            <h2 className="text-2xl font-semibold text-center">
+              Hi Udeme, you haven’t started learning yet!{" "}
+              <span className="tracking-tight mt- block text-lg font-medium">
+                Explore our courses and find the perfect one for you.
+              </span>
             </h2>
-            <p className="py-6 text-lg text-center font-medium tracking-wide">
+            <p className=" pt-6 text-lg text-center font-medium">
               Your purchased courses will be displayed here.
             </p>
             <Link
-              to="/course-detail"
-              className="border-b-2 border-orange-600 w-fit text-orange-600 text-lg font-bold tracking-wide"
+              to="/courses-detail"
+              className="border border-orange-200 text-lg w-fit px-6 py-3 mt-6 font-medium tracking-wide rounded-md text-orange-600 hover:bg-orange-500 hover:text-white capitalize transition duration-300"
             >
-              Browse courses.
+              Browse Courses
             </Link>
           </section>
         )}
@@ -94,5 +97,7 @@ const MyLearning = () => {
 };
 
 export default MyLearning;
+
+// Hi [User's Name], you haven’t started learning yet! Explore over 50,000 courses and find the perfect one for you.
 
 // loader function here to load purchased courses from backend server - depending on whether there are available courses, i will display dynamic contents.
