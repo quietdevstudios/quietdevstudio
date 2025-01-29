@@ -42,7 +42,7 @@ const UserSection = ({ closeNav }) => {
       </div> */}
 
       {/* Accounts Section */}
-      <div className="bg-zinc-700 shadow-lg rounded-lg py-6 px-4 w-full">
+      <div className="bg-zinc-700 shadow-lg rounded-lg py-6 px-4 w-fit">
         <button
           onClick={() => setAccountsOpen(!accountsOpen)}
           className="w-full text-left font-semibold text-gray-800 focus:outline-none"
