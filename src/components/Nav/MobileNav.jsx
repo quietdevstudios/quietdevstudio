@@ -30,7 +30,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
 
                   return (
                     <Fragment key={navLink.linkText}>
-                      <li className="mb-6 bg-zinc-700 shadow-lg rounded-lg p-4 w-fit">
+                      <li className="mb-6 bg-zinc-700 shadow-lg rounded-lg p-4 w-full">
                         <NavLink
                           to={hyperLink}
                           target={`${linkText === "Community" ? "_blank" : ""}`}
