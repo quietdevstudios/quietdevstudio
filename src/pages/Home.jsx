@@ -11,15 +11,15 @@ const Home = () => {
   return (
     <>
       <main className="font-montserrat text-zinc-600">
-        <section className="relative text-center bg-zinc-800 leading-10 flex flex-col items-center justify-center gap-10 p-6 py-8 text-white">
-          <h1 className="text-[2.25rem] font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
+        <section className="relative text-center bg-zinc-800 leading-10 flex flex-col items-center justify-center gap-6 p-4 py-6 text-white">
+          <h1 className="text-[1.75rem] font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Your{" "}
             <span className="text-orange-200">
               Gateway to Modern Web Development
             </span>{" "}
             Starts Here
           </h1>
-          <p className="font-medium text-[1.125rem] leading-6 tracking-wide">
+          <p className="font-medium text-[1rem] leading-6 tracking-wide">
             Learn to code with structured lessons, hands-on projects, and step
             by step guidance.
           </p>
