@@ -6,13 +6,13 @@ const About = () => {
   return (
     <section className="font-montserrat">
       {/* Hero Section */}
-      <div className="bg-zinc-800 text-white py-8">
+      <div className="bg-zinc-800 text-white py-6">
         <div className="md:px-12 lg:px-20 text-center flex flex-col items-center gap-2">
-          <h1 className="text-2xl border font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
+          <h1 className="text-[1.7rem] px-1 font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Empowering Tomorrow's{" "}
             <span className="text-orange-200">Developers</span>
           </h1>
-          <p className="mb-8 font-medium text-[1rem] leading-6 tracking-wide px-4">
+          <p className="mb-8 font-medium text-[1rem] leading-6 tracking-wide px-1">
             QuietDev Studios makes learning simple, structured, and
             beginner-friendly. Start your journey today!
           </p>
@@ -29,7 +29,7 @@ const About = () => {
       {/* About Section */}
       <div className="container mx-auto px-6 md:px-12 lg:px-20 py-12">
         <div className="text-center">
-          <h1 className="text-[2.25rem] font-bold leading-tight tracking-wide text-gray-800 mb-4">
+          <h1 className="text-[1.85rem] font-bold leading-tight tracking-wide text-gray-800 mb-4">
             About Quietdev Studios
           </h1>
           <p className="text-gray-600 mb-8">
