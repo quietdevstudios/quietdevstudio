@@ -6,7 +6,7 @@ export const Input = ({ label, id, name, type, placeholder, ...props }) => {
     <>
       <div className="mt-6 flex flex-col gap-1">
         <label
-          className="tracking-wider font-medium text-xs mb-1 mx-1"
+          className="tracking-widest font-semibold text-xs mb-1 mx-1"
           htmlFor="fullName"
         >
           {label}
