@@ -8,7 +8,7 @@ const About = () => {
       {/* Hero Section */}
       <div className="bg-zinc-800 text-white py-8">
         <div className="md:px-12 lg:px-20 text-center flex flex-col items-center gap-2">
-          <h1 className="text-[2.2rem] p-3 font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
+          <h1 className="text-2xl border font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Empowering Tomorrow's{" "}
             <span className="text-orange-200">Developers</span>
           </h1>
