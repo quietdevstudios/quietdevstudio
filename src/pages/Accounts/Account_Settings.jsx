@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Account_Settings = () => {
   return (
     <section className="font-montserrat">
-      <div className="text-center bg-zinc-800 font-semibold tracking-wide leading-tight uppercase flex items-center justify-center text-xl py-8 text-orange-200">
+      <div className="text-center bg-zinc-800 font-semibold tracking-wide leading-tight uppercase flex items-center justify-center text-2xl py-10 text-orange-200">
         Account Settings
       </div>
       <main>

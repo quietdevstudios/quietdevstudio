@@ -13,7 +13,7 @@ const MyLearning = () => {
   return (
     <section className="font-montserrat">
       <header className="bg-zinc-800 flex flex-col items-center justify-center">
-        <h1 className="text-3xl text-orange-200 tracking-wide text-left font-semibold py-[3rem] px-[1.5rem] w-[95%] max-w-7xl xl:mx-auto">
+        <h1 className="text-3xl text-orange-200 tracking-wide text-left font-semibold py-[2rem] px-[1.5rem] w-[95%] max-w-7xl xl:mx-auto">
           My learning
         </h1>
         <nav className="flex items-end justify-between w-full px-[1.5rem]">
