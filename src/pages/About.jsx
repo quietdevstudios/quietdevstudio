@@ -13,9 +13,8 @@ const About = () => {
             <span className="text-orange-200">Developers</span>
           </h1>
           <p className="mb-8 font-medium text-[1rem] leading-6 tracking-wide px-4">
-            At Quietdev Studios, we believe in transforming dreams into reality
-            by providing top-notch education in web development and technology.
-            Join a platform where innovation meets learning.
+            QuietDev Studios makes learning simple, structured, and
+            beginner-friendly. Start your journey today!
           </p>
           <Link
             to="/signup"
@@ -34,11 +33,11 @@ const About = () => {
             About Quietdev Studios
           </h1>
           <p className="text-gray-600 mb-8">
-            Quietdev Studios is a premier learning platform dedicated to
-            empowering aspiring developers with the knowledge and skills needed
-            to excel in the tech industry. We specialize in delivering
-            high-quality courses in web development, front-end frameworks, and
-            beyond.
+            QuietDev Studios helps beginners and aspiring developers grasp web
+            development concepts easily and quickly. We break down complex
+            topics, provide structured learning paths, and offer support to
+            ensure no one feels overwhelmed. Our goal is to remove barriers and
+            make learning web development smooth and accessible for everyone.
           </p>
         </div>
 
