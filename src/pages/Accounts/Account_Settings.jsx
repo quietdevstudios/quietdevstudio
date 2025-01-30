@@ -12,7 +12,7 @@ const Account_Settings = () => {
         Account_Settings
       </div>
       <main>
-        <section className="py-6 m-1 border border-red-400 p-6 rounded">
+        <section className="py-6 m-2 border shadow p-6 rounded">
           <h2 className="text-2xl font-medium text-gray-800 mb-4">
             Basic Information
           </h2>
@@ -55,7 +55,7 @@ const Account_Settings = () => {
           </div>
         </section>
 
-        <section className="py-6 m-1 border border-red-400 p-6 rounded">
+        <section className="py-6 m-2 p-6 rounded border shadow">
           <h2 className="text-2xl font-medium text-gray-800 mb-4">
             Password and Security
           </h2>
