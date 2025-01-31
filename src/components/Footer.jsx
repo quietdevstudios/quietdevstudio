@@ -1,6 +1,7 @@
 import React from "react";
-import brandLogo from "/assets/images/apple-touch-icon.png";
+import { Link } from "react-router-dom";
 
+import brandLogo from "/assets/images/apple-touch-icon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faXTwitter,
@@ -23,16 +24,16 @@ const Footer = () => {
             professionals.
           </p>
           <section className="flex gap-10">
-            <a href="#" target="_blank">
+            <Link to="https://github.com/quietdevstudios" target="_blank" title='github'>
               <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a href="#" target="_blank">
+            </Link>
+            <a href="#" target="_blank" title="coming soon">
               <FontAwesomeIcon icon={faDiscord} />
             </a>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" title="coming soon">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" title="coming soon">
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
           </section>
@@ -46,9 +47,9 @@ const Footer = () => {
               <h3 className="font-semibold leading-6">About us</h3>
               <ul className="mt-4 space-y-3">
                 <li>
-                  <a href="#" className="text-sm leading-6">
+                  <Link to="about" className="text-sm leading-6">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a href="#" className="text-sm leading-6">
