@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import profile from "/profile.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,6 +17,7 @@ import { Link } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
 
 const CourseDetail = () => {
+  const [showCurriculum, setShowCurriculum] = useState(false);
   const params = useParams();
   return (
     <section className="font-montserrat">
@@ -127,84 +128,84 @@ const CourseDetail = () => {
       <section className="mx-8 my-12">
         <h3 className="font-semibold mb-4 tracking-wide">Curriculum</h3>
         <ul>
-          <li className="mb-8">
-            <button className="border border-zinc-100 shadow-md w-full rounded-md p-7 text-left flex items-center gap-3">
-              <FontAwesomeIcon icon={faMinus} />
+          <li className="mb-8 border border-zinc-100 shadow-md rounded-md">
+            <button
+              className="w-full p-7 text-left flex items-center gap-3"
+              onClick={() => setShowCurriculum(!showCurriculum)}
+            >
+              <FontAwesomeIcon icon={showCurriculum ? faMinus : faPlus} />
               <h4 className="text-sm font-medium">Introduction</h4>
             </button>
-            <ul className="mt-4">
-              {/* one */}
-              <li className="p-4 pb-6 border-b rounded-md mt-2">
-                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
-                  <FontAwesomeIcon icon={faFile} size="lg" />
-                  Introduction to course
-                </p>
-                <div className="flex items-center gap-6">
-                  <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
-                    3 question
-                  </p>
-                  <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
-                    30 min
-                  </p>
-                  <button className="ml-4">
-                    <FontAwesomeIcon icon={faPlay} size="lg" />
-                  </button>
-                </div>
-              </li>
-              {/* two */}
-              <li className="p-4 pb-6 border-b rounded-md bg-zinc-50 mt-2">
-                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
-                  <FontAwesomeIcon icon={faFile} size="lg" />
-                  Introduction
-                </p>
-                <div className="flex items-center gap-6">
-                  <FontAwesomeIcon icon={faLock} />
-                </div>
-              </li>
-              {/* two */}
-              <li className="p-4 pb-6 border-b rounded-md bg-zinc-50 mt-2">
-                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
-                  <FontAwesomeIcon icon={faClock} size="lg" />
-                  Required Tools
-                </p>
-                <div className="flex items-center gap-6">
-                  <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
-                    12 lectures
-                  </p>
-                  <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
-                    30 min
-                  </p>
-                  <button className="ml-4">
-                    <FontAwesomeIcon icon={faLock} size="lg" />
-                  </button>
-                </div>
-              </li>
-              {/* three */}
-              <li className="p-4 pb-6 border-b rounded-md mt-2">
-                <p className="text-sm font-regular mb-5 flex gap-3 items-center">
-                  <FontAwesomeIcon icon={faClock} size="lg" />
-                  Course Structure
-                </p>
-                <div className="flex items-center gap-6">
-                  <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
-                    3 question
-                  </p>
-                  <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
-                    30 min
-                  </p>
-                  <button className="ml-4">
-                    <FontAwesomeIcon icon={faPlay} size="lg" />
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <button className="border border-zinc-100 shadow-md w-full rounded-md p-7 text-left flex items-center gap-3">
-              <FontAwesomeIcon icon={faPlus} />
-              <h4 className="text-sm font-medium">Web Development Basics</h4>
-            </button>
+            {showCurriculum && (
+              <>
+                <ul className="mt-4">
+                  {/* one */}
+                  <li className="p-4 pb-6 border-b rounded-md mt-3 bg-zinc-100">
+                    <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                      <FontAwesomeIcon icon={faFile} size="lg" />
+                      Introduction to course
+                    </p>
+                    <div className="flex items-center gap-6">
+                      <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
+                        3 question
+                      </p>
+                      <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
+                        30 min
+                      </p>
+                      <button className="ml-4">
+                        <FontAwesomeIcon icon={faPlay} size="lg" />
+                      </button>
+                    </div>
+                  </li>
+                  {/* two */}
+                  <li className="p-4 pb-6 border-b rounded-md bg-zinc-100 mt-3">
+                    <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                      <FontAwesomeIcon icon={faFile} size="lg" />
+                      Introduction
+                    </p>
+                    <div className="flex items-center gap-6">
+                      <FontAwesomeIcon icon={faLock} />
+                    </div>
+                  </li>
+                  {/* two */}
+                  <li className="p-4 pb-6 border-b rounded-md bg-zinc-100 mt-3">
+                    <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                      <FontAwesomeIcon icon={faClock} size="lg" />
+                      Required Tools
+                    </p>
+                    <div className="flex items-center gap-6">
+                      <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
+                        12 lectures
+                      </p>
+                      <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
+                        30 min
+                      </p>
+                      <button className="ml-4">
+                        <FontAwesomeIcon icon={faLock} size="lg" />
+                      </button>
+                    </div>
+                  </li>
+                  {/* three */}
+                  <li className="p-4 pb-6 border-b rounded-md mt-3">
+                    <p className="text-sm font-regular mb-5 flex gap-3 items-center">
+                      <FontAwesomeIcon icon={faClock} size="lg" />
+                      Course Structure
+                    </p>
+                    <div className="flex items-center gap-6">
+                      <p className="bg-orange-100 text-[10px] tracking-wide p-2 rounded-md">
+                        3 question
+                      </p>
+                      <p className="bg-blue-100 text-[10px] tracking-wide p-2 rounded-md">
+                        30 min
+                      </p>
+                      <button className="ml-4">
+                        <FontAwesomeIcon icon={faPlay} size="lg" />
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </>
+            )}
           </li>
         </ul>
       </section>
