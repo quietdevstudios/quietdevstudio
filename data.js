@@ -234,27 +234,30 @@ export const COURSECONTENT = [
 export const COURSElIST = [
   {
     id: 1,
-    courseTitle: "Wen Development",
+    courseTitle: "Frontend Development",
     courseThumbnailImg: FE,
     courseDuration: "1 year course",
     courseTopics: "HTML & CSS, Vanilla JS, Nodejs, Reactjs...",
     nextCohortStartDate: "3rd of Mar., 2025",
+    info: 'Master HTML, CSS, and JavaScript to build stunning websites.'
   },
   {
     id: 2,
-    courseTitle: "Graphics Design",
+    courseTitle: "React for beginners",
     courseThumbnailImg: uiux,
     courseDuration: "1 year course",
     courseTopics: "Figma, Adobe Photoshop, Canva...",
     nextCohortStartDate: "3rd of Mar., 2025",
+    info: 'Learn ReactJS to create dynamic and interactive web apps.'
   },
   {
     id: 3,
-    courseTitle: "Virtual Assistance",
+    courseTitle: "Backend with Nodejs",
     courseThumbnailImg: uiux,
     courseDuration: "1 year course",
     courseTopics: "Communication, sales,...",
     nextCohortStartDate: "3rd of Mar., 2025",
+    info: 'Dive into backend development with Node.js and Express.'
   },
 ];
 
