@@ -3,9 +3,11 @@ import vector from "/vector.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { COURSElIST } from "../../data";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const CoursesList = () => {
+  const courses = useLoaderData();
+  console.log(courses);
   return (
     <section>
       <article className="relative bg-zinc-800">
@@ -78,7 +80,7 @@ const CoursesList = () => {
       </h1>
 
       <section className="sm:grid md:grid-cols-2 xl:grid-cols-3 max-w-7xl xl:mx-auto">
-        {COURSElIST.map((course) => {
+        {courses.map((course) => {
           const {
             id,
             courseDuration,
@@ -146,3 +148,15 @@ const CoursesList = () => {
 };
 
 export default CoursesList;
+
+export const loader = () => {
+  try {
+    const response = COURSElIST;
+    if (!response) {
+      throw new Error("failed to fetch courses");
+    }
+    return COURSElIST;
+  } catch (error) {
+    console.error("failed here");
+  }
+};

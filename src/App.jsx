@@ -9,7 +9,7 @@ import GetStarted from "./pages/GetStarted";
 import SignIn from "./pages/Signin";
 import Form from "./pages/Form";
 import CoursePlayerPage from "./pages/CoursePlayerPage";
-import CoursesList from "./pages/CoursesList";
+import CoursesList, { loader as couselistLoader } from "./pages/CoursesList";
 import CourseLayout from "./pages/CourseLayout";
 import CourseDetail from "./pages/CourseDetail";
 import Checkout from "./pages/Checkout";
@@ -29,6 +29,7 @@ const App = () => {
         {
           path: "courses-list",
           element: <CoursesList />,
+          loader: couselistLoader,
         },
         {
           path: "courses-list/:courseId",
