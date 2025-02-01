@@ -11,3 +11,4 @@ const CoursePlayerPage = () => {
 export default CoursePlayerPage;
 
 // export const loader = () => {}; fetch single entries for course content e.g. lessons, modules, courseTitle,
+ 

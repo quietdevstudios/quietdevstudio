@@ -11,8 +11,8 @@ const Account_Settings = () => {
       <div className="text-center bg-zinc-800 font-semibold tracking-wide leading-tight uppercase flex items-center justify-center text-2xl py-10 text-orange-200">
         Account Settings
       </div>
-      <main>
-        <section className="py-6 m-2 border shadow p-6 rounded">
+      <main className="mx-auto md:w-[60%]  lg:w-[40%] xl:w-[30%]">
+        <section className="py-6 m-2 shadow p-6 rounded">
           <h2 className="text-2xl font-medium text-gray-800 mb-4">
             Basic Information
           </h2>
@@ -55,7 +55,7 @@ const Account_Settings = () => {
           </div>
         </section>
 
-        <section className="py-6 m-2 p-6 rounded border shadow">
+        <section className="py-6 m-2 p-6 rounded shadow">
           <h2 className="text-2xl font-medium text-gray-800 mb-4">
             Password and Security
           </h2>
