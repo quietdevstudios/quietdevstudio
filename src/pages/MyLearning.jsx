@@ -98,6 +98,8 @@ const MyLearning = () => {
 
 export default MyLearning;
 
+// export const loader = () => {}; fetching courses that have been purchased by a user.
+
 // Hi [User's Name], you haven’t started learning yet! Explore over 50,000 courses and find the perfect one for you.
 
 // loader function here to load purchased courses from backend server - depending on whether there are available courses, i will display dynamic contents.

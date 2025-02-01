@@ -111,7 +111,7 @@ const About = () => {
             your tech career.
           </p>
           <Link
-            to="/courses-list"
+            to="/courses"
             // className="inline-block bg-ef6351 text-white py-3 px-6 rounded-lg shadow hover:bg-f38375 transition duration-300"
             className="border border-orange-200 w-fit px-6 py-3 font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-500 hover:text-white capitalize transition duration-300"
           >

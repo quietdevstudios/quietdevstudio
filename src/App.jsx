@@ -9,7 +9,7 @@ import GetStarted from "./pages/Accounts/GetStarted";
 import SignIn from "./pages/Accounts/Signin";
 import Form from "./pages/Form";
 import CoursePlayerPage from "./pages/CoursePlayerPage";
-import CoursesList, { loader as couselistLoader } from "./pages/CoursesList";
+import Courses, { loader as couselistLoader } from "./pages/Courses";
 import CourseLayout from "./pages/Layouts/CourseLayout";
 import CourseDetail from "./pages/CourseDetail";
 import Checkout from "./pages/Checkout";
@@ -27,12 +27,12 @@ const App = () => {
           element: <Home />,
         },
         {
-          path: "courses-list",
-          element: <CoursesList />,
+          path: "courses",
+          element: <Courses />,
           loader: couselistLoader,
         },
         {
-          path: "courses-list/:courseId",
+          path: "courses/:courseId",
           id: "course-detail",
           children: [
             {

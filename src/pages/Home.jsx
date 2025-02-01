@@ -3,11 +3,9 @@ import {
   faGraduationCap,
   faLaptopCode,
 } from "@fortawesome/free-solid-svg-icons";
-// import Maintenance from "../components/Maintenance";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import { COURSElIST } from "../../data";
-import PopularCourses from "../components/PopularCourses";
+import { PopularCourses } from "../components/PopularCourses";
 import Testimonials from "../components/Testimonials";
 
 const Home = () => {
@@ -27,7 +25,7 @@ const Home = () => {
             by step guidance.
           </p>
           <Link
-            to="courses-list"
+            to="courses"
             className="border border-orange-50 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize transition duration-300"
           >
             start your journey

@@ -1,7 +1,7 @@
 import React from "react";
 import { COURSElIST } from "../../data";
 
-const PopularCourses = () => {
+export const PopularCourses = () => {
   return (
     <section className="bg-gray-50 py-16">
       <div className="container mx-auto px-6">
@@ -32,4 +32,4 @@ const PopularCourses = () => {
   );
 };
 
-export default PopularCourses;
+// export const loader = () => {};

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faTv } from "@fortawesome/free-solid-svg-icons";
 import { COURSECONTENT } from "../../data";
 
-const CourseContent = () => {
+const CourseContent = ({ params }) => {
   const [showContent, setShowContent] = useState(false);
   const [checkedTopics, setCheckedTopics] = useState({});
 
@@ -49,7 +49,7 @@ const CourseContent = () => {
                 by Quietdev
               </p>
               <p className="font-medium tracking-wider text-lg mt-4 text-center">
-                Course Content
+                Course Id: {params.courseId}
               </p>
             </div>
           </section>

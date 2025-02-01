@@ -1,13 +1,11 @@
 import React from "react";
 import vector from "/vector.svg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import Courselist from "../components/Courselist";
+import { useLoaderData } from "react-router-dom";
 import { COURSElIST } from "../../data";
-import { Link, useLoaderData } from "react-router-dom";
 
-const CoursesList = () => {
+const Courses = () => {
   const courses = useLoaderData();
-  // console.log(courses);
   return (
     <section>
       <article className="relative bg-zinc-800">
@@ -78,76 +76,12 @@ const CoursesList = () => {
       <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 mb-6 px-6 md:text-[2.5rem] lg:text-[3.25rem] xl:max-w-7xl xl:mx-auto">
         All Courses
       </h1>
-
-      <section className="sm:grid md:grid-cols-2 xl:grid-cols-3 max-w-7xl xl:mx-auto">
-        {courses.map((course) => {
-          const {
-            id,
-            courseDuration,
-            courseTitle,
-            courseThumbnailImg,
-            courseTopics,
-            nextCohortStartDate,
-          } = course;
-          return (
-            <section key={id} className="p-6">
-              <div className="shadow-zinc-300 shadow-lg flex flex-col justify-between h-96">
-                <div className="w-full h-32">
-                  <img
-                    src={courseThumbnailImg}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-
-                <div className="p-6 h-screen">
-                  <p className="tracking-wider text-xl font-medium pb-4">
-                    {courseTitle}
-                  </p>
-                  <p className="flex items-center gap-4">
-                    <FontAwesomeIcon icon={faClock} />
-                    <span>{courseDuration}</span>
-                  </p>
-                  <p className="flex items-center gap-4 mt-2">
-                    <FontAwesomeIcon icon={faGraduationCap} />
-                    <span>{courseTopics}</span>
-                  </p>
-                </div>
-
-                {/* details */}
-                <div className="bg-orange-50 p-6 font-medium text-lg flex items-center justify-between">
-                  <p>
-                    <span className="text-md font-medium flex flex-col items-start justify-between">
-                      <span className="text-xs tracking-wider font-regular text-zinc-600">
-                        Next Cohort Starts
-                      </span>
-                      {nextCohortStartDate}
-                    </span>
-                  </p>
-                  <Link
-                    to={`${id}`}
-                    className="text-sm bg-zinc-800 text-zinc-100 tracking-wider p-3 rounded-md shadow-xl"
-                    // state={{
-                    //   id,
-                    //   courseDuration,
-                    //   courseTitle,
-                    //   courseThumbnailImg,
-                    //   courseTopics,
-                    //   nextCohortStartDate,
-                    // }}
-                  >
-                    Course Detail
-                  </Link>
-                </div>
-              </div>
-            </section>
-          );
-        })}
-      </section>
+      <Courselist courses={courses} />
     </section>
   );
 };
 
-export default CoursesList;
+export default Courses;
 
 export const loader = () => {
   try {
