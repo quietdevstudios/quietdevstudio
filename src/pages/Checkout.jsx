@@ -91,27 +91,22 @@ const Checkout = () => {
                 <Input
                   label="Expiration*"
                   type="text"
-                  id="cardName"
-                  name="cardName"
+                  id="expiration"
+                  name="expiration"
                 />
                 <Input
                   label="Address*"
                   type="text"
-                  id="cardName"
-                  name="cardName"
+                  id="address"
+                  name="address"
                 />
                 <Input
                   label="Country*"
                   type="text"
-                  id="cardName"
-                  name="cardName"
+                  id="country"
+                  name="country"
                 />
-                <Input
-                  label="State*"
-                  type="text"
-                  id="cardName"
-                  name="cardName"
-                />
+                <Input label="State*" type="text" id="state" name="state" />
               </div>
               <div>
                 <Input
@@ -120,29 +115,19 @@ const Checkout = () => {
                   id="cardNumber"
                   name="cardNumber"
                 />
-                <Input
-                  label="CVV*"
-                  type="number"
-                  id="cardNumber"
-                  name="cardNumber"
-                />
+                <Input label="CVV*" type="number" id="cvv" name="cvv" />
                 <Input
                   label="Address (cont)*"
                   type="number"
-                  id="cardNumber"
-                  name="cardNumber"
+                  id="addressCont"
+                  name="addressCont"
                 />
-                <Input
-                  label="City*"
-                  type="number"
-                  id="cardNumber"
-                  name="cardNumber"
-                />
+                <Input label="City*" type="number" id="city" name="city" />
                 <Input
                   label="Postal code*"
                   type="number"
-                  id="cardNumber"
-                  name="cardNumber"
+                  id="postalcode"
+                  name="postalcode"
                 />
               </div>
             </section>

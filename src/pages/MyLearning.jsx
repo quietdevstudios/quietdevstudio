@@ -28,7 +28,7 @@ const MyLearning = () => {
       </header>
 
       <main className={`flex flex-col items-center justify-center`}>
-        {PURCHASEDCOURSES.length < 0 ? (
+        {PURCHASEDCOURSES.length > 0 ? (
           <>
             <section className="sm:grid sm:grid-cols-2 lg:grid-cols-3 max-w-7xl xl:mx-auto">
               {PURCHASEDCOURSES.map((courses) => {

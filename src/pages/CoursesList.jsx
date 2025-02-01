@@ -7,7 +7,7 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const CoursesList = () => {
   const courses = useLoaderData();
-  console.log(courses);
+  // console.log(courses);
   return (
     <section>
       <article className="relative bg-zinc-800">
