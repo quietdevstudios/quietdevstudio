@@ -4,8 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 import { Input, Checkbox } from "../../components/Form/Input";
+import { useFormik } from "formik";
 
 export const GetStarted = () => {
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      password: "",
+    },
+
+    onSubmit: (values) => {
+      alert("signup succcessful", values);
+    },
+  });
+
   return (
     <div className="min-h-[80vh] flex flex-col items-center justify-center font-montserrat px-8 bg-[#2c2b3c] text-[#ffffff]">
       <div className="w-full max-w-md p-6 rounded-lg shadow-lg bg-[#1b2432]">
@@ -19,13 +32,14 @@ export const GetStarted = () => {
           </Link>
         </p>
 
-        <form>
+        <form onSubmit={formik.handleSubmit}>
           <Input
             label="Full Name"
             type="text"
             id="fullName"
             name="fullName"
             placeholder="Enter your fullName"
+            formik={formik}
           />
           <Input
             label="Email"
@@ -33,6 +47,7 @@ export const GetStarted = () => {
             id="email"
             name="email"
             placeholder="Enter your email"
+            formik={formik}
           />
           <Input
             label="Password"
@@ -40,6 +55,7 @@ export const GetStarted = () => {
             id="password"
             name="password"
             placeholder="Enter your password"
+            formik={formik}
           />
           <Input
             label="Confirm Password"
@@ -47,6 +63,7 @@ export const GetStarted = () => {
             id="confirmPassword"
             name="confirmPassword"
             placeholder="Confirm your password"
+            formik={formik}
           />
           <div className="flex items-center cursor-pointer">
             <Checkbox />

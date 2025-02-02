@@ -1,7 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const Input = ({ label, id, name, type, placeholder, ...props }) => {
+export const Input = ({
+  label,
+  id,
+  name,
+  type,
+  placeholder,
+  formik,
+  ...props
+}) => {
   return (
     <>
       <div className="mt-6 flex flex-col gap-1">
@@ -18,7 +26,13 @@ export const Input = ({ label, id, name, type, placeholder, ...props }) => {
           name={name}
           type={type}
           placeholder={placeholder}
+          onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
+          value={formik.values[name]}
         />
+        {formik.touched[name] ? (
+          <div className="text-red-400">error</div>
+        ) : null}
       </div>
     </>
   );

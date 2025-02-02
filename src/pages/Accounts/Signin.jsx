@@ -2,10 +2,22 @@ import React from "react";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 import { Checkbox, Input } from "../../components/Form/Input";
 
 export const SignIn = () => {
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    onSubmit: (values) => {
+      alert("signed in successfully", values);
+    },
+  });
+
   return (
     <div
       className="min-h-[80vh] flex items-center justify-center font-montserrat px-8"
@@ -29,13 +41,14 @@ export const SignIn = () => {
           </Link>
         </p>
 
-        <form>
+        <form onSubmit={formik.handleSubmit}>
           <Input
             label="Email"
             type="email"
             id="email"
             name="email"
             placeholder="Enter your email"
+            formik={formik}
           />
           <Input
             label="Password"
@@ -43,6 +56,7 @@ export const SignIn = () => {
             id="password"
             name="password"
             placeholder="Enter your password"
+            formik={formik}
           />
           <Input
             label="Confirm Password"
@@ -50,6 +64,7 @@ export const SignIn = () => {
             id="confirmPassword"
             name="confirmPassword"
             placeholder="Confirm your password"
+            formik={formik}
           />
 
           <Checkbox
