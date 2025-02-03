@@ -2,9 +2,10 @@ import React from "react";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
 
 import { Input, Checkbox } from "../../components/Form/Input";
-import { useFormik } from "formik";
+import { signUpSchema } from "../../../validation/formInputValidation";
 
 export const GetStarted = () => {
   const formik = useFormik({
@@ -12,15 +13,18 @@ export const GetStarted = () => {
       fullName: "",
       email: "",
       password: "",
+      confirmPassword: "",
+      acceptedTerms: false,
     },
-
+    validationSchema: signUpSchema,
     onSubmit: (values) => {
-      alert("signup succcessful", values);
+      // alert("signup succcessful", values);
+      console.log(values);
     },
   });
 
   return (
-    <div className="min-h-[80vh] flex flex-col items-center justify-center font-montserrat px-8 bg-[#2c2b3c] text-[#ffffff]">
+    <div className="min-h-[80vh] p-8 flex flex-col items-center justify-center font-montserrat bg-[#2c2b3c] text-[#ffffff]">
       <div className="w-full max-w-md p-6 rounded-lg shadow-lg bg-[#1b2432]">
         <h2 className="text-2xl font-bold mb-4 text-[#b76d68]">
           Sign up for free
@@ -59,25 +63,20 @@ export const GetStarted = () => {
           />
           <Input
             label="Confirm Password"
-            type="confirmPassword"
+            type="password"
             id="confirmPassword"
             name="confirmPassword"
             placeholder="Confirm your password"
             formik={formik}
           />
           <div className="flex items-center cursor-pointer">
-            <Checkbox />
-            <p className="text-xs my-4 mt-5">
-              By signing up, you agree to our{" "}
-              <a
-                href="#"
-                className="hover:underline"
-                style={{ color: "#b76d68" }}
-              >
-                terms of use
-              </a>
-              .
-            </p>
+            <Checkbox
+              label={`By signing up, you agree to our`}
+              placeholder="terms of use"
+              id="acceptedTerms"
+              name="acceptedTerms"
+              formik={formik}
+            />
           </div>
           <button
             type="submit"
@@ -93,10 +92,16 @@ export const GetStarted = () => {
             <hr className="w-full" style={{ borderColor: "#403f4c" }} />
           </div>
           <div className="flex justify-center gap-4">
-            <button className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]">
+            <button
+              type="button"
+              className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]"
+            >
               <FontAwesomeIcon icon={faGithub} color="#b76d68" size="xl" />
             </button>
-            <button className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]">
+            <button
+              type="button"
+              className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]"
+            >
               <FontAwesomeIcon icon={faGoogle} color="#b76d68" size="xl" />
             </button>
           </div>
@@ -107,3 +112,5 @@ export const GetStarted = () => {
 };
 
 export default GetStarted;
+
+// make the github and google buttons re-usable

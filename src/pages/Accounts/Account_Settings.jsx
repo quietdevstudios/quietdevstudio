@@ -4,8 +4,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil } from "@fortawesome/free-solid-svg-icons";
 import { Input } from "../../components/Form/Input";
 import { Link } from "react-router-dom";
+import { useFormik } from "formik";
+import { accountSettingsSchema } from "../../../validation/formInputValidation";
 
 const Account_Settings = () => {
+  const formik = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      password: "",
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: "",
+    },
+    validationSchema: accountSettingsSchema,
+    onSubmit: (values) => {
+      console.log("account settings", values);
+    },
+  });
   return (
     <section className="font-montserrat">
       <div className="text-center bg-zinc-800 font-semibold tracking-wide leading-tight uppercase flex items-center justify-center text-2xl py-10 text-orange-200">
@@ -32,13 +48,14 @@ const Account_Settings = () => {
             </button>
           </div>
 
-          <form className="flex flex-col gap-4">
+          <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
             <Input
               label="Full Name"
               type="text"
               id="fullName"
               name="fullName"
               placeholder="Enter your fullName"
+              formik={formik}
             />
             <Input
               label="Email"
@@ -46,39 +63,46 @@ const Account_Settings = () => {
               id="email"
               name="email"
               placeholder="Enter your email"
+              formik={formik}
             />
+            <div className="text-center flex items-center justify-end mt-6">
+              <button
+                type="submit"
+                className="bg-green-700 px-6 py-3 rounded-lg text-white tracking-wide font-medium uppercase"
+              >
+                Update
+              </button>
+            </div>
           </form>
-          <div className="text-center flex items-center justify-end mt-8">
-            <button className="bg-green-700 px-6 py-3 rounded-lg text-white tracking-wide font-medium uppercase">
-              Update
-            </button>
-          </div>
         </section>
 
-        <section className="py-6 m-2 p-6 rounded shadow">
+        <form className="py-6 m-2 p-6 rounded shadow">
           <h2 className="text-2xl font-medium text-gray-800 mb-4">
             Password and Security
           </h2>
           <Input
             label="Current Password"
             type="password"
-            id="password"
-            name="password"
+            id="currentPassword"
+            name="currentPassword"
             placeholder="Enter current password"
+            formik={formik}
           />
           <Input
             label="New Password"
             type="password"
-            id="password"
-            name="password"
+            id="newPassword"
+            name="newPassword"
             placeholder="Enter new password"
+            formik={formik}
           />
           <Input
             label="Confirm New Password"
-            type="confirmPassword"
+            type="password"
             id="confirmPassword"
             name="confirmPassword"
             placeholder="Confirm new password"
+            formik={formik}
           />
           <p className="mt-4 text-sm font-medium tracking-wider">
             Can't remember your current password?{" "}
@@ -87,17 +111,22 @@ const Account_Settings = () => {
             </Link>
           </p>
           <div className="text-center flex items-center justify-end mt-8">
-            <button className="bg-green-700 px-6 py-3 rounded-lg text-white tracking-wide font-medium uppercase">
+            <button
+              type="button"
+              className="bg-green-700 px-6 py-3 rounded-lg text-white tracking-wide font-medium uppercase"
+            >
               Update
             </button>
             {/* <button className="bg-red-700 px-6 py-3 rounded-lg text-white tracking-wide font-medium uppercase">
               Delete
             </button> */}
           </div>
-        </section>
+        </form>
       </main>
     </section>
   );
 };
 
 export default Account_Settings;
+
+// still got some work to do here

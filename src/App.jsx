@@ -46,7 +46,7 @@ const App = () => {
           element: <Checkout />,
         },
         {
-          path: "about", 
+          path: "about",
           element: <About />,
         },
         {

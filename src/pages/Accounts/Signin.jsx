@@ -3,8 +3,8 @@ import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
-import * as Yup from "yup";
 
+import { signInSchema } from "../../../validation/formInputValidation";
 import { Checkbox, Input } from "../../components/Form/Input";
 
 export const SignIn = () => {
@@ -12,15 +12,19 @@ export const SignIn = () => {
     initialValues: {
       email: "",
       password: "",
+      confirmPassword: "",
+      rememberMe: false,
     },
+    validationSchema: signInSchema,
     onSubmit: (values) => {
-      alert("signed in successfully", values);
+      // alert("signed in successfully", values);
+      console.log(values);
     },
   });
 
   return (
     <div
-      className="min-h-[80vh] flex items-center justify-center font-montserrat px-8"
+      className="min-h-[80vh] p-8 flex items-center justify-center font-montserrat"
       style={{ backgroundColor: "#2c2b3c", color: "#ffffff" }}
     >
       <div
@@ -58,19 +62,17 @@ export const SignIn = () => {
             placeholder="Enter your password"
             formik={formik}
           />
-          <Input
-            label="Confirm Password"
-            type="confirmPassword"
-            id="confirmPassword"
-            name="confirmPassword"
-            placeholder="Confirm your password"
-            formik={formik}
-          />
 
           <Checkbox
             label="Remember me"
             placeholder="Forgot your password"
-            id="remember"
+            id="rememberMe"
+            name="rememberMe"
+            formik={formik}
+            checked={formik.values.rememberMe}
+            onChange={(e) =>
+              formik.setFieldValue("rememberMe", e.target.checked)
+            }
           />
 
           <button
@@ -87,10 +89,16 @@ export const SignIn = () => {
             <hr className="w-full" style={{ borderColor: "#403f4c" }} />
           </div>
           <div className="flex justify-center gap-4">
-            <button className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]">
+            <button
+              type="button"
+              className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]"
+            >
               <FontAwesomeIcon icon={faGithub} color="#b76d68" size="xl" />
             </button>
-            <button className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]">
+            <button
+              type="button"
+              className="p-2 rounded-lg border border-[#fff] w-full hover:bg-[#121420]"
+            >
               <FontAwesomeIcon icon={faGoogle} color="#b76d68" size="xl" />
             </button>
           </div>
@@ -101,3 +109,6 @@ export const SignIn = () => {
 };
 
 export default SignIn;
+
+// How do I use the formik.setFieldValue to set the value to my checkboxes coming from the backend?
+// make the github and google buttons re-usable

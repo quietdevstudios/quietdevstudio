@@ -30,34 +30,44 @@ export const Input = ({
           onBlur={formik.handleBlur}
           value={formik.values[name]}
         />
-        {formik.touched[name] ? (
-          <div className="text-red-400">error</div>
+        {formik.touched[name] && formik.errors[name] ? (
+          <div className="text-red-400">{formik.errors[name]}</div>
         ) : null}
       </div>
     </>
   );
 };
 
-export const Checkbox = ({ label, id, placeholder, ...props }) => {
+export const Checkbox = ({ label, id, name, placeholder, formik }) => {
   return (
-    <div className="my-4 mx-1 flex items-start">
-      <input
-        type="checkbox"
-        id={id}
-        className="mr-2 mt-1"
-        style={{ accentColor: "#b76d68" }}
-      />
-
-      <label htmlFor="remember" className="text-sm cursor-pointer">
-        {label}
-      </label>
-      <Link
-        href="#"
-        className="ml-auto text-sm hover:underline"
-        style={{ color: "#b76d68" }}
-      >
-        {placeholder}
-      </Link>
+    <div className="my-4 space-y-1">
+      <div className="mx-1 flex items-start">
+        <input
+          type="checkbox"
+          id={id}
+          checked={formik.values[name]}
+          onChange={(e) => formik.setFieldValue(name, e.target.checked)}
+          className="mr-2 mt-1"
+          style={{ accentColor: "#b76d68" }}
+        />
+        <div className="space-x-1 text-[13px]">
+          <label htmlFor={id} className="cursor-pointer">
+            {label}
+          </label>
+          <Link
+            href="#"
+            className="ml-auto hover:underline"
+            style={{ color: "#b76d68" }}
+          >
+            {placeholder}
+          </Link>
+        </div>
+      </div>
+      {formik.touched[name] && formik.errors[name] ? (
+        <div className="text-[10px] mx-2 tracking-wide text-red-400">
+          {formik.errors[name]}
+        </div>
+      ) : null}
     </div>
   );
 };
