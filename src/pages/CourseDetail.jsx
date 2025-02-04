@@ -10,4 +10,5 @@ const CourseDetail = () => {
 
 export default CourseDetail;
 
-// export const loader = () => {}; fetches single entry of courseDetails using the id from useParams();
+// export const loader = async (params) => {}; fetches single entry of courseDetails using the id from useParams();
+ 

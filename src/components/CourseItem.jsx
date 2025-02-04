@@ -290,7 +290,7 @@ const CourseItem = ({ params }) => {
         </div>
 
         <ul className="px-2 mt-8 flex flex-col gap-6">
-          <li className="flex items-center justify-between">
+          <li className="flex items-center justify-between"> 
             <span className="flex items-center gap-4">
               <FontAwesomeIcon icon={faCalendar} color="orange" />
               <p className="font-medium text-sm">Duration</p>

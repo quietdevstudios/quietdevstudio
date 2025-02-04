@@ -10,7 +10,10 @@ export const Input = ({
   formik,
   ...props
 }) => {
+  const isError = formik.touched[name] && formik.errors[name];
+
   return (
+    // [#403f4c]
     <>
       <div className="mt-6 flex flex-col gap-1">
         <label
@@ -20,7 +23,9 @@ export const Input = ({
           {label}
         </label>
         <input
-          className="text-white bg-[#121420] border border-[#403f4c] bg-none px-4 py-3 w-full rounded-lg font-medium tracking-wide shadow-2xl focus:outline-none focus:ring-2"
+          className={`text-white bg-[#121420] bg-none px-4 py-3 w-full rounded-lg font-medium tracking-wide shadow-2xl outline-none focus:border focus:border-[#403f4c] ${
+            isError && "border border-red-400"
+          }`}
           {...props}
           id={id}
           name={name}
@@ -30,8 +35,8 @@ export const Input = ({
           onBlur={formik.handleBlur}
           value={formik.values[name]}
         />
-        {formik.touched[name] && formik.errors[name] ? (
-          <div className="text-red-400">{formik.errors[name]}</div>
+        {isError ? (
+          <div className="text-red-400 tracking-wide leading-6">{formik.errors[name]}</div>
         ) : null}
       </div>
     </>

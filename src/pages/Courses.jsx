@@ -17,13 +17,13 @@ const Courses = () => {
             <h4 className="text-[1.5rem] font-medium tracking-wide leading-6 mt-2 text-white md:text-[2rem] md:leading-8">
               The essential skillset for new front-end developers
             </h4>
-            <p className="mt-4 font-medium text-md text-white">
+            <p className="mt-4 tracking-snug text-md text-white">
               The Quietdev Studio Curriculum provides a structured guide to the
               essential skills and practices for being a successful front-end
               developer, along with recommended learning resources.
             </p>
 
-            <p className="mt-10 font-regular text-md tracking-wide leading-tight text-white">
+            <p className="my-8 font-regular text-md tracking-wide leading-tight text-white">
               Last Updated: January 2025.
             </p>
           </header>
@@ -35,7 +35,7 @@ const Courses = () => {
             />
           </figure>
         </section>
-        <section className="flex items-center justify-evenly bg-orange-400 w-[80%] md:max-w-[60%] mx-auto p-6 absolute -bottom-14 left-0 right-0 rounded-md text-white font-medium text-2xl tracking-tighter">
+        <section className="flex items-center justify-evenly bg-zinc-700 w-[80%] md:max-w-[60%] mx-auto p-6 absolute -bottom-14 left-0 right-0 rounded-md text-white font-medium text-2xl tracking-tight">
           <div>
             {/* <FontAwesomeIcon icon={faGraduationCap} /> */}
             <p>Beginner's level</p>
@@ -48,7 +48,7 @@ const Courses = () => {
 
       {/* about the curriculum */}
       <section className="w-[95%] max-w-7xl xl:mx-auto">
-        <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-28 w-[95%] mx-auto md:text-[2.5rem] lg:text-[3.25rem]">
+        <h1 className="text-[2rem] font-semibold tracking-wide leading-tight text-zinc-700 mt-28 w-[95%] mx-auto md:text-[2.5rem] lg:text-[3.25rem]">
           About the courses
         </h1>
         <div className="flex flex-col gap-4 text-md font-regular tracking-tight px-16 my-10">
@@ -73,7 +73,7 @@ const Courses = () => {
         </div>
       </section>
 
-      <h1 className="text-[2rem] font-medium tracking-wide leading-tight text-orange-400 mt-12 mb-6 px-6 md:text-[2.5rem] lg:text-[3.25rem] xl:max-w-7xl xl:mx-auto">
+      <h1 className="text-[2rem] font-semibold leading-tight text-zinc-700 mt-12 mb-6 px-6 md:text-[2.5rem] lg:text-[3.25rem] xl:max-w-7xl xl:mx-auto">
         All Courses
       </h1>
       <Courselist courses={courses} />
