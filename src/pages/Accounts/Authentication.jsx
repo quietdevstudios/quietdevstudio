@@ -90,10 +90,6 @@ const Authentication = () => {
               id="rememberMe"
               name="rememberMe"
               formik={formik}
-              checked={formik.values.rememberMe}
-              onChange={(e) =>
-                formik.setFieldValue("rememberMe", e.target.checked)
-              }
             />
           )}
           {isSignUp && (
@@ -103,10 +99,6 @@ const Authentication = () => {
               id="acceptedTerms"
               name="acceptedTerms"
               formik={formik}
-              checked={formik.values.acceptedTerms}
-              onChange={(e) =>
-                formik.setFieldValue("acceptedTerms", e.target.checked)
-              }
             />
           )}
           <button
@@ -143,3 +135,5 @@ const Authentication = () => {
 };
 
 export default Authentication;
+
+export const action = async ({ request }) => {};
