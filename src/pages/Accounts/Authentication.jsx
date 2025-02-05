@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -10,6 +10,9 @@ import {
 } from "../../../validation/formInputValidation";
 
 const Authentication = () => {
+  const [showSignInPassword, setShowSignInPassword] = useState(false);
+  const [showSignUpPassword, setShowSignUpPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   //   const navigation = useNavigation();
   //   const isSubmitting = navigation.state === "submitting";
   const [searchParams] = useSearchParams();
@@ -97,6 +100,10 @@ const Authentication = () => {
             name="password"
             placeholder="Enter your password"
             formik={formik}
+            showPassword={isSignUp ? showSignUpPassword : showSignInPassword}
+            setShowPassword={
+              isSignUp ? setShowSignUpPassword : setShowSignInPassword
+            }
           />
           {isSignUp && (
             <Input
@@ -106,6 +113,8 @@ const Authentication = () => {
               name="confirmPassword"
               placeholder="Confirm your password"
               formik={formik}
+              showPassword={showConfirmPassword}
+              setShowPassword={setShowConfirmPassword}
             />
           )}
           {!isSignUp && (

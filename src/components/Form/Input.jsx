@@ -10,9 +10,10 @@ export const Input = ({
   type,
   placeholder,
   formik,
+  showPassword,
+  setShowPassword,
   ...props
 }) => {
-  const [showPassword, setShowPassword] = useState(false);
   const isPasswordField = type === "password";
   const isError = formik.touched[name] && formik.errors[name];
 
@@ -46,7 +47,9 @@ export const Input = ({
               color="#5d5d61"
               className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer w-fit"
               onMouseDown={(e) => e.preventDefault()}
-              onClick={() => setShowPassword((prev) => !prev)}
+              onClick={() =>
+                setShowPassword((prevShowPassword) => !prevShowPassword)
+              }
             />
           )}
         </div>
