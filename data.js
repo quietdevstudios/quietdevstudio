@@ -14,11 +14,6 @@ import FE from "/FE.svg";
 import uiux from "/uiux.svg";
 
 export const NAV_LINKS = [
-  // {
-  //   linkText: "Home",
-  //   hyperLink: "/",
-  //   faImage: faBookOpen
-  // },
   {
     linkText: "Courses",
     hyperLink: "courses",
@@ -39,19 +34,9 @@ export const NAV_LINKS = [
     hyperLink: "https://chat.whatsapp.com/C9lCAAYQtEyEWOX880NnTv",
     faImage: faCommentNodes,
   },
-  // {
-  //   linkText: "Templates",
-  //   hyperLink: "#",
-  //   faImage: faBookOpen
-  // },
-  {
-    linkText: "Sign In",
-    hyperLink: "signin",
-    faImage: faBookOpen,
-  },
   {
     linkText: "Get Started",
-    hyperLink: "signup",
+    hyperLink: "auth",
     faImage: faBookOpen,
   },
 ];
@@ -239,7 +224,7 @@ export const COURSElIST = [
     courseDuration: "1 year course",
     courseTopics: "HTML & CSS, Vanilla JS, Nodejs, Reactjs...",
     nextCohortStartDate: "3rd of Mar., 2025",
-    info: 'Master HTML, CSS, and JavaScript to build stunning websites.'
+    info: "Master HTML, CSS, and JavaScript to build stunning websites.",
   },
   {
     id: 2,
@@ -248,7 +233,7 @@ export const COURSElIST = [
     courseDuration: "1 year course",
     courseTopics: "Figma, Adobe Photoshop, Canva...",
     nextCohortStartDate: "3rd of Mar., 2025",
-    info: 'Learn ReactJS to create dynamic and interactive web apps.'
+    info: "Learn ReactJS to create dynamic and interactive web apps.",
   },
   {
     id: 3,
@@ -257,9 +242,8 @@ export const COURSElIST = [
     courseDuration: "1 year course",
     courseTopics: "Communication, sales,...",
     nextCohortStartDate: "3rd of Mar., 2025",
-    info: 'Dive into backend development with Node.js and Express.'
+    info: "Dive into backend development with Node.js and Express.",
   },
 ];
-
 
 // export const CHECKOUT = []

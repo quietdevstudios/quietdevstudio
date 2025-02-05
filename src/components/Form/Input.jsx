@@ -36,10 +36,12 @@ export const Input = ({
           value={formik.values[name]}
         />
         {isError ? (
-          <div className="text-red-400 tracking-wide leading-6">{formik.errors[name]}</div>
+          <div className="text-red-400 tracking-wide leading-6">
+            {formik.errors[name]}
+          </div>
         ) : null}
       </div>
-    </>
+    </> 
   );
 };
 

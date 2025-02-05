@@ -5,8 +5,8 @@ import Errorpage from "./pages/Errorpage";
 import RootLayout from "./pages/Layouts/RootLayout";
 import MyLearning from "./pages/MyLearning";
 import About from "./pages/About";
-import GetStarted from "./pages/Accounts/GetStarted";
-import SignIn from "./pages/Accounts/Signin";
+// import GetStarted from "./pages/Accounts/GetStarted";
+// import SignIn from "./pages/Accounts/Signin";
 import Form from "./pages/Form";
 import CoursePlayerPage from "./pages/CoursePlayerPage";
 import Courses, { loader as couselistLoader } from "./pages/Courses";
@@ -14,6 +14,7 @@ import CourseLayout from "./pages/Layouts/CourseLayout";
 import CourseDetail from "./pages/CourseDetail";
 import Checkout from "./pages/Checkout";
 import Account_Settings from "./pages/Accounts/Account_Settings";
+import Authentication from "./pages/Accounts/Authentication";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -50,12 +51,8 @@ const App = () => {
           element: <About />,
         },
         {
-          path: "signup",
-          element: <GetStarted />,
-        },
-        {
-          path: "signin",
-          element: <SignIn />,
+          path: "auth",
+          element: <Authentication />,
         },
         {
           path: "form",
