@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 export const Input = ({
   label,
@@ -10,6 +12,8 @@ export const Input = ({
   formik,
   ...props
 }) => {
+  const [showPassword, setShowPassword] = useState(false);
+  const isPasswordField = type === "password";
   const isError = formik.touched[name] && formik.errors[name];
 
   return (
@@ -17,31 +21,42 @@ export const Input = ({
     <>
       <div className="mt-6 flex flex-col gap-1">
         <label
-          className="tracking-widest font-semibold text-xs mb-1 mx-1"
+          className="tracking-widest font-semibold text-xs mb-1 mx-1 w-fit"
           htmlFor={name}
         >
           {label}
         </label>
-        <input
-          className={`text-white bg-[#121420] bg-none px-4 py-3 w-full rounded-lg font-medium tracking-wide shadow-2xl outline-none focus:border focus:border-[#403f4c] ${
-            isError && "border border-red-400"
-          }`}
-          {...props}
-          id={id}
-          name={name}
-          type={type}
-          placeholder={placeholder}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values[name]}
-        />
+        <div className="relative w-full">
+          <input
+            className={`text-white bg-[#121420] bg-none px-4 py-3 w-full rounded-lg font-medium tracking-wide shadow-2xl outline-none focus:border focus:border-[#403f4c] ${
+              isError ? "border border-red-400" : ""
+            }`}
+            {...props}
+            id={id}
+            name={name}
+            type={isPasswordField && showPassword ? "text" : type}
+            placeholder={placeholder}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values[name] ?? ""}
+          />
+          {isPasswordField && (
+            <FontAwesomeIcon
+              icon={showPassword ? faEyeSlash : faEye}
+              color="#5d5d61"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer w-fit"
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={() => setShowPassword((prev) => !prev)}
+            />
+          )}
+        </div>
         {isError ? (
           <div className="text-red-400 tracking-wide leading-6">
             {formik.errors[name]}
           </div>
         ) : null}
       </div>
-    </> 
+    </>
   );
 };
 

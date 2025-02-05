@@ -14,7 +14,6 @@ const Authentication = () => {
   //   const isSubmitting = navigation.state === "submitting";
   const [searchParams] = useSearchParams();
   const mode = searchParams.get("mode") || "signin"; // Default to sign-in
-
   const isSignUp = mode === "signup";
 
   const formikSignup = useFormik({
@@ -47,9 +46,7 @@ const Authentication = () => {
       }, 2000);
     },
   });
-
   const formik = isSignUp ? formikSignup : formikSignin;
-
   const isSubmitting = formik.isSubmitting;
 
   useEffect(() => {
