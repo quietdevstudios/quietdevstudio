@@ -18,7 +18,7 @@ export const Input = ({
       <div className="mt-6 flex flex-col gap-1">
         <label
           className="tracking-widest font-semibold text-xs mb-1 mx-1"
-          htmlFor="fullName"
+          htmlFor={name}
         >
           {label}
         </label>

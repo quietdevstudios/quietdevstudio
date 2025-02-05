@@ -10,6 +10,8 @@ import {
 } from "../../../validation/formInputValidation";
 
 const Authentication = () => {
+  //   const navigation = useNavigation();
+  //   const isSubmitting = navigation.state === "submitting";
   const [searchParams] = useSearchParams();
   const mode = searchParams.get("mode") || "signin"; // Default to sign-in
 
@@ -26,8 +28,16 @@ const Authentication = () => {
         }
       : { email: "", password: "", rememberMe: false },
     validationSchema: isSignUp ? signUpSchema : signInSchema,
-    onSubmit: (values) => alert(JSON.stringify(values)),
+    onSubmit: (values, { resetForm, setSubmitting }) => {
+      setTimeout(() => {
+        alert(JSON.stringify(values));
+        resetForm();
+        setSubmitting(false);
+      }, 2000);
+    },
   });
+
+  const isSubmitting = formik.isSubmitting;
 
   return (
     <div className="min-h-[80vh] p-8 flex items-center justify-center font-montserrat bg-[#2c2b3c] text-[#ffffff]">
@@ -101,11 +111,15 @@ const Authentication = () => {
               formik={formik}
             />
           )}
+          {/* hover:bg-[#8a524e] */}
           <button
             type="submit"
-            className="w-full py-2 px-4 rounded-lg font-semibold bg-[#b76d68] hover:bg-[#8a524e]"
+            disabled={isSubmitting}
+            className={`w-full py-2 px-4 rounded-lg font-semibold bg-[#b76d68] ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            {isSignUp ? "Sign up" : "Sign in"}
+            {isSubmitting ? "Submitting" : isSignUp ? "Sign up" : "Sign in"}
           </button>
 
           <div className="flex items-center justify-between my-4">
