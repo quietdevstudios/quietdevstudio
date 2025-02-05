@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { useFormik } from "formik";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -17,19 +17,30 @@ const Authentication = () => {
 
   const isSignUp = mode === "signup";
 
-  const formik = useFormik({
-    initialValues: isSignUp
-      ? {
-          fullName: "",
-          email: "",
-          password: "",
-          confirmPassword: "",
-          acceptedTerms: false,
-        }
-      : { email: "", password: "", rememberMe: false },
-    validationSchema: isSignUp ? signUpSchema : signInSchema,
+  const formikSignup = useFormik({
+    initialValues: {
+      fullName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      acceptedTerms: false,
+    },
+    validationSchema: signUpSchema,
     onSubmit: (values, { resetForm, setSubmitting }) => {
       setTimeout(() => {
+        console.log("signup");
+        alert(JSON.stringify(values));
+        resetForm();
+        setSubmitting(false);
+      }, 2000);
+    },
+  });
+  const formikSignin = useFormik({
+    initialValues: { email: "", password: "", rememberMe: false },
+    validationSchema: signInSchema,
+    onSubmit: (values, { resetForm, setSubmitting }) => {
+      setTimeout(() => {
+        console.log("signin");
         alert(JSON.stringify(values));
         resetForm();
         setSubmitting(false);
@@ -37,7 +48,13 @@ const Authentication = () => {
     },
   });
 
+  const formik = isSignUp ? formikSignup : formikSignin;
+
   const isSubmitting = formik.isSubmitting;
+
+  useEffect(() => {
+    formik.resetForm();
+  }, [mode]);
 
   return (
     <div className="min-h-[80vh] p-8 flex items-center justify-center font-montserrat bg-[#2c2b3c] text-[#ffffff]">
