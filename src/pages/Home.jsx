@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { PopularCourses } from "../components/PopularCourses";
 import Testimonials from "../components/Testimonials";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (

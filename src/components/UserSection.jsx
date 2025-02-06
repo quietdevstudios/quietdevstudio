@@ -2,6 +2,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const UserSection = ({ closeNav }) => {
   // const [alertsOpen, setAlertsOpen] = useState(false);
@@ -9,40 +10,13 @@ const UserSection = ({ closeNav }) => {
 
   const linkStyle = `text-white tracking-wider leading-10 hover:underline hover:text-orange-200`;
   return (
-    <div className="mt-10">
-      {/* Alerts Section */}
-      {/* <div className="mb-6 bg-zinc-800 shadow-md rounded-lg p-4">
-        <button
-          onClick={() => setAlertsOpen(!alertsOpen)}
-          className="w-full text-left font-semibold text-gray-800 focus:outline-none"
-        >
-          <div className="flex items-center gap-4">
-            <h2 className="text-lg font-semibold text-white"> Alerts</h2>
-            <FontAwesomeIcon
-              icon={faChevronDown}
-              color="#fff"
-              width="20"
-              height="20"
-              className={`transform transition-transform ${
-                alertsOpen ? "rotate-180" : ""
-              }`}
-            />
-          </div>
-        </button>
-
-        {alertsOpen && (
-          <ul className="list-disc pl-5 text-gray-600">
-            <li>
-              <NavLink to="/notification" className={linkStyle}>
-                Notification
-              </NavLink>
-            </li>
-          </ul>
-        )}
-      </div> */}
-
+    <div className="mt-6">
       {/* Accounts Section */}
-      <div className="bg-zinc-700 shadow-lg rounded-lg py-6 px-4 w-fit">
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 500 }}
+        className="bg-zinc-700 shadow-lg rounded-lg p-5 w-full"
+      >
         <button
           onClick={() => setAccountsOpen(!accountsOpen)}
           className="w-full text-left font-semibold text-gray-800 focus:outline-none"
@@ -80,7 +54,7 @@ const UserSection = ({ closeNav }) => {
             </li> */}
           </ul>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

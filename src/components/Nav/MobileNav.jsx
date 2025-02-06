@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router";
+import { AnimatePresence, motion } from "framer-motion";
 
 import { NAV_LINKS } from "../../../data";
 import Profilesection from "../Profilesection";
@@ -30,7 +30,11 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
 
                   return (
                     <Fragment key={navLink.linkText}>
-                      <li className="mb-6 bg-zinc-700 shadow-lg rounded-lg p-4 w-fit">
+                      <motion.li
+                        whileHover={{ scale: 1.1 }}
+                        transition={{ type: "spring", stiffness: 500 }}
+                        className="mb-6 bg-zinc-700 shadow-lg rounded-lg p-4 w-full"
+                      >
                         <NavLink
                           to={hyperLink}
                           target={`${linkText === "Community" ? "_blank" : ""}`}
@@ -43,7 +47,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
                             {linkText}
                           </span>
                         </NavLink>
-                      </li>
+                      </motion.li>
 
                       {/* {linkText === "Get Started" && (
                         <>
