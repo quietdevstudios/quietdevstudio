@@ -8,6 +8,7 @@ import {
   signUpSchema,
   signInSchema,
 } from "../../../validation/formInputValidation";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Authentication = () => {
   const [showSignInPassword, setShowSignInPassword] = useState(false);
@@ -58,7 +59,11 @@ const Authentication = () => {
 
   return (
     <div className="min-h-[80vh] p-8 flex items-center justify-center font-montserrat bg-[#2c2b3c] text-[#ffffff]">
-      <div className="w-full max-w-md p-6 rounded-lg shadow-lg bg-[#1b2432]">
+      <motion.div
+        className="w-full max-w-md p-6 rounded-lg shadow-lg bg-[#1b2432]"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         <h2 className="text-2xl font-bold mb-4 text-[#b76d68]">
           {isSignUp ? "Sign up for free" : "Sign in to your account"}
         </h2>
@@ -166,7 +171,7 @@ const Authentication = () => {
             />
           </div>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };

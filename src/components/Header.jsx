@@ -1,7 +1,7 @@
 import React, { Fragment, useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { NavLink } from "react-router";
+import { motion } from "framer-motion";
 
 import brandLogo from "/assets/images/apple-touch-icon.png";
 import { NAV_LINKS } from "../../data";
@@ -20,10 +20,13 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="bg-zinc-800 h-20 text-orange-950 font-montserrat sticky top-0 z-50 border-b border-zinc-700 "
+      className="bg-zinc-800 h-20 text-orange-950 font-montserrat sticky top-0 z-50 border-b border-zinc-700"
     >
-      <section className="h-full w-[95%] max-w-7xl xl:mx-auto flex items-center justify-between">
-        <NavLink to="/" className="flex items-center justify-center">
+      <section className="h-full w-[95%] mx-auto max-w-7xl flex items-center justify-between">
+        <NavLink
+          to="/"
+          className="flex items-center justify-center h-20"
+        >
           <img src={brandLogo} className="w-24 cursor-pointer" />
           <h2 className="font-semibold leading-normal text-xl text-white hidden lg:flex lg:text-[1.25rem] relative right-5">
             Quietdev Studios
@@ -33,7 +36,7 @@ const Header = () => {
         {isNavOpen && <MobileNav isNavOpen={isNavOpen} toggleNav={toggleNav} />}
 
         <nav>
-          <ul className="hidden md:flex md:items-center md:justify-evenly md:gap-5 lg:gap-6 xl:gap-10">
+          <ul className="hidden md:flex md:items-center md:justify-evenly md:gap-10">
             {NAV_LINKS.map((navLink) => {
               const { hyperLink, linkText } = navLink;
               const defaultStyle =
@@ -44,7 +47,10 @@ const Header = () => {
 
               return (
                 <Fragment key={navLink.linkText}>
-                  <li>
+                  <motion.li
+                    whileHover={{ scale: 1.06 }}
+                    transition={{ type: "spring", stiffness: 500 }}
+                  >
                     <NavLink
                       to={hyperLink}
                       target={`${
@@ -60,14 +66,7 @@ const Header = () => {
                     >
                       {linkText}
                     </NavLink>
-                  </li>
-                  {linkText === "Sign in" && (
-                    <FontAwesomeIcon
-                      icon={faMoon}
-                      size="xl"
-                      className="text-zinc-600 hover:text-orange-500 cursor-pointer"
-                    />
-                  )}
+                  </motion.li>
                 </Fragment>
               );
             })}
@@ -75,7 +74,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center justify-center gap-10">
-          <div className="relative">
+          <div className="relative mr-2">
             <FontAwesomeIcon
               icon={faCartShopping}
               color="#ffcc80"
