@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
+import { stagger, useAnimate } from "framer-motion";
 
 export const Input = ({
   label,
@@ -17,6 +18,18 @@ export const Input = ({
   const isPasswordField = type === "password";
   const isError = formik.touched[name] && formik.errors[name];
 
+  const [scope, animate] = useAnimate();
+
+  useEffect(() => {
+    if (isError) {
+      animate(
+        scope.current,
+        { x: [-20, 0, 20, 0] },
+        { type: "spring", duration: 0.5, delay: stagger(0.05) }
+      );
+    }
+  }, [isError, animate, scope]);
+
   return (
     // [#403f4c]
     <>
@@ -29,6 +42,7 @@ export const Input = ({
         </label>
         <div className="relative w-full">
           <input
+            ref={scope}
             className={`text-white bg-[#121420] bg-none px-4 py-3 w-full rounded-lg font-medium tracking-wide shadow-2xl outline-none focus:border focus:border-[#403f4c] ${
               isError ? "border border-red-400" : ""
             }`}

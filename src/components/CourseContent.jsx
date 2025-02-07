@@ -3,6 +3,7 @@ import video from "/wontFail.mp4";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faTv } from "@fortawesome/free-solid-svg-icons";
 import { COURSECONTENT } from "../../data";
+import { AnimatePresence, motion } from "framer-motion";
 
 const CourseContent = ({ params }) => {
   const [showContent, setShowContent] = useState(false);
@@ -66,56 +67,65 @@ const CourseContent = ({ params }) => {
             } = coursecontentitem;
             const isVisible = showContent === id;
             return (
-              <section key={id}>
-                <button
-                  onClick={() => handleShowContent(id)}
-                  className="p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t bg-zinc-700"
-                >
-                  <span className="flex items-center justify-between">
-                    <h2>
-                      Section {sectionNumber}: {courseTitle}
-                    </h2>
-                    <FontAwesomeIcon
-                      icon={faChevronDown}
-                      size="sm"
-                      className={`transform transition-transform ${
-                        isVisible ? "rotate-180" : ""
-                      }`}
-                    />
-                  </span>
-                  <span className="text-xs font-medium">
-                    {completedSteps} / {totalSteps} | {estimatedTime}
-                  </span>
-                </button>
-                {isVisible && (
-                  <ul>
-                    {topics.map((topic, index) => {
-                      const { topicTitle, topicTime } = topic;
-                      return (
-                        <button
-                          key={`${id}-${index}`}
-                          className="w-full flex items-start gap-4 py-4 px-4 my-4 text-sm"
-                        >
-                          <div>
-                            <input
-                              type="checkbox"
-                              checked={!!checkedTopics[`${id}-${index}`]}
-                              onChange={() => toggleCheckbox(`${id}-${index}`)}
-                            />
-                          </div>
-                          <div className="w-full flex flex-col gap-1">
-                            <h2 className="text-left">{topicTitle}</h2>
-                            <span className="text-xs font-regular flex gap-2 items-center">
-                              <FontAwesomeIcon icon={faTv} />
-                              {topicTime}
-                            </span>
-                          </div>
-                        </button>
-                      );
-                    })}
-                  </ul>
-                )}
-              </section>
+              <AnimatePresence>
+                <section key={id}>
+                  <motion.button
+                    layout
+                    onClick={() => handleShowContent(id)}
+                    className="p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t bg-zinc-700"
+                  >
+                    <span className="flex items-center justify-between">
+                      <h2>
+                        Section {sectionNumber}: {courseTitle}
+                      </h2>
+                      <FontAwesomeIcon
+                        icon={faChevronDown}
+                        size="sm"
+                        className={`transform transition-transform ${
+                          isVisible ? "rotate-180" : ""
+                        }`}
+                      />
+                    </span>
+                    <span className="text-xs font-medium">
+                      {completedSteps} / {totalSteps} | {estimatedTime}
+                    </span>
+                  </motion.button>
+                  <AnimatePresence>
+                    {isVisible && (
+                      <motion.ul exit={{ opacity: 0, y: 20 }}>
+                        <AnimatePresence>
+                          {topics.map((topic, index) => {
+                            const { topicTitle, topicTime } = topic;
+                            return (
+                              <motion.button
+                                key={`${id}-${index}`}
+                                className="w-full flex items-start gap-4 py-4 px-4 my-4 text-sm"
+                              >
+                                <div>
+                                  <input
+                                    type="checkbox"
+                                    checked={!!checkedTopics[`${id}-${index}`]}
+                                    onChange={() =>
+                                      toggleCheckbox(`${id}-${index}`)
+                                    }
+                                  />
+                                </div>
+                                <div className="w-full flex flex-col gap-1">
+                                  <h2 className="text-left">{topicTitle}</h2>
+                                  <span className="text-xs font-regular flex gap-2 items-center">
+                                    <FontAwesomeIcon icon={faTv} />
+                                    {topicTime}
+                                  </span>
+                                </div>
+                              </motion.button>
+                            );
+                          })}
+                        </AnimatePresence>
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </section>
+              </AnimatePresence>
             );
           })}
         </ul>
