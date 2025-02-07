@@ -9,6 +9,7 @@ const UserSection = ({ closeNav }) => {
   const [accountsOpen, setAccountsOpen] = useState(false);
 
   const linkStyle = `text-white tracking-wider leading-10 hover:underline hover:text-orange-200`;
+
   return (
     <div className="mt-6">
       {/* Accounts Section */}
@@ -37,8 +38,24 @@ const UserSection = ({ closeNav }) => {
         </button>
 
         {accountsOpen && (
-          <ul className="list-disc pl-5 text-gray-600 mt-1">
-            <li>
+          <motion.ul
+            className="list-disc pl-5 text-gray-600 mt-1"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.1 },
+              },
+            }}
+          >
+            <motion.li
+              variants={{
+                hidden: { opacity: 0, x: -30 },
+                visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+              }}
+            >
               <NavLink
                 to="account-settings"
                 className={linkStyle}
@@ -46,13 +63,8 @@ const UserSection = ({ closeNav }) => {
               >
                 Account Settings
               </NavLink>
-            </li>
-            {/* <li>
-              <NavLink to="/purchase-history" className={linkStyle}>
-                Purchase History
-              </NavLink>
-            </li> */}
-          </ul>
+            </motion.li>
+          </motion.ul>
         )}
       </motion.div>
     </div>

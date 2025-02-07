@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { NAV_LINKS } from "../../../data";
 import Profilesection from "../Profilesection";
@@ -31,36 +31,47 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
       >
         <Profilesection />
         <nav className="p-6">
-          <ul>
+          <motion.ul
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.05 },
+              },
+            }}
+          >
             {NAV_LINKS.map((navLink) => {
               const { hyperLink, linkText } = navLink;
               const defaultStyle = "font-semibold leading-10 text-lg";
               const activeLink = `text-[#f97316] ${defaultStyle}`;
 
               return (
-                <Fragment key={navLink.linkText}>
-                  <motion.li
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ type: "spring", stiffness: 500 }}
-                    className="mb-6 bg-zinc-700 shadow-lg rounded-lg p-4 w-full"
+                <motion.li
+                  key={linkText}
+                  variants={{
+                    hidden: { opacity: 0, x: -30 },
+                    visible: { opacity: 1, x: 0, scale: 1 },
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 500 }}
+                  className="mb-6 bg-zinc-700 shadow-lg rounded-lg p-4 w-full"
+                >
+                  <NavLink
+                    to={hyperLink}
+                    target={linkText === "Community" ? "_blank" : ""}
+                    className={({ isActive }) =>
+                      isActive ? activeLink : defaultStyle + " text-white"
+                    }
+                    onClick={toggleNav}
                   >
-                    <NavLink
-                      to={hyperLink}
-                      target={linkText === "Community" ? "_blank" : ""}
-                      className={({ isActive }) =>
-                        isActive ? activeLink : defaultStyle + " text-white"
-                      }
-                      onClick={toggleNav}
-                    >
-                      <span className="flex items-center gap-4">
-                        {linkText}
-                      </span>
-                    </NavLink>
-                  </motion.li>
-                </Fragment>
+                    <span className="flex items-center gap-4">{linkText}</span>
+                  </NavLink>
+                </motion.li>
               );
             })}
-          </ul>
+          </motion.ul>
           <UserSection closeNav={toggleNav} />
         </nav>
       </motion.section>
