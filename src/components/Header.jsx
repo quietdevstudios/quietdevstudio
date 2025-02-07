@@ -30,7 +30,11 @@ const Header = () => {
           </h2>
         </NavLink>
 
-        {isNavOpen && <MobileNav isNavOpen={isNavOpen} toggleNav={toggleNav} />}
+        <AnimatePresence>
+          {isNavOpen && (
+            <MobileNav isNavOpen={isNavOpen} toggleNav={toggleNav} />
+          )}
+        </AnimatePresence>
 
         <nav>
           <ul className="hidden md:flex md:items-center md:justify-evenly md:gap-10">

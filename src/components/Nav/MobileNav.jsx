@@ -12,7 +12,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
   return (
     <>
       {/* Backdrop */}
-      <motion.div
+      <div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -25,7 +25,7 @@ const MobileNav = ({ isNavOpen, toggleNav }) => {
       <motion.section
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 100 }}
+        exit={{ opacity: 0, x: -100 }}
         transition={{ duration: 0.5 }}
         className="bg-zinc-800 fixed top-0 left-0 bottom-0 right-1/3 z-50 backdrop-blur-2xl overflow-y-auto md:hidden"
       >
