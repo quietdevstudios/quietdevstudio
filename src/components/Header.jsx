@@ -1,7 +1,7 @@
 import React, { Fragment, useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 import brandLogo from "/assets/images/apple-touch-icon.png";
 import { NAV_LINKS } from "../../data";
@@ -23,10 +23,7 @@ const Header = () => {
       className="bg-zinc-800 h-20 text-orange-950 font-montserrat sticky top-0 z-50 border-b border-zinc-700"
     >
       <section className="h-full w-[95%] mx-auto max-w-7xl flex items-center justify-between">
-        <NavLink
-          to="/"
-          className="flex items-center justify-center h-20"
-        >
+        <NavLink to="/" className="flex items-center justify-center h-20">
           <img src={brandLogo} className="w-24 cursor-pointer" />
           <h2 className="font-semibold leading-normal text-xl text-white hidden lg:flex lg:text-[1.25rem] relative right-5">
             Quietdev Studios
