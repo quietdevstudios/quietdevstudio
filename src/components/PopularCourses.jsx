@@ -1,5 +1,6 @@
 import React from "react";
 import { COURSElIST } from "../../data";
+import { motion } from "framer-motion";
 
 export const PopularCourses = () => {
   return (
@@ -20,9 +21,17 @@ export const PopularCourses = () => {
                   {course.courseTitle}
                 </h3>
                 <p className="text-gray-600 mb-4">{course.info}</p>
-                <button className="px-4 py-2 rounded-md border border-orange-200 w-fit font-medium tracking-wider text-orange-600 hover:bg-orange-400 hover:text-white capitalize transition duration-300">
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500,
+                    duration: 0.15,
+                  }}
+                  className="px-4 py-2 rounded-md border border-orange-200 w-fit font-medium tracking-wider text-orange-600 hover:bg-orange-400 hover:text-white capitalize"
+                >
                   Learn More
-                </button>
+                </motion.button>
               </div>
             );
           })}

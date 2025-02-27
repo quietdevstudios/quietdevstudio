@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Courselist = ({ courses }) => {
+  const MotionLink = motion(Link);
+
   return (
     <section className="sm:grid md:grid-cols-2 xl:grid-cols-3 max-w-7xl xl:mx-auto">
       {courses.map((course) => {
@@ -49,20 +52,18 @@ const Courselist = ({ courses }) => {
                     {nextCohortStartDate}
                   </span>
                 </p>
-                <Link
+                <MotionLink
+                  whileHover={{ scale: 1.1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 500,
+                    duration: 0.15,
+                  }}
                   to={`${id}`}
                   className="text-sm bg-zinc-800 text-zinc-100 tracking-wider p-3 rounded-md shadow-xl"
-                  // state={{
-                  //   id,
-                  //   courseDuration,
-                  //   courseTitle,
-                  //   courseThumbnailImg,
-                  //   courseTopics,
-                  //   nextCohortStartDate,
-                  // }}
                 >
                   Course Detail
-                </Link>
+                </MotionLink>
               </div>
             </div>
           </section>

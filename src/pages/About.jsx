@@ -1,12 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Hero from "../components/Hero_Component/Hero";
+import { AnimatedLink } from "../components/Buttons/MotionLink";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const MotionLink = motion(Link);
   return (
     <section className="font-montserrat">
       {/* Hero Section */}
-      <div className="bg-zinc-800 text-white py-6">
+      <section className="bg-zinc-800 text-white py-6">
         <div className="md:px-12 lg:px-20 text-center flex flex-col items-center gap-2">
           <h1 className="text-[1.7rem] px-1 font-bold leading-tight tracking-wide md:text-[2.5rem] lg:text-[3.25rem] lg:px-60">
             Empowering Tomorrow's{" "}
@@ -16,18 +18,17 @@ const About = () => {
             QuietDev Studios makes learning simple, structured, and
             beginner-friendly. Start your journey today!
           </p>
-          <Link
+          <AnimatedLink
             to="/signup"
-            // className="inline-block bg-f7a399 text-ef6351 py-3 px-6 rounded-lg shadow hover:bg-fbc3bc transition duration-300"
-            className="border border-orange-50 w-fit px-6 py-3 font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize transition duration-300"
+            className="border border-orange-50 w-fit px-6 py-3 font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize"
           >
             Get Started
-          </Link>
+          </AnimatedLink>
         </div>
-      </div>
+      </section>
 
       {/* About Section */}
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 py-12">
+      <section className="container mx-auto px-6 md:px-12 lg:px-20 py-12">
         <div className="text-center">
           <h1 className="text-[1.85rem] font-bold leading-tight tracking-wide text-gray-800 mb-4">
             About Quietdev Studios
@@ -110,15 +111,14 @@ const About = () => {
             Quietdev Studios. Explore our courses and take the first step toward
             your tech career.
           </p>
-          <Link
+          <AnimatedLink
             to="/courses"
-            // className="inline-block bg-ef6351 text-white py-3 px-6 rounded-lg shadow hover:bg-f38375 transition duration-300"
-            className="border border-orange-200 w-fit px-6 py-3 font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-500 hover:text-white capitalize transition duration-300"
+            className="border border-orange-200 w-fit px-6 py-3 font-medium tracking-wider rounded-md text-orange-600 hover:bg-orange-500 hover:text-white capitalize"
           >
             Explore Courses
-          </Link>
+          </AnimatedLink>
         </div>
-      </div>
+      </section>
     </section>
   );
 };

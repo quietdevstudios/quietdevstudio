@@ -71,6 +71,7 @@ const CourseContent = ({ params }) => {
                 <section key={id}>
                   <motion.button
                     layout
+                    exit={{ opacity: 0, y: -50 }}
                     onClick={() => handleShowContent(id)}
                     className="p-6 text-left font-semibold text-[1rem] tracking-wide w-full border-t bg-zinc-700"
                   >
@@ -92,7 +93,7 @@ const CourseContent = ({ params }) => {
                   </motion.button>
                   <AnimatePresence>
                     {isVisible && (
-                      <motion.ul exit={{ opacity: 0, y: 20 }}>
+                      <motion.ul key="lists" exit={{ opacity: 0, y: -20 }}>
                         <AnimatePresence>
                           {topics.map((topic, index) => {
                             const { topicTitle, topicTime } = topic;
@@ -100,6 +101,10 @@ const CourseContent = ({ params }) => {
                               <motion.button
                                 key={`${id}-${index}`}
                                 className="w-full flex items-start gap-4 py-4 px-4 my-4 text-sm"
+                                initial={{ opacity: 0, y: -50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -50 }}
+                                transition={{ type: "spring", duration: 0.2 }}
                               >
                                 <div>
                                   <input

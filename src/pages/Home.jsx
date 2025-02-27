@@ -8,8 +8,11 @@ import { Link } from "react-router-dom";
 import { PopularCourses } from "../components/PopularCourses";
 import Testimonials from "../components/Testimonials";
 import { motion } from "framer-motion";
+import { AnimatedLink } from "../components/Buttons/MotionLink";
 
 const Home = () => {
+  const MotionLink = motion(Link);
+
   return (
     <>
       <main className="font-montserrat text-zinc-600">
@@ -25,15 +28,12 @@ const Home = () => {
             Learn to code with structured lessons, hands-on projects, and step
             by step guidance.
           </p>
-          <Link
+          <AnimatedLink
             to="courses"
-            className="border border-orange-50 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize transition duration-300"
+            className="border border-orange-50 w-fit p-2 px-6 text-[1.25rem] font-medium tracking-wider rounded-md text-white hover:bg-orange-50 hover:text-orange-600 capitalize"
           >
             start your journey
-          </Link>
-          {/* <video height="100px" loop autoPlay muted>
-            <source src={qlVideo} type="video/mp4" />
-          </video> */}
+          </AnimatedLink>
         </section>
 
         <section className="text-center p-6 my-12">
